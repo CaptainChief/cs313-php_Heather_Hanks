@@ -8,5 +8,6 @@ function Change_Color()
     var color = document.getElementById("color").value;
     alert(color);
     document.getElementById("div1").style.backgroundColor = color;
+    document.getElementById("div1").style.backgroundColor = "red";
     
 }
