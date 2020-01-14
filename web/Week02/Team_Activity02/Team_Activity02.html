@@ -3,6 +3,7 @@
 <head>
     <title>Week 2 Team Assignment</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Personal.css">
 </head>
 <script src="Click_Me.js"></script>
 <body>
@@ -11,21 +12,23 @@
         include '../shared/header.php'; 
     ?>
 
-    <div id = "div1" class = "bg-light">
+    <div id = "div1" class = "bg-light center">
         <p>This is the 1 div</p>
     </div>
 
+    <input type = "color" id = "color" value = "#e66465">
+    <button type="button" onclick="Change_Color()">Change Color</button>
+
     
-    <div id = "div2" class = "bg-success">
+    <div id = "div2" class = "bg-success center">
         <p>This is the 2nd div</p>
     </div id = "div1">
 
     
-    <div id = "div3" class = "bg-info">
+    <div id = "div3" class = "bg-info center">
         <p>This is 3 div</p>
     </div id = "div1">
-
-    <button type="button" onclick="">Click Me!</button>
+    <button type="button" onclick="Clicked()">Click Me!</button>
 
 </body>
 </html>
