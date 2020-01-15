@@ -55,3 +55,17 @@ div.justify
 {
     text-align: justify;
 } 
+
+body.forest
+{
+    /*the image url*/
+    background-image: url(nature_stock_photo_1.jpg);
+
+    /*Blur the image*/
+    filter: blur(8px);
+   -webkit-filter: blur(8px);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
