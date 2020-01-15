@@ -56,6 +56,11 @@ div.justify
     text-align: justify;
 } 
 
+div.indent
+{
+    text-indent: 30%;
+}
+
 
 /* Create a blurry background image */
 body, html 
