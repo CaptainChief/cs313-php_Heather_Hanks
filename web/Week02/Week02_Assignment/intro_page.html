@@ -9,6 +9,20 @@
 
 <body>
 
+  <div class = "center">
+    <p>Some of my favorite animals include: </p>
+    <?php
+      $animals = array("Dogs", "Cats", "Horses", "Foxes", "Wolves");
+
+      $count = 1;
+      foreach($animal as $fave)
+      {
+        echo "$count. $fave<br>";
+        $count++;
+      }
+    ?>
+  </div>
+
   <ul>
     <li><a href="main_page.html">Home Page</a></li>
     <li><a class="active" href="">Intro Page</a></li>
