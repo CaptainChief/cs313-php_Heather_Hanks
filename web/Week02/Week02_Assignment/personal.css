@@ -36,22 +36,22 @@ li a:hover
 /* End of menu bar */
 
 /* For text formatting */
-div.a 
+div.center
 {
     text-align: center;
 }
       
-div.b 
+div.left
 {
     text-align: left;
 }
       
-div.c 
+div.right
 {
     text-align: right;
 }
       
-div.c 
+div.justify
 {
     text-align: justify;
 } 
