@@ -25,14 +25,17 @@
         }
     }
     ?>
-    <div class ="half">
+    <div class ="half" style = "float: left">
         <h1>PHP Team Activity</h1>
         <?php tenTimes() ?>
     </div>
-    <div class = "half">
+    <div class = "half" style = "float: right">
         <h1>PHP Team Activity</h1>
         <?php tenTimes() ?>
     </div>
     </div>
 </body>
 </html>
+
+
+/*  */
