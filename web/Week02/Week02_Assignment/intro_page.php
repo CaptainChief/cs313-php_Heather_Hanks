@@ -42,13 +42,13 @@
       $number = 1;
       for($i = 0; $i < count($animals); $i++)
       {
-        if($i != (count($animels) - 1))
+        if($number == count($animels))
         {
-          echo "$number. $animals[$i], ";
+          echo "and $number. $animals[$i].";
         }
         else
         {
-          echo "and $number. $animals[$i].";
+          echo "$number. $animals[$i], ";
         }
         $number++;
       }
