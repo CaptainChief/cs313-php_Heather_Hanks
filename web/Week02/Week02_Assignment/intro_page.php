@@ -23,8 +23,9 @@
       Major: Computer Science <br><br>
     </div>
 
-    <img src="me.jpg" alt="Heather Hanks the author" height="62" width="42" align="left">
-
+    <div class = "left">
+      <img src="me.jpg" alt="Heather Hanks the author" height="62" width="42" align="left">
+    </div>
     
     <div class = "left indent">
       I am in my final semester for college. I plan on working at Boeing when I graduate in April. I have had the opportunity to intern for them for <br>

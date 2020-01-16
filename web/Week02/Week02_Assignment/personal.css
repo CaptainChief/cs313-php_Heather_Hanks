@@ -111,16 +111,3 @@ body, html
     text-align: center;
   }
 
-  .personal-pic
-  {
-    background-image: url("me.jpg");
-    
-    /*  */
-    height: 15%; 
-    width: 25%;
-    
-    /* Center and scale the image nicely */
-    background-position: left;
-    background-repeat: no-repeat;
-  }
-
