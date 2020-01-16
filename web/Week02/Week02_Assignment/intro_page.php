@@ -17,14 +17,13 @@
 
   <div class = "forest"></div>
 
-  <div class = "forest-text">
+  <div class = "forest-text personal-pic">
     <div class = "left">
       Name: Heather Hanks <br>
       Major: Computer Science <br><br>
     </div>
 
 
-    <img src="me.jpg" alt="Heather Hanks">
     
     <div class = "left indent">
       I am in my final semester for college. I plan on working at Boeing when I graduate in April. I have had the opportunity to intern for them for <br>

@@ -111,7 +111,7 @@ body, html
     text-align: center;
   }
 
-  .perosnal-pic
+  .personal-pic
   {
     background-image: url("me.jpg");
     
@@ -125,6 +125,5 @@ body, html
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
-    
   }
 
