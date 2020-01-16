@@ -42,7 +42,7 @@
       $number = 1;
       for($i = 0; $i < count($animals); $i++)
       {
-        if($number == count($animels))
+        if($number == count($animals))
         {
           echo "and $number. $animals[$i].";
         }
