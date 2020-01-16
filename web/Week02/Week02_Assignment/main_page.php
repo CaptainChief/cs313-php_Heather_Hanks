@@ -25,6 +25,12 @@
     <p>
       I hope to be able to provide a good idea of who I am through these pages.
     </p>
+
+    <div>
+      <img src="me.jpg" alt="Heather Hanks the author" height="150" width="100"><br><br>
+    </div>
+
+
   </div>  
 
 </body>
