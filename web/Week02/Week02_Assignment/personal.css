@@ -110,3 +110,19 @@ body, html
     padding: 20px;
     text-align: center;
   }
+
+  .perosnal-pic
+  {
+    background-image: url("me.jpg");
+    
+
+    
+    /* Full height */
+    height: 25%; 
+    width: 50%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    
+  }
+
