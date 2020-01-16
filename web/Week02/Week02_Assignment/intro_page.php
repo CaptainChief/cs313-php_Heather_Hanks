@@ -24,7 +24,7 @@
     </div>
 
     <div class = "left">
-      <img src="me.jpg" alt="Heather Hanks the author" height="62" width="42">
+      <img src="me.jpg" alt="Heather Hanks the author" height="100" width="80"><br><br>
     </div>
     
     <div class = "left indent">
