@@ -115,15 +115,12 @@ body, html
   {
     background-image: url("me.jpg");
     
-
-    
     /*  */
-    height: 1%; 
-    width: 5%;
+    height: 15%; 
+    width: 25%;
     
     /* Center and scale the image nicely */
     background-position: left;
     background-repeat: no-repeat;
-    background-size: contain;
   }
 
