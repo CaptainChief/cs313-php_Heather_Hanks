@@ -36,7 +36,7 @@
       $animals = array("Dogs", "Cats", "Horses", "Foxes", "Wolves");
 
       $number = 1;
-      for($i = 0; $i <= count($animals); $++)
+      for($i = 0; $i <= count($animals); $i++)
       {
         echo "$number. $fave<br>";
         $number++;
