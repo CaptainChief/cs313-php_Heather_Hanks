@@ -14,11 +14,11 @@
         {
             if ($i % 2 == 0)
             {
-                echo "<div class='red'>This is div #$i</div>";
+                echo "<div class=\"red\">This is div #$i</div><br>";
             }
             else
             {
-                echo "<div>This is div #$i</div>";
+                echo "<div>This is div #$i</div><br>";
             }
         }
     ?>
