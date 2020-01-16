@@ -7,9 +7,11 @@
 </head>
 <body>
 
-<div>
+  <div>
     <h1>PHP Team Activity</h1>
     <?php
+    function tenTimes()
+    {
         for($i = 0; $i < 10; $i++)
         {
             if ($i % 2 == 0)
@@ -21,8 +23,12 @@
                 echo "<div>This is div #$i</div><br>";
             }
         }
+    }
     ?>
-</div>
+
+    <div style = "align: left"><?php tenTimes() ?></div>
+    <div><?php tenTimes() ?></div>
+  </div>
 
 </body>
 </html>
