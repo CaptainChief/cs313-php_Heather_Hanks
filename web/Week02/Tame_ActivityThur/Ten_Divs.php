@@ -16,19 +16,23 @@
         {
             if ($i % 2 == 0)
             {
-                echo "<div class=\"red\">This is div #$i</div><br>";
+                echo "<div class=\"red inner_border\">This is div #$i</div><br>";
             }
             else
             {
-                echo "<div>This is div #$i</div><br>";
+                echo "<div class =\"inner_border\">This is div #$i</div><br>";
             }
         }
     }
     ?>
-
-    <div style = "align: left"><?php tenTimes() ?></div>
-    <div><?php tenTimes() ?></div>
+    <div style="align: left">
+        <h1>PHP Team Activity</h1>
+        <?php tenTimes() ?>
+    </div>
+    <div>
+        <h1>PHP Team Activity</h1>
+        <?php tenTimes() ?>
+    </div>
   </div>
-
 </body>
 </html>

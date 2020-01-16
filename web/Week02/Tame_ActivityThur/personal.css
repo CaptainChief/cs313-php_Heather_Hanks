@@ -1,8 +1,12 @@
-div 
+div.inner_border 
+{
+   width: 50%
+}
+
+div
 {
     text-align: center;
-   border-style: solid;
-   width: 50%
+    border-style: solid;
 }
 
 .red
