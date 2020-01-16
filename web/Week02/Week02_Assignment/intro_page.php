@@ -31,13 +31,13 @@
     </div>
 
     <div>
-      <?php "Hello World" ?>
+      <?php echo "Hello World" ?>
     </div>
 
-    <?php "Hello World" ?>
+    <?php echo "Hello World" ?>
 
   </div>  
-    <!-- <p>Some of my favorite animals include: </p>
+    <p>Some of my favorite animals include:
 
     <?php
       $animals = array("Dogs", "Cats", "Horses", "Foxes", "Wolves");
@@ -48,7 +48,7 @@
         echo "$count. $fave<br>";
         $count++;
       }
-    ?> -->
+    ?>
 
 
 </body>
