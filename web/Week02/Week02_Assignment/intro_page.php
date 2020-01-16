@@ -38,7 +38,7 @@
       $number = 1;
       for($i = 0; $i <= count($animals); $i++)
       {
-        echo "$number. $fave<br>";
+        echo "$number. $animals[$i]<br>";
         $number++;
       }
     ?>
