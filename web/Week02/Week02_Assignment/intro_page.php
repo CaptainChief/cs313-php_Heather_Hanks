@@ -30,7 +30,6 @@
       I am from Oklahoma, and have a family of fourteen.
     </div>
 
-  </div>  
     <p>Some of my favorite animals include:
 
     <?php
@@ -43,6 +42,8 @@
         $count++;
       }
     ?>
+
+  </div>  
 
 
 </body>
