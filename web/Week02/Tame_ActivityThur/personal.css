@@ -16,6 +16,11 @@ div.outer_div
     color: red;
 }
 
+.half {
+   -ms-flex: 50%;
+   flex: 50%;
+}
+
 
 
 

@@ -25,11 +25,11 @@
         }
     }
     ?>
-    <div style="align: left">
+    <div class ="half">
         <h1>PHP Team Activity</h1>
         <?php tenTimes() ?>
     </div>
-    <div>
+    <div class = "half">
         <h1>PHP Team Activity</h1>
         <?php tenTimes() ?>
     </div>
