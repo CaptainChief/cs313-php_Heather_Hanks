@@ -7,11 +7,11 @@
 <body>
 
 <div>
-    <?php 
-      for($i = 0; $i < 10; i++)
+    <?php
+      for($i = 0; $i < 10; $i++)
       {
           echo "<div><p>This is div #$i</p></div>";
-      }   
+      }
     ?>
 </div>
 
