@@ -10,8 +10,8 @@
 <body>
 
   <ul>
-    <li><a href="main_page.html">Home Page</a></li>
-    <li><a href="intro_page.html">Intro Page</a></li>
+    <li><a href="main_page.php">Home Page</a></li>
+    <li><a href="intro_page.php">Intro Page</a></li>
     <li><a class="active" href="">Assingments</a></li>
   </ul>
 

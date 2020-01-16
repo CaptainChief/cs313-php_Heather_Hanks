@@ -10,9 +10,9 @@
 <body>
 
   <ul>
-    <li><a href="main_page.html">Home Page</a></li>
+    <li><a href="main_page.php">Home Page</a></li>
     <li><a class="active" href="">Intro Page</a></li>
-    <li><a href="index_page.html">Assingments</a></li>
+    <li><a href="index_page.php">Assingments</a></li>
   </ul>
 
   <div class = "forest"></div>
@@ -29,12 +29,6 @@
 
       I am from Oklahoma, and have a family of fourteen.
     </div>
-
-    <div>
-      <?php echo "Hello World" ?>
-    </div>
-
-    <?php echo "Hello World" ?>
 
   </div>  
     <p>Some of my favorite animals include:
