@@ -10,17 +10,17 @@
 <div>
     <h1>PHP Team Activity</h1>
     <?php
-      for($i = 0; $i < 10; $i++)
-      {
-          if ($i % 2 == 0) 
-          {
-              echo "<div class='red'><p>This is div #$i</p></div>";
-          }
-          else
-          {
-              echo "<div><p>This is div #$i</p></div>";
-          }
-      }
+        for($i = 0; $i < 10; $i++)
+        {
+            if ($i % 2 == 0)
+            {
+                echo "<div class='red'>This is div #$i</div>";
+            }
+            else
+            {
+                echo "<div>This is div #$i</div>";
+            }
+        }
     ?>
 </div>
 
