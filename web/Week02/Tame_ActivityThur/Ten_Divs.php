@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <div>
+    <div class = "outer_div">
     <h1>PHP Team Activity</h1>
     <?php
     function tenTimes()
@@ -33,6 +33,6 @@
         <h1>PHP Team Activity</h1>
         <?php tenTimes() ?>
     </div>
-  </div>
+    </div>
 </body>
 </html>

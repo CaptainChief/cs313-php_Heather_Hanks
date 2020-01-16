@@ -3,7 +3,7 @@ div.inner_border
    width: 50%
 }
 
-div
+div.outer_div
 {
     text-align: center;
     border-style: solid;
@@ -13,6 +13,7 @@ div
 {
     color: red;
 }
+
 
 /* body
 {
