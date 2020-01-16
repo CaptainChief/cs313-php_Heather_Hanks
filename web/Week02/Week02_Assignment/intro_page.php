@@ -35,18 +35,11 @@
     <?php
       $animals = array("Dogs", "Cats", "Horses", "Foxes", "Wolves");
 
-      $count = 1;
-      foreach($animal as $fave)
+      $number = 1;
+      for($i = 0; $i <= count($animals); $++)
       {
         echo "$count. $fave<br>";
-        $count++;
-      }
-    ?>
-    <?php
-
-      for ($x = 0; $x <= 10; $x++) 
-      {
-          echo "The number is: $x <br>";
+        $number++;
       }
     ?>
 
