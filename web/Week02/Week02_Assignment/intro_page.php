@@ -27,10 +27,10 @@
       I am in my final semester for college. I plan on working at Boeing when I graduate in April. I have had the opportunity to intern for them for <br>
       several years now and am excited to work for them on a more permanent basis. <br><br><br>
 
-      I am from Oklahoma, and have a family of fourteen.
+      I am originally from Oklahoma, and have a family of fourteen. It's definitly been a unique experience.
     </div>
 
-    <p>Some of my favorite animals include:
+    <p>Some of my favorite animals include: <br>
 
     <?php
       $animals = array("Dogs", "Cats", "Horses", "Foxes", "Wolves");
@@ -38,7 +38,7 @@
       $number = 1;
       for($i = 0; $i <= count($animals); $++)
       {
-        echo "$count. $fave<br>";
+        echo "$number. $fave<br>";
         $number++;
       }
     ?>
