@@ -23,7 +23,7 @@
       Major: Computer Science <br><br>
     </div>
 
-    <img src="me.jpg" alt="Heather Hanks the author" height="42" width="42">
+    <img src="me.jpg" alt="Heather Hanks the author" height="62" width="42" align="left">
 
     
     <div class = "left indent">
