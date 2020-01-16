@@ -17,12 +17,13 @@
 
   <div class = "forest"></div>
 
-  <div class = "forest-text personal-pic">
+  <div class = "forest-text">
     <div class = "left">
       Name: Heather Hanks <br>
       Major: Computer Science <br><br>
     </div>
 
+    <div class = "personal-pic"></div>
 
     
     <div class = "left indent">
