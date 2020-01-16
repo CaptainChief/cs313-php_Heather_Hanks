@@ -17,8 +17,7 @@ div.outer_div
 }
 
 .half {
-   -ms-flex: 50%;
-   flex: 50%;
+   width: 50%;
 }
 
 
