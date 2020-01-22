@@ -12,7 +12,7 @@
   <ul>
     <li><a class="active" href="">Home Page</a></li>
     <li><a href="intro_page.php">Intro Page</a></li>
-    <li><a href="index_page.php">Assingments</a></li>
+    <li><a href="index_page.php">Assignments</a></li>
   </ul>
 
   <div class = "forest"></div>
