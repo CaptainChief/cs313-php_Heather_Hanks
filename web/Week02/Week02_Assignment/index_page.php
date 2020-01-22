@@ -17,12 +17,12 @@
 
 
   <div class = "center">
-    <p>This page is still under construction.</p>
+    <a href="../Week03/browse_pages.php">Assignment 03: Shopping List</a>
   </div>
 
-  <div class = "center">
+  <!-- <div class = "center">
     <img src="construction_image.webp" alt="Construction Site">
-  </div>
+  </div> -->
 
 </body>
 
