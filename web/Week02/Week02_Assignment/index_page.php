@@ -17,7 +17,7 @@
 
 
   <div class = "center">
-    <a href="C:\Users\Sam's Cluib\Project_Git\cs313-php\web\Week03\Shopping_List\browse_page.php">Assignment 03: Shopping List</a>
+    <a href="..\Week03\Shopping_List\browse_page.php">Assignment 03: Shopping List</a>
   </div>
 
   <!-- <div class = "center">
