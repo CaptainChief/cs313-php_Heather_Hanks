@@ -1,0 +1,83 @@
+/*For the menu bars*/
+.active 
+{
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top: 100%
+}
+  
+li 
+{
+    float: left;
+}
+  
+li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover 
+{
+    background-color: #111;
+}
+
+/* End of menu bar */
+
+/* For text formatting */
+div.center
+{
+    text-align: center;
+}
+      
+div.left
+{
+    text-align: left;
+}
+      
+div.right
+{
+    text-align: right;
+}
+      
+div.justify
+{
+    text-align: justify;
+} 
+
+div.indent
+{
+    text-indent: 2%;
+}
+
+/* Background image should be fixed now. */
+html 
+{ 
+    height: 100%;
+    margin:0px;
+    background: url("Books.jpg") no-repeat center center;
+
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    background-size: cover;
+    background-attachment: fixed;
+}
