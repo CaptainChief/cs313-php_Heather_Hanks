@@ -9,7 +9,7 @@
 <body>
 
   <ul>
-    <li><a href="brows_page.php">Browse Books</a></li>
+    <li><a href="browse_page.php">Browse Books</a></li>
     <li><a class="active" href="">View Cart</a></li>
   </ul>
  

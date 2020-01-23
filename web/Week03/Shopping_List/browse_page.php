@@ -17,48 +17,58 @@
   <div class = "library"></div>
  
   <div class = "library-text">
-  <div>
-    Fablehaven: Book 1
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Fablehaven: Book 2
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Fablehaven: Book 3
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Fablehaven: Book 4
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Fablehaven: Book 5
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Percy Jackson: Book 1
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Percy Jackson: Book 2
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Percy Jackson: Book 3
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>  
-    Percy Jackson: Book 4
-    <button type="button">Add to Cart</button>
-  </div>
-  <div>
-    Percy Jackson: Book 5
-    <button type="button">Add to Cart</button>
-  </div>
 
-</div>
+  <?php
+  $file_lines = file('items.txt');
+
+  foreach ($file_lines as $line)
+  {
+    echo $line;
+  }
+  ?>
+
+    <!-- <div>
+      Fablehaven: Book 1 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Fablehaven: Book 2 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Fablehaven: Book 3 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Fablehaven: Book 4 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Fablehaven: Book 5 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Percy Jackson: Book 1 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Percy Jackson: Book 2 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Percy Jackson: Book 3 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>  
+      Percy Jackson: Book 4 <br>
+      <button type="button">Add to Cart</button>
+    </div>
+    <div>
+      Percy Jackson: Book 5 <br>
+      <button type="button">Add to Cart</button>
+    </div> -->
+
+  </div>
 
 
 
