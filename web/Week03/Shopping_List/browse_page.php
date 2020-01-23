@@ -18,24 +18,31 @@
  
   <!-- <div class = "library-text"> -->
 
-  <?php
-    $file_lines = file('items.txt');
-    $items = [];
+  <div class = "center">
+  <form action="view_cart.php" method="post">
+    <?php
+      $file_lines = file('items.txt');
+      $items = [];
 
-    $i = 0;
-    foreach ($file_lines as $line)
-    {
-      $items[$i] = $line;
-      $i++;
-    }
+      $i = 0;
+      foreach ($file_lines as $line)
+      {
+        $items[$i] = $line;
+        $i++;
+      }
 
-    $i = 0;
-    foreach ($items as $item)
-    {
-      echo "<div> $item <br> <input type='checkbox' name = book_$i value = $item>Add to Cart</div>";
-      $i++;
-    }
-  ?>
+      $i = 0;
+      foreach ($items as $item)
+      {
+        echo "<div> $item <br> <input type='checkbox' name = book_$i value = $item>Add to Cart</div>";
+        $i++;
+      }
+    ?>
+
+    <input type = "submit" name = "submission" value = "Add all to cart!">
+    </form>
+
+  </div>
 
    
 

@@ -21,6 +21,11 @@
     $optradio = htmlspecialchars($_POST["optradio"]);
     $textbox = htmlspecialchars($_POST["textbox"]);
    ?>
+
+   <h1>Your Cart</h1>
+   <div>
+     
+   </div>
  
 
 </body>
