@@ -13,7 +13,10 @@
     <li><a class="active" href="">Browse Items</a></li>
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
+
+  <div class = "forest"></div>
  
+  <div class = "books-text">
   <div>
     Fablehaven: Book 1
     <button type="button">Add to Cart</button>
@@ -53,7 +56,9 @@
   <div>
     Percy Jackson: Book 5
     <button type="button">Add to Cart</button>
-  </div
+  </div>
+
+</div>
 
 
 
