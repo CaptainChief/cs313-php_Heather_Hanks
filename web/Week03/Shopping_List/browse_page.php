@@ -7,12 +7,55 @@
 </head>
 
 <body>
+  <h1>Bookstore</h1>
 
   <ul>
     <li><a class="active" href="">Browse Items</a></li>
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
  
+  <div>
+    Fablehaven: Book 1
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Fablehaven: Book 2
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Fablehaven: Book 3
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Fablehaven: Book 4
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Fablehaven: Book 5
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Percy Jackson: Book 1
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Percy Jackson: Book 2
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Percy Jackson: Book 3
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>  
+    Percy Jackson: Book 4
+    <button type="button">Add to Cart</button>
+  </div>
+  <div>
+    Percy Jackson: Book 5
+    <button type="button">Add to Cart</button>
+  </div
+
+
 
 </body>
 
