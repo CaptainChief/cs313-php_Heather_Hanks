@@ -14,33 +14,28 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <!-- <div class = "library"></div> -->
- 
-  <!-- <div class = "library-text"> -->
-
   <div class = "center">
-  <form action="view_cart.php" method="post">
-    <?php
-      $file_lines = file('items.txt');
-      $items = [];
+    <form action="view_cart.php" method="post">
+      <?php
+        $file_lines = file('items.txt');
+        $items = [];
 
-      $i = 0;
-      foreach ($file_lines as $line)
-      {
-        $items[$i] = $line;
-        $i++;
-      }
+        $i = 0;
+        foreach ($file_lines as $line)
+        {
+          $items[$i] = $line;
+          $i++;
+        }
 
-      $i = 0;
-      foreach ($items as $item)
-      {
-        echo "<div> $item <br> <input type='checkbox' name = book_$i value = $item>Add to Cart</div>";
-        $i++;
-      }
-    ?>
+        foreach ($items as $item)
+        {
+          echo "<div class='left border'> $item <br> <input type='checkbox' name='books[]' value=$item>Add to Cart</div>";
+        }
+      ?>
 
-    <input type = "submit" name = "submission" value = "Add all to cart!">
+      <input type = "submit" name = "submission" value = "Add all to cart!">
     </form>
+    <br><br><br>
 
   </div>
 

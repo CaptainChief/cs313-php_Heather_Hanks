@@ -62,6 +62,11 @@ div.indent
     text-indent: 2%;
 }
 
+div.border
+{
+    border-style: inset;
+}
+
 /* Background image should be fixed now. */
 .library 
 {
