@@ -29,10 +29,10 @@
       $i++;
     }
 
-    // foreach ($items as $item)
-    // {
-    //   echo "<div>$item <br> <button type = 'button'>Add to Cart</button></div>";
-    // }
+    foreach ($items as $item)
+    {
+      echo "<div>$item <br> <button type = 'button'>Add to Cart</button></div>";
+    }
   ?>
 
     <!-- <div>
