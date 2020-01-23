@@ -14,9 +14,9 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "forest"></div>
+  <div class = "library"></div>
  
-  <div class = "books-text">
+  <div class = "library-text">
   <div>
     Fablehaven: Book 1
     <button type="button">Add to Cart</button>
