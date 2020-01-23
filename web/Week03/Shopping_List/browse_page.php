@@ -29,10 +29,11 @@
       $i++;
     }
 
-    $i = 0
+    $i = 0;
     foreach ($items as $item)
     {
       echo "<div> $item <br> <input type='checkbox' name = book_$i value = $item>Add to Cart</div>";
+      $i++;
     }
   ?>
 
