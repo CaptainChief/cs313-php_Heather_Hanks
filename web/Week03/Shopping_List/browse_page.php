@@ -22,12 +22,12 @@
     $file_lines = file('items.txt');
     $items = [];
 
-    // $i = 0;
-    // foreach ($file_lines as $line)
-    // {
-    //   $items($i) = $line;
-    //   $i++;
-    // }
+    $i = 0;
+    foreach ($file_lines as $line)
+    {
+      $items($i) = $line;
+      $i++;
+    }
 
     // foreach ($items as $item)
     // {
