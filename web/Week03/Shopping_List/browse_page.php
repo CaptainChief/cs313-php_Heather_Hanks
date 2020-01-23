@@ -31,7 +31,7 @@
 
     foreach ($lines as $item)
     {
-      echo "<div> $item <br> <button type = 'button'>Add to Cart</button>"
+      echo "<div>$item <br> <button type = 'button'>Add to Cart</button></div>";
     }
   ?>
 
