@@ -1,7 +1,6 @@
 <?php
    // Start the session
    session_start();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,8 +23,11 @@
           <input type = "submit" name = "submission" value = "Submit!">
       </form>
 
-      <?php // set session variables using a form 
-
+      <?php 
+        if(isset($_POST['submission']))
+        {
+            $_SESSION['pictureUrl'] = $_POST['picture'];
+        }
 
       ?>
    </body>
