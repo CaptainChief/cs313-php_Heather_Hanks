@@ -25,7 +25,7 @@
     $i = 0;
     foreach ($file_lines as $line)
     {
-      $items($i) = $line;
+      $items[$i] = $line;
       $i++;
     }
 
