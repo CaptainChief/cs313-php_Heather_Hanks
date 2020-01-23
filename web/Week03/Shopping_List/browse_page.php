@@ -14,9 +14,9 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "library"></div>
+  <!-- <div class = "library"></div> -->
  
-  <div class = "library-text">
+  <!-- <div class = "library-text"> -->
 
   <?php
     $file_lines = file('items.txt');
@@ -29,54 +29,16 @@
       $i++;
     }
 
+    $i = 0
     foreach ($items as $item)
     {
-      echo "<div>$item <br> <button type = 'button'>Add to Cart</button></div>";
+      echo "<div> $item <br> <input type='checkbox' name = book_$i value = $item>Add to Cart</div>";
     }
   ?>
 
-    <!-- <div>
-      Fablehaven: Book 1 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Fablehaven: Book 2 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Fablehaven: Book 3 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Fablehaven: Book 4 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Fablehaven: Book 5 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Percy Jackson: Book 1 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Percy Jackson: Book 2 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Percy Jackson: Book 3 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>  
-      Percy Jackson: Book 4 <br>
-      <button type="button">Add to Cart</button>
-    </div>
-    <div>
-      Percy Jackson: Book 5 <br>
-      <button type="button">Add to Cart</button>
-    </div> -->
+   
 
-  </div>
+  <!-- </div> -->
 
 
 

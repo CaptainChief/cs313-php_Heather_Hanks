@@ -12,6 +12,15 @@
     <li><a href="browse_page.php">Browse Books</a></li>
     <li><a class="active" href="">View Cart</a></li>
   </ul>
+
+  <?php
+    // retrieve POST data
+    $textForPHP = htmlspecialchars($_POST["textForPHP"]);
+    $email = htmlspecialchars($_POST["emailForPHP"]);
+    $password = htmlspecialchars($_POST["passwordForPHP"]);
+    $optradio = htmlspecialchars($_POST["optradio"]);
+    $textbox = htmlspecialchars($_POST["textbox"]);
+   ?>
  
 
 </body>
