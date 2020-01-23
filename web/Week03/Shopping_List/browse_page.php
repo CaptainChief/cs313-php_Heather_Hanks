@@ -19,12 +19,20 @@
   <div class = "library-text">
 
   <?php
-  $file_lines = file('items.txt');
+    $file_lines = file('items.txt');
+    $lines = array();
 
-  foreach ($file_lines as $line)
-  {
-    echo $line;
-  }
+    $i = 0;
+    foreach ($file_lines as $line)
+    {
+      $lines($i) = $line;
+      $i++;
+    }
+
+    foreach ($lines as $item)
+    {
+      echo "<div> $item <br> <button type = 'button'>Add to Cart</button>"
+    }
   ?>
 
     <!-- <div>
