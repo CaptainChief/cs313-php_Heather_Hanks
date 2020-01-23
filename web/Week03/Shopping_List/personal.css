@@ -67,6 +67,11 @@ div.border
     border-style: inset;
 }
 
+div.item
+{
+    width: 30%;
+}
+
 /* Background image should be fixed now. */
 .library 
 {
