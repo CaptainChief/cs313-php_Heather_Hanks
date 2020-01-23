@@ -7,6 +7,7 @@
    <body>
       <?php
          // remove previous session variable
+         unset($_SESSION['pictureUrl']);
          // Set session variables
          $_SESSION["favorite_color"] = "Blue";
          $_SESSION["favorite_animal"] = "Wolves";
