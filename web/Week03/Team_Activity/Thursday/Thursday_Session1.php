@@ -9,7 +9,7 @@
          // Set session variables
          // echo that variables have been set
 ?>
-      <a href="thursdaySession2.php">Check the variables on another page</a>
+      <a href="Thursday_Session2.php">Check the variables on another page</a>
 
       <?php // set session variables using a form ?>
    </body>
