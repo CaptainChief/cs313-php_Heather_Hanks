@@ -20,16 +20,16 @@
 
   <?php
     $file_lines = file('items.txt');
-    //$lines = array();
+    $items = [];
 
     // $i = 0;
     // foreach ($file_lines as $line)
     // {
-    //   $lines($i) = $line;
+    //   $items($i) = $line;
     //   $i++;
     // }
 
-    // foreach ($lines as $item)
+    // foreach ($items as $item)
     // {
     //   echo "<div>$item <br> <button type = 'button'>Add to Cart</button></div>";
     // }
