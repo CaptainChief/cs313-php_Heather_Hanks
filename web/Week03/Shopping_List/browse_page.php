@@ -16,7 +16,7 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "view library">
+  <div class = "view library"></div>
   <div class = "layover">
     <form action="view_cart.php" method="post">
       <?php
@@ -41,7 +41,6 @@
       <input type = "submit" name = "submission" value = "Add all to cart!">
       </form>
     <br><br><br>
-  </div>
 
   </body>
 
