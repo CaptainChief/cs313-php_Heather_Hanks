@@ -16,7 +16,6 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "view library"></div>
   <div class = "layover">
     <form action="view_cart.php" method="post">
       <?php
