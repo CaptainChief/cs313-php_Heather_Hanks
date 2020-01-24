@@ -42,7 +42,7 @@
       <input type = "submit" name = "submission" value = "Add all to cart!">
     </form>
 
-    <?php
+    <!-- <?php
       $i = 0;
       if(!empty($_POST['books']))
       {
@@ -53,7 +53,7 @@
         }
         $_SESSION["index"] = $i;
       }
-    ?>
+    ?> -->
 
 
     <br><br><br>
