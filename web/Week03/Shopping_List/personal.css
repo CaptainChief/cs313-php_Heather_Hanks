@@ -78,7 +78,7 @@ div.item
 /* Background image should be fixed now. */
 .library 
 {
-    background-image: url('Books.jpg');
+    background-image: url("Books.jpg");
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center center;
