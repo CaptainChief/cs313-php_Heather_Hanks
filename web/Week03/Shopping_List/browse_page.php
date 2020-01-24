@@ -36,9 +36,9 @@
           echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><br>";
         }
       ?>
-      </div>
 
-      <input type = "submit" name = "submission" value = "Add all to cart!">
+        <input type = "submit" name = "submission" value = "Add all to cart!">
+      </div>
       </form>
     <br><br><br>
       

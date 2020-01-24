@@ -66,10 +66,12 @@ div.indent
 
 div.item
 {
+    padding-bottom: 20px;
     display: inline-block;
     text-align: left;
     width: 30%;
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    border: 3px solid #f1f1f1;
 }
 
 /* Background image should be fixed now. */
