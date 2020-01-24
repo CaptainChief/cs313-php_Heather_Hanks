@@ -27,10 +27,10 @@
     {
       foreach $_POST['books'] as $book
       {
-        $_SESSION["cart_item_"$i] = htmlspecialchars($book);
+        // $_SESSION["cart_item_"$i] = htmlspecialchars($book);
         $i++;
       }
-      $_SESSION["index"] = $i;
+      // $_SESSION["index"] = $i;
     }
   ?>
 
