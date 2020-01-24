@@ -12,7 +12,6 @@
   function checked(item)
   {
     alert("In the function");
-    $_SESSION[item] = item;
     alert(item); 
   }
 </script>
