@@ -1,6 +1,3 @@
-<?php 
-  session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +16,7 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "center border">
+  <div class = "library">
     <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
@@ -43,10 +40,9 @@
     </form>
 
     <br><br><br>
+    </div>
 
-  </div>
-  <div class="view library"></div>
-</body>
+  </body>
 
 
 </html>
