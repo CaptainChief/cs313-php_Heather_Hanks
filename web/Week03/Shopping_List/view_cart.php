@@ -29,8 +29,10 @@
        array_push($items, htmlspecialchars($value));
       }
     }
-  ?>
+    $_SESSION["items"] = $_SESSION["items"] + $items;
 
+  ?>
+  <div class = "center">
     <div class = "item">
       <?php
         if (!empty($items))
@@ -45,8 +47,8 @@
           echo "There are currently no items in your cart.";
         }
       ?>
-
     </div>
+  </div>
  
 
 </body>
