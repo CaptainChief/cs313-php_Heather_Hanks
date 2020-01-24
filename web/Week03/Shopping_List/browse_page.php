@@ -30,6 +30,7 @@
           $i++;
         }
 
+        echo "<br>";
         foreach ($items as $item)
         {
           echo "$item <br><br> ";
