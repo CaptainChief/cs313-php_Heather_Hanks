@@ -16,7 +16,7 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "center">
+  <div class = "center border">
     <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
