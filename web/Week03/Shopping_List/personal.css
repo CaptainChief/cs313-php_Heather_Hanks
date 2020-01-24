@@ -45,6 +45,7 @@ div.center
       
 div.left
 {
+    margin: auto;
     text-align: left;
 }
       
@@ -100,7 +101,7 @@ div.item
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
-  /* position: absolute; */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
