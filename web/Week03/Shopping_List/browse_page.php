@@ -46,7 +46,7 @@
           echo "<input type='checkbox' name='books' value='$item' id='$item' onclick = \"checked('$item')\"\n> \nAdd to Cart \n<br>\n<hr>\n";
         }
       ?>
-      <input type = 'checkbox' name = 'books' value='item' onclick = "checked('item')"> Add to Cart <br><hr>
+      <input type = 'checkbox' name = 'books' value='item' onclick = 'checked("item")'> Add to Cart <br><hr>
       <div class = "center">
         <input type = "button" name = "submission" value = "Add all to cart!">
       </div>
