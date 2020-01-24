@@ -12,7 +12,7 @@
   function checked(item)
   {
     $_SESSION[item] = item;
-    alert($_SESSION[item]); 
+    alert(item); 
   }
 </script>
 <body>
