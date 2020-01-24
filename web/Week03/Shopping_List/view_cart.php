@@ -1,6 +1,4 @@
-<?php 
-  session_start();
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,20 +15,6 @@
     <li><a href="browse_page.php">Browse Books</a></li>
     <li><a class="active" href="">View Cart</a></li>
   </ul>
-
-  <?php
-
-    $i = 0;
-    if(!empty($_POST['books']))
-    {
-      foreach $_POST['books'] as $book
-      {
-        $_SESSION["cart_item_"$i] = htmlspecialchars($book);
-        $i++;
-      }
-      $_SESSION["index"] = $i;
-    }
-   ?>
 
    <h1>Your Cart</h1>
    <div>
