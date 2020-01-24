@@ -66,6 +66,7 @@ div.indent
 
 div.border
 {
+    margin: 50%;
     border-style: solid;
 }
 
