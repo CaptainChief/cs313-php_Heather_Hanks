@@ -33,7 +33,17 @@
 
     <div class = "center">
       <?php
-      echo $items;
+      if ($items != NULL)
+      {
+        foreach ($items as $item)
+        {
+          echo $item;
+        }
+      }
+      else
+      {
+        echo "There are currently no items in your cart."
+      }
       ?>
 
     </div>
