@@ -17,37 +17,28 @@
   </ul>
 
   <div class = "view library">
-    <div class="mask rgba-black-light align-items-center">
-      <div class = "layover">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-4 white-text text-center">
-            <form action="view_cart.php" method="post">
-              <?php
-                $file_lines = file('items.txt');
-                $items = [];
 
-                $i = 0;
-                foreach ($file_lines as $line)
-                {
-                  $items[$i] = $line;
-                  $i++;
-                }
+    <form action="view_cart.php" method="post">
+      <?php
+        $file_lines = file('items.txt');
+        $items = [];
 
-                foreach ($items as $item)
-                {
-                  echo "<br><br>$item <br><br> ";
-                  echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><br>";
-                }
-              ?>
+        $i = 0;
+        foreach ($file_lines as $line)
+        {
+          $items[$i] = $line;
+          $i++;
+        }
 
-              <input type = "submit" name = "submission" value = "Add all to cart!">
-            </form>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
+        foreach ($items as $item)
+        {
+          echo "<br><br>$item <br><br> ";
+          echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><br>";
+        }
+      ?>
+
+      <input type = "submit" name = "submission" value = "Add all to cart!">
+      </form>
     <br><br><br>
   </div>
 
