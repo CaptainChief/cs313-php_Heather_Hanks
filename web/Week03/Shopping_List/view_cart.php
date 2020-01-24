@@ -21,19 +21,21 @@
   <?php
 
     $i = 0;
+    $items = [];
     if(!empty($_POST['books']))
     {
       foreach ($_POST['books'] as $key => $value)
       {
-        $_SESSION["cart_item_" . $i] = htmlspecialchars($value);
-        $i++;
+       array_push($items, htmlspecialchars($value));
       }
-      $_SESSION["index"] = $i;
     }
   ?>
 
     <div class = "center">
-      <h1>Your Cart</h1>
+      <?php
+      echo $items;
+      ?>
+
     </div>
  
 
