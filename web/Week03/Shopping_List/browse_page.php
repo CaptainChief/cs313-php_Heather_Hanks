@@ -16,7 +16,8 @@
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "layover">
+  <div class = "center">
+  <div class = "item">
     <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
@@ -40,8 +41,10 @@
       <input type = "submit" name = "submission" value = "Add all to cart!">
       </form>
     <br><br><br>
-
-  </body>
+      
+  </div>    
+  </div>
+</body>
 
 
 </html>

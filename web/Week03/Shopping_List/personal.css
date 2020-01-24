@@ -64,15 +64,12 @@ div.indent
     text-indent: 2%;
 }
 
-div.border
-{
-    margin: 75%;
-    border-style: solid;
-}
-
 div.item
 {
+    display: inline-block;
+    text-align: left;
     width: 30%;
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
 }
 
 /* Background image should be fixed now. */
@@ -82,14 +79,4 @@ div.item
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center center;
-}
-
-.layover
-{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    text-align: center;
-    width: 80%;
-    padding: 20px 20px;
 }
