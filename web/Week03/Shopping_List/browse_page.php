@@ -32,7 +32,7 @@
 
         foreach ($items as $item)
         {
-          echo "<br><br>$item <br><br> ";
+          echo "$item <br><br> ";
           echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><br>";
         }
       ?>
