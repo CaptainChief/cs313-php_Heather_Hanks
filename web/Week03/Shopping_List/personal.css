@@ -67,6 +67,7 @@ div.indent
 div.item
 {
     margin-top: 20px;
+    padding-left: 5px;
     display: inline-block;
     text-align: left;
     width: 30%;
