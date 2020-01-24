@@ -31,7 +31,7 @@
 
         foreach ($items as $item)
         {
-          echo "<br><br><div class='left border item'> $item <br> ";
+          echo "<br><br><div class='left'> $item <br> ";
           echo "<input type='checkbox' name='books[]' value=$item>Add to Cart</div><br><br>";
         }
       ?>
