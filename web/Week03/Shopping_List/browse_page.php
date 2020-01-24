@@ -20,7 +20,7 @@
   </ul>
 
   <div class = "center border">
-    <form action="browse_page.php" method="post">
+    <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
         $items = [];
