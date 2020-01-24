@@ -18,7 +18,7 @@
     <li><a class="active" href="">View Cart</a></li>
   </ul>
 
-  <!-- <?php
+  <?php
 
     $i = 0;
     if(!empty($_POST['books']))
@@ -30,7 +30,7 @@
       }
       $_SESSION["index"] = $i;
     }
-   ?> -->
+   ?>
 
    <h1>Your Cart</h1>
    <div>

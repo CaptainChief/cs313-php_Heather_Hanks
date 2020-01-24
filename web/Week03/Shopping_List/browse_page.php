@@ -42,20 +42,6 @@
       <input type = "submit" name = "submission" value = "Add all to cart!">
     </form>
 
-    <!-- <?php
-      $i = 0;
-      if(!empty($_POST['books']))
-      {
-        foreach $_POST['books'] as $book
-        {
-          $_SESSION["cart_item_"$i] = htmlspecialchars($book);
-          $i++;
-        }
-        $_SESSION["index"] = $i;
-      }
-    ?> -->
-
-
     <br><br><br>
 
   </div>
