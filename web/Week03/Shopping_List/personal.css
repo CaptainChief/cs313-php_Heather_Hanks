@@ -87,3 +87,8 @@ div.item
     filter: blur(8px);
     -webkit-filter: blur(8px);
 }
+
+.layover
+{
+    background-color: #336600;
+}
