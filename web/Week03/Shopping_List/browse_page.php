@@ -33,7 +33,7 @@
         foreach ($items as $item)
         {
           echo "$item <br><br> ";
-          echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><br><hr>";
+          echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><hr>";
         }
       ?>
       <div class = "center">
