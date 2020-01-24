@@ -23,7 +23,7 @@
   <?php
 
     $i = 0;
-    if(!empty($_POST['books']))
+    //if(!empty($_POST['books']))
     // {
     //   foreach $_POST['books'] as $book
     //   {
