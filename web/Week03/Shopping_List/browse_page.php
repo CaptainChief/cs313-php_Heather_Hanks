@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +20,7 @@
   </ul>
 
   <div class = "center border">
-    <form action="view_cart.php" method="post">
+    <form action="browse_page.php" method="post">
       <?php
         $file_lines = file('items.txt');
         $items = [];
@@ -38,6 +41,21 @@
 
       <input type = "submit" name = "submission" value = "Add all to cart!">
     </form>
+
+    <?php
+      $i = 0;
+      if(!empty($_POST['books']))
+      {
+        foreach $_POST['books'] as $book
+        {
+          $_SESSION["cart_item_"$i] = htmlspecialchars($book);
+          $i++;
+        }
+        $_SESSION["index"] = $i;
+      }
+    ?>
+
+
     <br><br><br>
 
   </div>

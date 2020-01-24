@@ -18,7 +18,7 @@
     <li><a class="active" href="">View Cart</a></li>
   </ul>
 
-  <?php
+  <!-- <?php
 
     $i = 0;
     if(!empty($_POST['books']))
@@ -30,13 +30,7 @@
       }
       $_SESSION["index"] = $i;
     }
-    // retrieve POST data
-    $textForPHP = htmlspecialchars($_POST["textForPHP"]);
-    $email = htmlspecialchars($_POST["emailForPHP"]);
-    $password = htmlspecialchars($_POST["passwordForPHP"]);
-    $optradio = htmlspecialchars($_POST["optradio"]);
-    $textbox = htmlspecialchars($_POST["textbox"]);
-   ?>
+   ?> -->
 
    <h1>Your Cart</h1>
    <div>
