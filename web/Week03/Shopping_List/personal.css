@@ -78,6 +78,7 @@ div.item
 /* Background image should be fixed now. */
 .library 
 {
+    color: #e6e6e6;
     background-image: url("Books.jpg");
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -86,5 +87,3 @@ div.item
     filter: blur(8px);
     -webkit-filter: blur(8px);
 }
-
-/* Position text in the middle of the page/image */
