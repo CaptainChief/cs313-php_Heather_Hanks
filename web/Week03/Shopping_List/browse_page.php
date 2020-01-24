@@ -17,7 +17,7 @@
   </ul>
 
   <div class = "view library">
-
+  <div class = "layover">
     <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
@@ -36,6 +36,7 @@
           echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><br>";
         }
       ?>
+      </div>
 
       <input type = "submit" name = "submission" value = "Add all to cart!">
       </form>
