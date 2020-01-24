@@ -17,8 +17,8 @@
   </ul>
 
   <div class = "view library">
-    <div class="mask rgba-black-light align-items-center">
-      <!-- <div class="container"> -->
+    <!-- <div class="mask rgba-black-light align-items-center"> -->
+      <div class="container">
         <!-- <div class="row"> -->
           <!-- <div class="col-md-12 mb-4 white-text text-center"> -->
             <form action="view_cart.php" method="post">
@@ -44,8 +44,8 @@
             </form>
           <!-- </div> -->
         <!-- </div> -->
-      <!-- </div> -->
-    </div>
+      </div>
+    <!-- </div> -->
     <br><br><br>
   </div>
 
