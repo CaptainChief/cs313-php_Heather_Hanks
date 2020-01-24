@@ -31,7 +31,7 @@
     //     $i++;
     //   }
       // $_SESSION["index"] = $i;
-    }
+    // }
   ?>
 
    <h1>Your Cart</h1>
