@@ -33,7 +33,7 @@
 
     <div class = "center">
       <?php
-      if ($items != NULL)
+      if (!empty($items))
       {
         foreach ($items as $item)
         {
