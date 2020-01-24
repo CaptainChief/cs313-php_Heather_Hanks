@@ -7,14 +7,16 @@
 </head>
 
 <body>
-  <h1>Bookstore</h1>
+  <div class = "center">
+    <h1>Bookstore</h1>
+  </div>
 
   <ul>
     <li><a class="active" href="">Browse Items</a></li>
     <li><a href="view_cart.php">View Cart</a></li>
   </ul>
 
-  <div class = "center">
+  <div class = "library-text">
     <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
@@ -39,12 +41,6 @@
     <br><br><br>
 
   </div>
-
-   
-
-  <!-- </div> -->
-
-
 
 </body>
 
