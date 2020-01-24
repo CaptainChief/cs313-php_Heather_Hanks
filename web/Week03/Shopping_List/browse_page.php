@@ -42,7 +42,7 @@
         echo "<br>";
         foreach ($items as $item)
         {
-          echo "$item <br><br> ";
+          echo "$item <br><br>\n ";
           echo "<input type='checkbox' name='books' value='$item' id='$item' onclick = \"checked('$item')\"> Add to Cart <br><hr>\n";
         }
       ?>
