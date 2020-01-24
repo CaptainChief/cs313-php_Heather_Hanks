@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="personal.css">
 </head>
-
+<script>
+  function checked(item)
+  {
+    $_SESSION[item] = item;
+    alert($_SESSION[item]); 
+  }
+</script>
 <body>
   <div class = "center">
     <h1>Bookstore</h1>
@@ -18,7 +27,6 @@
 
   <div class = "center">
   <div class = "item">
-    <form action="view_cart.php" method="post">
       <?php
         $file_lines = file('items.txt');
         $items = [];
@@ -34,13 +42,12 @@
         foreach ($items as $item)
         {
           echo "$item <br><br> ";
-          echo "<input type='checkbox' name='books[]' value=$item>Add to Cart<br><hr>";
+          echo "<input type='checkbox' name='books' onclick='clicked($item)'value=$item id='$item'>Add to Cart<br><hr>";
         }
       ?>
       <div class = "center">
-        <input type = "submit" name = "submission" value = "Add all to cart!">
+        <input type = "button" name = "submission" value = "Add all to cart!">
       </div>
-    </form>
   </div>
 
     <br><br><br>

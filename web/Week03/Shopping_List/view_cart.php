@@ -26,10 +26,10 @@
     {
       foreach ($_POST['books'] as $key => $value)
       {
-       array_push($items, htmlspecialchars($value));
+       array_push($items, $key => htmlspecialchars($value));
       }
     }
-    $_SESSION["items"] = $_SESSION["items"] + $items;
+    //$_SESSION["items"] = $_SESSION["items"] + $items;
 
   ?>
   <div class = "center">
