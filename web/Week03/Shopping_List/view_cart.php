@@ -1,7 +1,5 @@
 <?php
-
   session_start();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,17 +25,16 @@
     {
       foreach ($_POST['books'] as $key => $value)
       {
-        $_SESSION["cart_item_"$i] = htmlspecialchars($book);
+        $_SESSION["cart_item_"$i] = htmlspecialchars($value);
         $i++;
       }
       $_SESSION["index"] = $i;
     }
   ?>
 
-   <h1>Your Cart</h1>
-   <div>
-
-   </div>
+    <div class = "center">
+      <h1>Your Cart</h1>
+    </div>
  
 
 </body>
