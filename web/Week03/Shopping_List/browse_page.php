@@ -54,6 +54,7 @@
 
       ?>
 
+<form method = "POST">
       <div>
         Percy Jackson: Sea of Monsters - Rick Riordan<br>
         <input type = 'button' name = 'PJ_2' value = "Add to Cart"> <br><hr>
@@ -68,6 +69,7 @@
         Ransom - Julie Garwood<br>
         <input type = 'button' name = 'Ran' value = "Add to Cart"> <br><hr>
       </div>
+</form>
 
   </div>      
   </div>    

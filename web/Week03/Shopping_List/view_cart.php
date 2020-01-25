@@ -20,6 +20,8 @@
 
   <div class = "center">
     <div class = "item">
+
+    <form method = "POST">
       <?php
 
         if(array_key_exists('PJ_2', $_POST))
@@ -84,6 +86,7 @@
           echo $_SESSION['book_3'] . "<br><br>";
         }
       ?>
+      </form>
 
     </div>
   </div>
