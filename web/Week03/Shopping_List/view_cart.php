@@ -45,15 +45,11 @@
     <div class = "item">
       <?php
 
-        echo "$book_1";
-        echo "$book_2";
-        echo "$book_3";
-
         if($book_1 == "add")
         { 
 
           echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan";
-          echo "<input type = 'button' name = 'PJ_2' value='Remove from Cart'><br><hr>";
+          echo "<input type = 'button' name = 'PJ_2' onClick=\"remove('PJ_2')\" value='Remove from Cart'><br><hr>";
           echo "</div>";
         
          }
@@ -61,7 +57,7 @@
         { 
 
           echo "<div>Covenants - Lorna Freeman";
-          echo "<input type = 'button' name = 'Cov' value='Remove from Cart'><br><hr>";
+          echo "<input type = 'button' name = 'Cov' onClick=\"remove('Cov')\" value='Remove from Cart'><br><hr>";
           echo "</div>";
         
          }
@@ -69,7 +65,7 @@
         { 
 
           echo "<div>Ransom - Julie Garwood";
-          echo "<input type = 'button' name = 'Ran' value='Remove from Cart'><br><hr>";
+          echo "<input type = 'button' name = 'Ran' onClick=\"remove('Ran')\" value='Remove from Cart'><br><hr>";
           echo "</div>";
         
          }
