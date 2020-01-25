@@ -16,15 +16,24 @@
     alert(item);
     if(item == "PJ_2")
     {
-      <?php $_SESSION["book_1"] = 0;?>
+      <?php 
+        unset($_SESSION['book_1']);
+        $_SESSION["book_1"] = 0;
+        ?>
     }
     else if(item == "Cov")
     {
-      <?php $_SESSION["book_2"] = 0;?>
+      <?php 
+        unset($_SESSION['book_2']);
+        $_SESSION["book_2"] = 0;
+        ?>
     }
     else if(item == "Ran")
     {
-      <?php $_SESSION["book_3"] = 0;?>
+      <?php 
+        unset($_SESSION['book_3']);
+        $_SESSION["book_3"] = 0;
+        ?>
     }
   }
 
