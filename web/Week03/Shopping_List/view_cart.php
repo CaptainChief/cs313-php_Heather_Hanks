@@ -86,6 +86,11 @@
           echo $_SESSION['book_3'] . "<br><br>";
         }
       ?>
+
+      <div class = "center">
+      <input type = "button" onclick="window.location.href = 'checkout.php'" value="Checkout">
+      
+      </div>
       </form>
 
     </div>
