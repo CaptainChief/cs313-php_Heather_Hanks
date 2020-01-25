@@ -7,11 +7,11 @@
 </head>
 
 <body>
-<div class = "center">
-    <h1>Thank you</h1>
+  <div class = "center">
+    <h1>Purchase Confirmed</h1>
   </div>
   <ul>
-
+    <li><a class="active" href="">Thank you for your purchase.</a></li> 
   </ul>
 
 <div class = "center">

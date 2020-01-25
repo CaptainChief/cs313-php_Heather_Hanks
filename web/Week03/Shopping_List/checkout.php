@@ -12,7 +12,7 @@
     <h1>Checkout</h1>
   </div>
   <ul>
-
+    <li><a href="view_cart.php">Browse Books</a></li>   
   </ul>
 
 <div class = "center">
@@ -28,9 +28,6 @@
                 <input type = "button" value = "Confirm Purchase" onclick="window.location.href = 'confirm.php'">
             </div>
         </form>
-        <div class = "center">
-            <input type = "button" value = "Back to Cart" onclick="window.location.href = 'view_cart.php'">
-        </div>
     </div>
 </div>
 
