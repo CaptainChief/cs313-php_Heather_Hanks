@@ -57,7 +57,7 @@
         { 
 
           echo "<div>Covenants - Lorna Freeman";
-          echo "<input type = 'button' name = 'Cov'value='Remove from Cart'><br><hr>";
+          echo "<input type = 'button' name = 'Cov' value='Remove from Cart'><br><hr>";
           echo "</div>";
         
          }
@@ -65,7 +65,7 @@
         { 
 
           echo "<div>Ransom - Julie Garwood";
-          echo "<input type = 'button' name = 'Ran' value='Remove from Cart'><br><hr>"
+          echo "<input type = 'button' name = 'Ran' value='Remove from Cart'><br><hr>";
           echo "</div>";
         
          }
