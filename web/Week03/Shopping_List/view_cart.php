@@ -57,7 +57,7 @@
           echo "</div>";
         
          }
-        else if($book_2 == "add")
+        if($book_2 == "add")
         { 
 
           echo "<div>Covenants - Lorna Freeman";
@@ -65,7 +65,7 @@
           echo "</div>";
         
          }
-        else if($book_3 == "add")
+        if($book_3 == "add")
         { 
 
           echo "<div>Ransom - Julie Garwood";
