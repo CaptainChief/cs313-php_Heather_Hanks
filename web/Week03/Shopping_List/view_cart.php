@@ -44,11 +44,12 @@
   <div class = "center">
     <div class = "item">
       <?php
+      echo "$book_1<br><br>";
 
         if($book_1 == "add")
         { 
 
-          echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan";
+          echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan<br>";
           echo "<input type = 'button' name = 'PJ_2' onClick=\"remove('PJ_2')\" value='Remove from Cart'><br><hr>";
           echo "</div>";
         
@@ -56,7 +57,7 @@
         if($book_2 == "add")
         { 
 
-          echo "<div>Covenants - Lorna Freeman";
+          echo "<div>Covenants - Lorna Freeman<br>";
           echo "<input type = 'button' name = 'Cov' onClick=\"remove('Cov')\" value='Remove from Cart'><br><hr>";
           echo "</div>";
         
@@ -64,7 +65,7 @@
         if($book_3 == "add")
         { 
 
-          echo "<div>Ransom - Julie Garwood";
+          echo "<div>Ransom - Julie Garwood<br>";
           echo "<input type = 'button' name = 'Ran' onClick=\"remove('Ran')\" value='Remove from Cart'><br><hr>";
           echo "</div>";
         
