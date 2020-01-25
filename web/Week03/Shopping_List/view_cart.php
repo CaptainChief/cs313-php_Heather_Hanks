@@ -70,13 +70,13 @@
         
          }
         if($_SESSION["book_3"])
-        { 
+        { ?>
 
-          echo "<div>Ransom - Julie Garwood<br>";
-          echo "<input type = 'button' name = 'Ran' onClick=\"remove('Ran')\" value='Remove from Cart'><br><hr>";
-          echo "</div>";
+          <div>Ransom - Julie Garwood<br>
+          <input type = 'button' name = 'Ran' onClick="remove('Ran')" value='Remove from Cart'><br><hr>
+          </div>;
         
-         }
+         <?php }
         else
         {
           echo "There are currently no items in your cart.";
