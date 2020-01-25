@@ -9,35 +9,6 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
-<script>
-
-  function add(item)
-  {
-    if(item == "PJ_2")
-    {
-      <?php
-        $i = 1;
-        $_SESSION["book_1"] = $i;
-        ?>
-    }
-    else if(item == "Cov")
-    {
-      <?php 
-        $i = 1;
-        $_SESSION["book_2"] = $i;
-        ?>
-    }
-    else if(item == "Ran")
-    {
-      <?php 
-        $i = 1;
-        $_SESSION["book_3"] = $i;
-        ?>
-    }
-  }
-
-</script>
-
 <body>
   <div class = "center">
     <h1>Bookstore</h1>
@@ -51,6 +22,34 @@
   <div class = "center">
   <div class = "item">
 
+      <?php
+      if(array_key_exists('PJ_2', $_POST))
+      {
+        button_1();
+      }
+      if(array_key_exists('Cov', $_POST))
+      {
+        button_2();
+      }
+      if(array_key_exists('Ran', $_POST))
+      {
+        button_3();
+      }
+
+      function button_1()
+      {
+        $_SESSION["book_1"] = 1;
+      }
+      function button_2()
+      {
+        $_SESSION["book_2"] = 1;
+      }
+      function button_3()
+      {
+        $_SESSION["book_3"] = 1;
+      }
+
+      ?>
 
       <div>
         Percy Jackson: Sea of Monsters - Rick Riordan<br>

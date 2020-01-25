@@ -9,47 +9,6 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
-<script>
-
-  function remove(item)
-  {
-    if(item == "PJ_2")
-    {
-      alert("in book 1");
-      <?php 
-        $i = 0;
-        $_SESSION["book_1"] = $i;
-        ?>
-    }
-    else if(item == "Cov")
-    {
-      alert("in book 2");
-      <?php 
-        $i = 0;
-        $_SESSION["book_2"] = $i;
-        ?>
-    }
-    else if(item == "Ran")
-    {
-      alert("in book 3");
-      <?php 
-        $i = 0;
-        $_SESSION["book_3"] = $i;
-        ?>
-    }
-  }
-
-  function clicked()
-  {
-    <?php
-    $_SESSION['book_1'] = 0;
-    $_SESSION['book_2'] = 0;
-    $_SESSION['book_3'] = 0;
-    ?>
-  }
-
-</script>
-
 <body>
   <div class = "center">
     <h1>Your Cart</h1>
@@ -62,11 +21,39 @@
   <div class = "center">
     <div class = "item">
       <?php
+
+        if(array_key_exists('PJ_2', $_POST))
+        {
+          button_1();
+        }
+        if(array_key_exists('Cov', $_POST))
+        {
+          button_2();
+        }
+        if(array_key_exists('Ran', $_POST))
+        {
+          button_3();
+        }
+
+        function button_1()
+        {
+          $_SESSION["book_1"] = 0;
+        }
+        function button_2()
+        {
+          $_SESSION["book_2"] = 0;
+        }
+        function button_3()
+        {
+          $_SESSION["book_3"] = 0;
+        }
+
+
         if($_SESSION["book_1"])
         { ?>
 
           <div>Percy Jackson: Sea of Monsters - Rick Riordan<br>
-          <input type = 'button' name = 'PJ_2' onClick="remove('PJ_2')" value='Remove from Cart'><br><hr>
+          <input type = 'button' name = 'PJ_2' value='Remove from Cart'><br><hr>
           </div>
         
           <?php }
@@ -74,7 +61,7 @@
         { ?>
 
           <div>Covenants - Lorna Freeman<br>
-          <input type = 'button' name = 'Cov' onClick="remove('Cov')" value='Remove from Cart'><br><hr>
+          <input type = 'button' name = 'Cov' value='Remove from Cart'><br><hr>
           </div>
         
           <?php }
@@ -82,7 +69,7 @@
         { ?>
 
           <div>Ransom - Julie Garwood<br>
-          <input type = 'button' name = 'Ran' onClick="remove('Ran')" value='Remove from Cart'><br><hr>
+          <input type = 'button' name = 'Ran' value='Remove from Cart'><br><hr>
           </div>;
         
          <?php }
@@ -95,8 +82,6 @@
         }
       ?>
 
-
-      <input type = 'button' onClick="clicked()" value = "Remove All Items from Cart">
     </div>
   </div>
  
