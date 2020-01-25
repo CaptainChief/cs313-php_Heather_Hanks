@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="personal.css">
 </head>
-<script>
-  function checked(item)
-  {
-    alert("In the function");
-    alert(item); 
-  }
-</script>
 <body>
   <div class = "center">
     <h1>Bookstore</h1>
@@ -41,8 +34,8 @@
         echo "<br>";
         foreach ($items as $item)
         {
-          echo "$item <br><br>\n ";
-          echo "<input type='checkbox' name='books' value='$item' id='$item' onclick = \"checked('$item')\"\n> \nAdd to Cart \n<br>\n<hr>\n";
+          echo "$item <br><br> ";
+          echo "<input type='checkbox' name='books' value='$item' id='$item'  Add to Cart <br><hr>";
         }
       ?>
       <input type = 'checkbox' name = 'books' value='item' onclick = 'checked()'> Add to Cart <br><hr>
