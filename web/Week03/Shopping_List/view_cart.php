@@ -45,6 +45,10 @@
     <div class = "item">
       <?php
 
+        echo "$book_1";
+        echo "$book_2";
+        echo "$book_3";
+
         if($book_1 == "add")
         { 
 
