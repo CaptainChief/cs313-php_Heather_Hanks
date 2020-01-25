@@ -44,17 +44,17 @@
 
 
       <div>
-        Percy Jackson: Sea of Monsters - Rick Riordan
+        Percy Jackson: Sea of Monsters - Rick Riordan<br>
         <input type = 'button' name = 'PJ_2' onClick="add('PJ_2')"> Add to Cart <br><hr>
       </div>
       
       <div>
-        Covenants - Lorna Freeman
+        Covenants - Lorna Freeman<br>
         <input type = 'button' name = 'Cov' onClick="add('Cov')"> Add to Cart <br><hr>
       </div>
       
       <div>
-        Ransom - Julie Garwood
+        Ransom - Julie Garwood<br>
         <input type = 'button' name = 'Ran' onClick="add('Ran')"> Add to Cart <br><hr>
       </div>
 
