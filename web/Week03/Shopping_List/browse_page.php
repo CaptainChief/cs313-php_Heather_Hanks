@@ -1,8 +1,5 @@
 <?php
   session_start();
-  $_SESSION["book_1"] = 0;
-  $_SESSION["book_2"] = 0;
-  $_SESSION["book_3"] = 0;
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,6 +66,12 @@
         Ransom - Julie Garwood<br>
         <input type = 'button' name = 'Ran' onClick="add('Ran')" value = "Add to Cart"> <br><hr>
       </div>
+
+      <?php
+      echo $_SESSION["book_1"] . "<br>";
+      echo $_SESSION["book_1"] . "<br>";
+      echo $_SESSION["book_1"] . "<br>";
+      ?>
 
   </div>
 

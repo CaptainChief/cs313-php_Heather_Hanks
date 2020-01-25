@@ -17,7 +17,7 @@
     {
       alert("in book 1");
       <?php 
-        $i = 1;
+        $i = 0;
         $_SESSION["book_1"] = $i;
         ?>
     }
@@ -25,7 +25,7 @@
     {
       alert("in book 2");
       <?php 
-        $i = 1;
+        $i = 0;
         $_SESSION["book_2"] = $i;
         ?>
     }
@@ -33,7 +33,7 @@
     {
       alert("in book 3");
       <?php 
-        $i = 1;
+        $i = 0;
         $_SESSION["book_3"] = $i;
         ?>
     }
