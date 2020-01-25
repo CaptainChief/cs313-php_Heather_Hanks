@@ -40,21 +40,21 @@
         function button_1()
         {
           echo "Percy was clicked.";
-          $_SESSION["book_1"] = 0;
+          $_SESSION["book_1"] = "remove";
         }
         function button_2()
         {
           echo "Cov was clicked.";
-          $_SESSION["book_2"] = 0;
+          $_SESSION["book_2"] = "remove";
         }
         function button_3()
         {
           echo "Ran was clicked.";
-          $_SESSION["book_3"] = 0;
+          $_SESSION["book_3"] = "remove";
         }
 
 
-        if($_SESSION["book_1"])
+        if($_SESSION["book_1"] == "add")
         { ?>
 
           <div>Percy Jackson: Sea of Monsters - Rick Riordan<br>
@@ -62,7 +62,7 @@
           </div>
         
           <?php }
-        if($_SESSION["book_2"])
+        if($_SESSION["book_2"] == "add")
         { ?>
 
           <div>Covenants - Lorna Freeman<br>
@@ -70,7 +70,7 @@
           </div>
         
           <?php }
-        if($_SESSION["book_3"])
+        if($_SESSION["book_3"] == "add")
         { ?>
 
           <div>Ransom - Julie Garwood<br>
