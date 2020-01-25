@@ -91,7 +91,7 @@
           echo "There are currently no items in your cart.<br><br>";
           echo $_SESSION['book_1'] . "<br>";
           echo $_SESSION['book_2'] . "<br>";
-          echo $_SESSION['book_3'] . "<br>";
+          echo $_SESSION['book_3'] . "<br><br>";
         }
       ?>
 

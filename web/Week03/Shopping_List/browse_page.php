@@ -1,5 +1,8 @@
 <?php
   session_start();
+  $_SESSION["book_1"] = 0;
+  $_SESSION["book_2"] = 0;
+  $_SESSION["book_3"] = 0;
 ?>
 <!DOCTYPE html>
 <html>
