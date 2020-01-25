@@ -8,7 +8,10 @@
 
 <body>
 
+<div class = "center">
+<div class = "item">
 <h1>Thank you for your purchase!!!</h1>
+</div></div>
 
 </body>
 

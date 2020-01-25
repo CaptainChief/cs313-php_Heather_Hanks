@@ -11,9 +11,9 @@
 <div class = "center">
     <div class = "item">
         <form action="confirm">
-            Street Address: <input type = "text">
-            State: <input type = "text">
-            Zip Code: <input type = "text">
+            Street Address: <input type = "text"><br>
+            State: <input type = "text"><br>
+            Zip Code: <input type = "text"><br>
             <div class="center">
                 <input type = "button" value = "Confirm Purchase" onclick="window.location.href = 'confirm.php'">
             </div>
