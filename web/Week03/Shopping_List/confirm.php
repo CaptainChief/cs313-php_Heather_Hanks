@@ -7,11 +7,18 @@
 </head>
 
 <body>
+<div class = "center">
+    <h1>Thank you</h1>
+  </div>
+  <ul>
+
+  </ul>
 
 <div class = "center">
 <div class = "item">
+<div>
 <h1>Thank you for your purchase!!!</h1>
-</div></div>
+</div></div></div>
 
 </body>
 

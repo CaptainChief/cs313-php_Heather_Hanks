@@ -9,11 +9,21 @@
 <body>
 
 <div class = "center">
+    <h1>Checkout</h1>
+  </div>
+  <ul>
+
+  </ul>
+
+<div class = "center">
     <div class = "item">
         <form action="confirm">
-            Street Address: <input type = "text"><br>
-            State: <input type = "text"><br>
-            Zip Code: <input type = "text"><br>
+            <div>
+                <br><br>
+                Street Address: <br><input type = "text"><br>
+                State: <br><input type = "text"><br>
+                Zip Code: <br><input type = "text"><br>
+            </div>
             <div class="center">
                 <input type = "button" value = "Confirm Purchase" onclick="window.location.href = 'confirm.php'">
             </div>
