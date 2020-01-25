@@ -15,7 +15,6 @@
   {
     if(item == "PJ_2")
     {
-      alert("in book 1");
       <?php
         unset($_SESSION['book_1']);
         $_SESSION["book_1"] = 1;
@@ -23,7 +22,6 @@
     }
     else if(item == "Cov")
     {
-      alert("in book 1");
       <?php 
         unset($_SESSION['book_2']);
         $_SESSION["book_2"] = 1;
@@ -31,7 +29,6 @@
     }
     else if(item == "Ran")
     {
-      alert("in book 3");
       <?php 
         unset($_SESSION['book_3']);
         $_SESSION["book_3"] = 1;

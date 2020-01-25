@@ -4,7 +4,7 @@
       // set cookies
       $cookie_name = "user";
       $cookie_value = "Heather Hanks";
-      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+      setcookie($cookie_name, $cookie_value, time() + (20 * 30), "/");
    ?>
    <head>
       <title>Sessions and Cookies</title>

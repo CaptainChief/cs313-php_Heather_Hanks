@@ -13,7 +13,6 @@
 
   function remove(item)
   {
-    alert(item);
     if(item == "PJ_2")
     {
       alert("in book 1");
@@ -40,6 +39,15 @@
     }
   }
 
+  function clicked()
+  {
+    <?php
+    unset($_SESSION['book_1']);
+    unset($_SESSION['book_2']);
+    unset($_SESSION['book_3']);
+    ?>
+  }
+
 </script>
 
 <body>
@@ -55,21 +63,21 @@
     <div class = "item">
       <?php
         if($_SESSION["book_1"])
-        { 
+        { ?>
 
-          echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan<br>";
-          echo "<input type = 'button' name = 'PJ_2' onClick=\"remove('PJ_2')\" value='Remove from Cart'><br><hr>";
-          echo "</div>";
+          <div>Percy Jackson: Sea of Monsters - Rick Riordan<br>
+          <input type = 'button' name = 'PJ_2' onClick="remove('PJ_2')" value='Remove from Cart'><br><hr>
+          </div>
         
-         }
+          <?php }
         if($_SESSION["book_2"])
-        {
+        { ?>
 
-          echo "<div>Covenants - Lorna Freeman<br>";
-          echo "<input type = 'button' name = 'Cov' onClick=\"remove('Cov')\" value='Remove from Cart'><br><hr>";
-          echo "</div>";
+          <div>Covenants - Lorna Freeman<br>
+          <input type = 'button' name = 'Cov' onClick="remove('Cov')" value='Remove from Cart'><br><hr>
+          </div>
         
-         }
+          <?php }
         if($_SESSION["book_3"])
         { ?>
 
@@ -81,8 +89,14 @@
         else
         {
           echo "There are currently no items in your cart.";
+          echo $_SESSION['book_1'];
+          echo $_SESSION['book_2'];
+          echo $_SESSION['book_3'];
         }
       ?>
+
+
+      <input type = 'button' onClick="clicked()" value = "Remove All Items from Cart">
     </div>
   </div>
  
