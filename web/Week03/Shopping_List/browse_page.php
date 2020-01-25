@@ -38,14 +38,17 @@
 
       function button_1()
       {
+        echo "Percy was clicked.";
         $_SESSION["book_1"] = 1;
       }
       function button_2()
       {
+        echo "Cov was clicked.";
         $_SESSION["book_2"] = 1;
       }
       function button_3()
       {
+        echo "Ran was clicked.";
         $_SESSION["book_3"] = 1;
       }
 
@@ -65,12 +68,6 @@
         Ransom - Julie Garwood<br>
         <input type = 'button' name = 'Ran' onClick="add('Ran')" value = "Add to Cart"> <br><hr>
       </div>
-
-      <?php
-      echo $_SESSION["book_1"] . "<br>";
-      echo $_SESSION["book_1"] . "<br>";
-      echo $_SESSION["book_1"] . "<br>";
-      ?>
 
   </div>
 

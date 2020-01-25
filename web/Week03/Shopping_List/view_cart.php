@@ -37,14 +37,17 @@
 
         function button_1()
         {
+          echo "Percy was clicked.";
           $_SESSION["book_1"] = 0;
         }
         function button_2()
         {
+          echo "Cov was clicked.";
           $_SESSION["book_2"] = 0;
         }
         function button_3()
         {
+          echo "Ran was clicked.";
           $_SESSION["book_3"] = 0;
         }
 
