@@ -12,7 +12,7 @@
     <h1>Checkout</h1>
   </div>
   <ul>
-    <li><a href="view_cart.php">Browse Books</a></li>   
+    <li><a href="view_cart.php">Back to Cart</a></li>   
   </ul>
 
 <div class = "center">
