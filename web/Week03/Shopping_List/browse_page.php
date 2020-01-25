@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="personal.css">
 </head>
+
+<script>
+
+  function pressed()
+  {
+    alert("You pressed the button");
+  }
+
+</script>
+
 <body>
   <div class = "center">
     <h1>Bookstore</h1>
@@ -39,8 +49,9 @@
         }
       ?>
       <input type = 'checkbox' name = 'books' value='item' onclick = 'checked()'> Add to Cart <br><hr>
+
       <div class = "center">
-        <input type = "button" name = "submission" value = "Add all to cart!">
+        <input type = "button" name = "submission" value = "Add all to cart!" onclick="pressed()">
       </div>
   </div>
 
