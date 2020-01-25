@@ -41,31 +41,34 @@
   <div class = "center">
     <div class = "item">
       <?php
-        echo $_SESSION["book_1"]"<br>";
-        echo $_SESSION["book_2"]"<br>";
-        echo $_SESSION["book_3"]"<br>";
+        // echo $_SESSION["book_1"]"<br>";
+        // echo $_SESSION["book_2"]"<br>";
+        // echo $_SESSION["book_3"]"<br>";
 
         if($_SESSION["book_1"] == "add")
-        {?>
+        { ?>
 
           <div>Percy Jackson: Sea of Monsters - Rick Riordan
-          <input type = 'button' name = 'PJ_2' onClick="remove('PJ_2')" value='Remove from Cart'><br><hr></div>
+            <input type = 'button' name = 'PJ_2' onClick="remove('PJ_2')" value='Remove from Cart'><br><hr>
+          </div>
         
-        <?php}
+        <?php }
         else if($_SESSION["book_2"] == "add")
-        {?>
+        { ?>
 
-          <div>Covenants - Lorna Freeman";
-          <input type = 'button' name = 'Cov' onClick="remove('Cov')" value='Remove from Cart'><br><hr></div>
+          <div>Covenants - Lorna Freeman"
+            <input type = 'button' name = 'Cov' onClick="remove('Cov')" value='Remove from Cart'><br><hr>
+          </div>
         
-        <?php}
+        <?php }
         else if($_SESSION["book_3"] == "add")
-        {?>
+        { ?>
 
           <div>Ransom - Julie Garwood
-          <input type = 'button' name = 'Ran' onClick="remove('Ran')" value='Remove from Cart'><br><hr></div>
+            <input type = 'button' name = 'Ran' onClick="remove('Ran')" value='Remove from Cart'><br><hr>
+          </div>
         
-        <?php}
+        <?php }
         else
         {
           echo "There are currently no items in your cart.";
