@@ -13,21 +13,17 @@
 
   function add(item)
   {
-    alert(item);
     if(item == "PJ_2")
     {
-      <?php $_SESSION["book_1"] = "add";
-      echo $_SESSION["book_1"];?>
+      <?php $_SESSION["book_1"] = "add";?>
     }
     else if(item == "Cov")
     {
-      <?php $_SESSION["book_2"] = "add";
-      echo $_SESSION["book_1"];?>
+      <?php $_SESSION["book_2"] = "add";?>
     }
     else if(item == "Ran")
     {
-      <?php $_SESSION["book_3"] = "add";
-      echo $_SESSION["book_1"];?>
+      <?php $_SESSION["book_3"] = "add";?>
     }
   }
 
