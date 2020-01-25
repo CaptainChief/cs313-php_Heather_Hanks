@@ -13,7 +13,7 @@
 
   function remove(item)
   {
-    
+
   }
 
 </script>
@@ -33,17 +33,17 @@
         if($_SESSION["book_1"] == "add")
         {
           echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan";
-          echo "<input type = 'button' name = 'PJ_2' onClick='remove(PJ_2)'> Remove from Cart <br><hr></div>";
+          echo "<input type = 'button' name = 'PJ_2' onClick='remove(PJ_2)' value='Remove from Cart'><br><hr></div>";
         }
         else if($_SESSION["book_2"] == "add")
         {
           echo "<div>Covenants - Lorna Freeman";
-          echo "<input type = 'button' name = 'Cov' onClick='remove(Cov)'> Remove from Cart <br><hr></div>";
+          echo "<input type = 'button' name = 'Cov' onClick='remove(Cov)' value='Remove from Cart'><br><hr></div>";
         }
         else if($_SESSION["book_3"] == "add")
         {
           echo "<div>Ransom - Julie Garwood";
-          echo "<input type = 'button' name = 'Ran' onClick='remove(Ran)'> Remove from Cart <br><hr></div>";
+          echo "<input type = 'button' name = 'Ran' onClick='remove(Ran)' value='Remove from Cart'><br><hr></div>";
         }
         else
         {

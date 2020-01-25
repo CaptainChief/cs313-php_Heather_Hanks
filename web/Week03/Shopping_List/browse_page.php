@@ -45,17 +45,17 @@
 
       <div>
         Percy Jackson: Sea of Monsters - Rick Riordan<br>
-        <input type = 'button' name = 'PJ_2' onClick="add('PJ_2')"> Add to Cart <br><hr>
+        <input type = 'button' name = 'PJ_2' onClick="add('PJ_2')" value = "Add to Cart"> <br><hr>
       </div>
       
       <div>
         Covenants - Lorna Freeman<br>
-        <input type = 'button' name = 'Cov' onClick="add('Cov')"> Add to Cart <br><hr>
+        <input type = 'button' name = 'Cov' onClick="add('Cov')" value = "Add to Cart"> <br><hr>
       </div>
       
       <div>
         Ransom - Julie Garwood<br>
-        <input type = 'button' name = 'Ran' onClick="add('Ran')"> Add to Cart <br><hr>
+        <input type = 'button' name = 'Ran' onClick="add('Ran')" value = "Add to Cart"> <br><hr>
       </div>
 
   </div>
