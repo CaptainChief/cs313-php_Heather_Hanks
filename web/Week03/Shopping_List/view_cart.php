@@ -42,8 +42,6 @@
   <div class = "center">
     <div class = "item">
       <?php
-      echo "$book_1<br><br>";
-
         if($_SESSION["book_1"] == "add")
         { 
 
