@@ -42,7 +42,7 @@
   <div class = "center">
     <div class = "item">
       <?php
-      echo "$_SESSION[\"book_3\"]<br><br>";
+      echo $_SESSION["book_3"] . "<br><br>";
 
         if($_SESSION["book_1"])
         { 
