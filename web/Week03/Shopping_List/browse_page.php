@@ -15,15 +15,15 @@
   {
     if(item == "PJ_2")
     {
-      <?php $_SESSION["book_1"] = "add";?>
+      <?php $_SESSION["book_1"] = 1;?>
     }
     else if(item == "Cov")
     {
-      <?php $_SESSION["book_2"] = "add";?>
+      <?php $_SESSION["book_2"] = 1;?>
     }
     else if(item == "Ran")
     {
-      <?php $_SESSION["book_3"] = "add";?>
+      <?php $_SESSION["book_3"] = 1;?>
     }
   }
 

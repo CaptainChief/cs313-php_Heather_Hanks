@@ -16,15 +16,15 @@
     alert(item);
     if(item == "PJ_2")
     {
-      <?php $_SESSION["book_1"] = "removed";?>
+      <?php $_SESSION["book_1"] = 0;?>
     }
     else if(item == "Cov")
     {
-      <?php $_SESSION["book_2"] = "removed";?>
+      <?php $_SESSION["book_2"] = 0;?>
     }
     else if(item == "Ran")
     {
-      <?php $_SESSION["book_3"] = "removed";?>
+      <?php $_SESSION["book_3"] = 0;?>
     }
   }
 
@@ -42,7 +42,7 @@
   <div class = "center">
     <div class = "item">
       <?php
-        if($_SESSION["book_1"] == "add")
+        if($_SESSION["book_1"])
         { 
 
           echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan<br>";
@@ -50,7 +50,7 @@
           echo "</div>";
         
          }
-        if($_SESSION["book_2"] == "add")
+        if($_SESSION["book_2"])
         { 
 
           echo "<div>Covenants - Lorna Freeman<br>";
@@ -58,7 +58,7 @@
           echo "</div>";
         
          }
-        if($_SESSION["book_3"] == "add")
+        if($_SESSION["book_3"])
         { 
 
           echo "<div>Ransom - Julie Garwood<br>";
