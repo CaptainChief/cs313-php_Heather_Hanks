@@ -13,6 +13,7 @@
 
   function add(item)
   {
+    alert(item);
     if(item == "PJ_2")
     {
       <?php $_SESSION["book_1"] = 1;?>
