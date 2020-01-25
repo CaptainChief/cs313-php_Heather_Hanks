@@ -16,21 +16,18 @@
     if(item == "PJ_2")
     {
       <?php
-        unset($_SESSION['book_1']);
         $_SESSION["book_1"] = 1;
         ?>
     }
     else if(item == "Cov")
     {
       <?php 
-        unset($_SESSION['book_2']);
         $_SESSION["book_2"] = 1;
         ?>
     }
     else if(item == "Ran")
     {
       <?php 
-        unset($_SESSION['book_3']);
         $_SESSION["book_3"] = 1;
         ?>
     }

@@ -17,7 +17,6 @@
     {
       alert("in book 1");
       <?php 
-        unset($_SESSION['book_1']);
         $_SESSION["book_1"] = 0;
         ?>
     }
@@ -25,7 +24,6 @@
     {
       alert("in book 2");
       <?php 
-        unset($_SESSION['book_2']);
         $_SESSION["book_2"] = 0;
         ?>
     }
@@ -33,7 +31,6 @@
     {
       alert("in book 3");
       <?php 
-        unset($_SESSION['book_3']);
         $_SESSION["book_3"] = 0;
         ?>
     }
@@ -42,9 +39,9 @@
   function clicked()
   {
     <?php
-    unset($_SESSION['book_1']);
-    unset($_SESSION['book_2']);
-    unset($_SESSION['book_3']);
+    $_SESSION['book_1'] = 0;
+    $_SESSION['book_2'] = 0;
+    $_SESSION['book_3'] = 0;
     ?>
   }
 
