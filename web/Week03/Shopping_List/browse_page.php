@@ -13,7 +13,13 @@
 
   function pressed()
   {
-    alert("You pressed the button");
+    document.getElementById("books[]").foreach(add_item);
+  }
+
+  function add_item(item)
+  {
+    <?php $_SESSION['cart_item'] = ?> item;
+    alert(item);
   }
 
 </script>
@@ -45,7 +51,7 @@
         foreach ($items as $item)
         {
           echo "$item <br><br> ";
-          echo "<input type='checkbox' name='books' value='$item' id='$item'  Add to Cart <br><hr>";
+          echo "<input type='checkbox' name='books[]' value='$item' id='$item'  Add to Cart <br><hr>";
         }
       ?>
       <input type = 'checkbox' name = 'books' value='item' onclick = 'checked()'> Add to Cart <br><hr>
