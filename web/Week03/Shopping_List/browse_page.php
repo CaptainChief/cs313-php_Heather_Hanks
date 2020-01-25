@@ -16,19 +16,22 @@
     if(item == "PJ_2")
     {
       <?php
-        $_SESSION["book_1"] = 1;
+        $i = 1;
+        $_SESSION["book_1"] = $i;
         ?>
     }
     else if(item == "Cov")
     {
       <?php 
-        $_SESSION["book_2"] = 1;
+        $i = 1;
+        $_SESSION["book_2"] = $i;
         ?>
     }
     else if(item == "Ran")
     {
       <?php 
-        $_SESSION["book_3"] = 1;
+        $i = 1;
+        $_SESSION["book_3"] = $i;
         ?>
     }
   }

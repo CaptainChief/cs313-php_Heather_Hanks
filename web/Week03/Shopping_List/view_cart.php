@@ -17,21 +17,24 @@
     {
       alert("in book 1");
       <?php 
-        $_SESSION["book_1"] = 0;
+        $i = 1;
+        $_SESSION["book_1"] = $i;
         ?>
     }
     else if(item == "Cov")
     {
       alert("in book 2");
       <?php 
-        $_SESSION["book_2"] = 0;
+        $i = 1;
+        $_SESSION["book_2"] = $i;
         ?>
     }
     else if(item == "Ran")
     {
       alert("in book 3");
       <?php 
-        $_SESSION["book_3"] = 0;
+        $i = 1;
+        $_SESSION["book_3"] = $i;
         ?>
     }
   }
