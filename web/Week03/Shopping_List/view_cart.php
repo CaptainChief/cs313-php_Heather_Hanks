@@ -41,9 +41,13 @@
   <div class = "center">
     <div class = "item">
       <?php
+        echo $_SESSION["book_1"]"<br>";
+        echo $_SESSION["book_2"]"<br>";
+        echo $_SESSION["book_3"]"<br>";
+
         if($_SESSION["book_1"] == "add")
         {?>
-        
+
           <div>Percy Jackson: Sea of Monsters - Rick Riordan
           <input type = 'button' name = 'PJ_2' onClick="remove('PJ_2')" value='Remove from Cart'><br><hr></div>
         
