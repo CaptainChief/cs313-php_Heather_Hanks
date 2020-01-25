@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
+<script>
+
+  function remove(item)
+  {
+    
+  }
+
+</script>
+
 <body>
   <div class = "center">
     <h1>Your Cart</h1>
@@ -18,29 +27,23 @@
     <li><a class="active" href="">View Cart</a></li>
   </ul>
 
-  <?php
-
-    $i = 0;
-    $items = [];
-    if(!empty($_POST['books']))
-    {
-      foreach ($_POST['books'] as $key => $value)
-      {
-       array_push($items, $key => htmlspecialchars($value));
-      }
-    }
-    //$_SESSION["items"] = $_SESSION["items"] + $items;
-
-  ?>
   <div class = "center">
     <div class = "item">
       <?php
-        if (!empty($items))
+        if($_SESSION["book_1"] == "add")
         {
-          foreach ($items as $item)
-          {
-            echo $items;
-          }
+          echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan";
+          echo "<input type = 'button' name = 'PJ_2' onClick='remove(PJ_2)'> Remove from Cart <br><hr></div>";
+        }
+        else if($_SESSION["book_2"] == "add")
+        {
+          echo "<div>Covenants - Lorna Freeman";
+          echo "<input type = 'button' name = 'Cov' onClick='remove(Cov)'> Remove from Cart <br><hr></div>";
+        }
+        else if($_SESSION["book_3"] == "add")
+        {
+          echo "<div>Ransom - Julie Garwood";
+          echo "<input type = 'button' name = 'Ran' onClick='remove(Ran)'> Remove from Cart <br><hr></div>";
         }
         else
         {

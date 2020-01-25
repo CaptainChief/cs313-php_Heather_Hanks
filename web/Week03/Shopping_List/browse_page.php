@@ -11,15 +11,20 @@
 
 <script>
 
-  function pressed()
+  function add(item)
   {
-    document.getElementById("books[]").foreach(add_item);
-  }
-
-  function add_item(item)
-  {
-    <?php $_SESSION['cart_item'] = ?> item;
-    alert(item);
+    if(item == "PJ_2")
+    {
+      <?php $_SESSION["book_1"] = "add";?>
+    }
+    else if(item == "Cov")
+    {
+      <?php $_SESSION["book_2"] = "add";?>
+    }
+    else if(item == "Ran")
+    {
+      <?php $_SESSION["book_3"] = "add";?>
+    }
   }
 
 </script>
@@ -36,29 +41,23 @@
 
   <div class = "center">
   <div class = "item">
-      <?php
-        $file_lines = file('items.txt');
-        $items = [];
 
-        $i = 0;
-        foreach ($file_lines as $line)
-        {
-          $items[$i] = $line;
-          $i++;
-        }
 
-        echo "<br>";
-        foreach ($items as $item)
-        {
-          echo "$item <br><br> ";
-          echo "<input type='checkbox' name='books[]' value='$item' id='$item'  Add to Cart <br><hr>";
-        }
-      ?>
-      <input type = 'checkbox' name = 'books' value='item' onclick = 'checked()'> Add to Cart <br><hr>
-
-      <div class = "center">
-        <input type = "button" name = "submission" value = "Add all to cart!" onclick="pressed()">
+      <div>
+        Percy Jackson: Sea of Monsters - Rick Riordan
+        <input type = 'button' name = 'PJ_2' onClick="add(PJ_2)"> Add to Cart <br><hr>
       </div>
+      
+      <div>
+        Covenants - Lorna Freeman
+        <input type = 'button' name = 'Cov' onClick="add(Cov)"> Add to Cart <br><hr>
+      </div>
+      
+      <div>
+        Ransom - Julie Garwood
+        <input type = 'button' name = 'Ran' onClick="add(Ran)"> Add to Cart <br><hr>
+      </div>
+
   </div>
 
     <br><br><br>
