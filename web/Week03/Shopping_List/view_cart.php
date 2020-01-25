@@ -16,6 +16,7 @@
     alert(item);
     if(item == "PJ_2")
     {
+      alert("in book 1");
       <?php 
         unset($_SESSION['book_1']);
         $_SESSION["book_1"] = 0;
@@ -23,6 +24,7 @@
     }
     else if(item == "Cov")
     {
+      alert("in book 2");
       <?php 
         unset($_SESSION['book_2']);
         $_SESSION["book_2"] = 0;
@@ -30,6 +32,7 @@
     }
     else if(item == "Ran")
     {
+      alert("in book 3");
       <?php 
         unset($_SESSION['book_3']);
         $_SESSION["book_3"] = 0;
@@ -51,8 +54,6 @@
   <div class = "center">
     <div class = "item">
       <?php
-      echo $_SESSION["book_3"] . "<br><br>";
-
         if($_SESSION["book_1"])
         { 
 
@@ -62,7 +63,7 @@
         
          }
         if($_SESSION["book_2"])
-        { 
+        {
 
           echo "<div>Covenants - Lorna Freeman<br>";
           echo "<input type = 'button' name = 'Cov' onClick=\"remove('Cov')\" value='Remove from Cart'><br><hr>";
