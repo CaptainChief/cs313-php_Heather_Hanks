@@ -1,5 +1,8 @@
 <?php
   session_start();
+  $book_1 = $_SESSION["book_1"];
+  $book_2 = $_SESSION["book_2"];
+  $book_3 = $_SESSION["book_3"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,11 +44,8 @@
   <div class = "center">
     <div class = "item">
       <?php
-"        echo $_SESSION[\"book_1\"]<br>";
-        echo "$_SESSION[\"book_2\"]<br>";
-        echo "$_SESSION[\"book_3\"]<br>";
 
-        if($_SESSION["book_1"] == "add")
+        if($book_1 == "add")
         { 
 
           echo "<div>Percy Jackson: Sea of Monsters - Rick Riordan";
@@ -53,7 +53,7 @@
           echo "</div>";
         
          }
-        else if($_SESSION["book_2"] == "add")
+        else if($book_2 == "add")
         { 
 
           echo "<div>Covenants - Lorna Freeman";
@@ -61,7 +61,7 @@
           echo "</div>";
         
          }
-        else if($_SESSION["book_3"] == "add")
+        else if($book_3 == "add")
         { 
 
           echo "<div>Ransom - Julie Garwood";
