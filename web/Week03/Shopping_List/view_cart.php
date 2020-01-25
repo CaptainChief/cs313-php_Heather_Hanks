@@ -88,10 +88,10 @@
          <?php }
         else
         {
-          echo "There are currently no items in your cart.";
-          echo $_SESSION['book_1'];
-          echo $_SESSION['book_2'];
-          echo $_SESSION['book_3'];
+          echo "There are currently no items in your cart.<br><br>";
+          echo $_SESSION['book_1'] . "<br>";
+          echo $_SESSION['book_2'] . "<br>";
+          echo $_SESSION['book_3'] . "<br>";
         }
       ?>
 
