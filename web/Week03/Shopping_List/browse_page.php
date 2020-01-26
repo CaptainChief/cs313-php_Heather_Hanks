@@ -22,7 +22,7 @@
   <div class = "center">
   <div class = "item">
 
-    <form method = "POST">
+    <form action="view_cart.php" method = "POST">
       <div>
         Percy Jackson: Sea of Monsters - Rick Riordan<br>
         <input type = 'checkbox' name = 'PJ_2' value = "Add Book 1 to Cart"> <br><hr>
