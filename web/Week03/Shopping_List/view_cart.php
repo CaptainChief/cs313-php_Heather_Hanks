@@ -36,27 +36,27 @@
           $_SESSION["book_3"] = $_POST["Ran"];
         }
 
-        if($_SESSION["book_1"] == "Add Book 1 to Cart")
+        if($_SESSION["book_1"] == "book_1")
         { ?>
 
           <div>Percy Jackson: Sea of Monsters - Rick Riordan<br>
-          <input type = 'checkbox' name = 'PJ_2' value='Remove from Cart'><br><hr>
+          <input type = 'checkbox' name = 'PJ_2' value='Remove from Cart'>Remove from Cart<br><hr>
           </div>
         
           <?php }
-        if($_SESSION["book_2"] == "Add Book 2 to Cart")
+        if($_SESSION["book_2"] == "book_2")
         { ?>
 
           <div>Covenants - Lorna Freeman<br>
-          <input type = 'checkbox' name = 'Cov' value='Remove from Cart'><br><hr>
+          <input type = 'checkbox' name = 'Cov' value='Remove from Cart'>Remove from Cart<br><hr>
           </div>
         
           <?php }
-        if($_SESSION["book_3"] == "Add Book 3 to Cart")
+        if($_SESSION["book_3"] == "book_3")
         { ?>
 
           <div>Ransom - Julie Garwood<br>
-          <input type = 'checkbox' name = 'Ran' value='Remove from Cart'><br><hr>
+          <input type = 'checkbox' name = 'Ran' value='Remove from Cart'>Remove from Cart<br><hr>
           </div>;
         
          <?php }

@@ -25,17 +25,17 @@
     <form action="view_cart.php" method = "POST">
       <div>
         Percy Jackson: Sea of Monsters - Rick Riordan<br>
-        <input type = 'checkbox' name = 'PJ_2' value = "Add Book 1 to Cart"> <br><hr>
+        <input type = 'checkbox' name = 'PJ_2' value = "book_1">Add to Cart<br><hr>
       </div>
       
       <div>
         Covenants - Lorna Freeman<br>
-        <input type = 'checkbox' name = 'Cov' value = "Add Book 2 to Cart"> <br><hr>
+        <input type = 'checkbox' name = 'Cov' value = "book_2">Add to Cart<br><hr>
       </div>
       
       <div>
         Ransom - Julie Garwood<br>
-        <input type = 'checkbox' name = 'Ran' value = "Add Book 3 to Cart"> <br><hr>
+        <input type = 'checkbox' name = 'Ran' value = "book_3">Add to Cart<br><hr>
       </div>
 
       <div class="center">
