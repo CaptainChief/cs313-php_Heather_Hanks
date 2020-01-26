@@ -20,7 +20,7 @@
 
   <div class = "center">
     <div class = "item">
-
+<form action="view_cart.php">
     <?php
 
         if(isset($_POST["PJ_2"]))
@@ -35,6 +35,7 @@
         {
           $_SESSION["book_3"] = $_POST["Ran"];
         }
+      
 
         if($_SESSION["book_1"] == "book_1")
         { ?>
@@ -60,14 +61,16 @@
           </div>;
         
          <?php }
-        if($_SESSION["book_3"] != "Add Book 3 to Cart" && $_SESSION["book_2"] != "Add Book 2 to Cart" && $_SESSION["book_1"] != "Add Book 1 to Cart")
+        if($_SESSION["book_3"] != "book_3" && $_SESSION["book_2"] != "book_2" && $_SESSION["book_1"] != "book_3")
         {
           echo "There are currently no items in your cart.<br><br>";
 
         }
       ?>
 
+
       <div class = "center">
+      <input type = "submission" name = "submission" value = "Remove from Cart">
       <input type = "button" onclick="window.location.href = 'checkout.php'" value="Checkout">
       
       </div>
