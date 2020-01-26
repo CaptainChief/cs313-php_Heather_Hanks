@@ -70,7 +70,7 @@
 
 
       <div class = "center">
-      <input type = "submission" name = "submission" value = "Remove from Cart">
+      <input type = "submit" name = "submission" value = "Remove from Cart">
       <input type = "button" onclick="window.location.href = 'checkout.php'" value="Checkout">
       
       </div>
