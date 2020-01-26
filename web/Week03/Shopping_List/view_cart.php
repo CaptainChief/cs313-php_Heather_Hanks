@@ -60,7 +60,7 @@
           </div>;
         
          <?php }
-        else
+        if($_SESSION["book_3"] != "Add Book 3 to Cart" && $_SESSION["book_2"] != "Add Book 2 to Cart" && $_SESSION["book_1"] != "Add Book 1 to Cart")
         {
           echo "There are currently no items in your cart.<br><br>";
 
