@@ -21,69 +21,49 @@
   <div class = "center">
     <div class = "item">
 
-    <form method = "POST">
-      <?php
+    <?php
 
-        if(array_key_exists('PJ_2', $_POST))
+        if(isset($_POST["PJ_2"]))
         {
-          button_1();
+          $_SESSION["book_1"] = $_POST["PJ_2"];
         }
-        if(array_key_exists('Cov', $_POST))
+        if(isset($_POST["book_2"]))
         {
-          button_2();
+          $_SESSION["book_2"] = $_POST["Cov"];
         }
-        if(array_key_exists('Ran', $_POST))
+        if(isset($_POST["book_3"]))
         {
-          button_3();
-        }
-
-        function button_1()
-        {
-          echo "Percy was clicked.";
-          $_SESSION["book_1"] = "remove";
-        }
-        function button_2()
-        {
-          echo "Cov was clicked.";
-          $_SESSION["book_2"] = "remove";
-        }
-        function button_3()
-        {
-          echo "Ran was clicked.";
-          $_SESSION["book_3"] = "remove";
+          $_SESSION["book_3"] = $_POST["Ran"];
         }
 
-
-        if($_SESSION["book_1"] == "add")
+        if($_SESSION["book_1"] == "Add Book 1 to Cart")
         { ?>
 
           <div>Percy Jackson: Sea of Monsters - Rick Riordan<br>
-          <input type = 'button' name = 'PJ_2' value='Remove from Cart'><br><hr>
+          <input type = 'checkbox' name = 'PJ_2' value='Remove from Cart'><br><hr>
           </div>
         
           <?php }
-        if($_SESSION["book_2"] == "add")
+        if($_SESSION["book_2"] == "Add Book 2 to Cart")
         { ?>
 
           <div>Covenants - Lorna Freeman<br>
-          <input type = 'button' name = 'Cov' value='Remove from Cart'><br><hr>
+          <input type = 'checkbox' name = 'Cov' value='Remove from Cart'><br><hr>
           </div>
         
           <?php }
-        if($_SESSION["book_3"] == "add")
+        if($_SESSION["book_3"] == "Add Book 3 to Cart")
         { ?>
 
           <div>Ransom - Julie Garwood<br>
-          <input type = 'button' name = 'Ran' value='Remove from Cart'><br><hr>
+          <input type = 'checkbox' name = 'Ran' value='Remove from Cart'><br><hr>
           </div>;
         
          <?php }
         else
         {
           echo "There are currently no items in your cart.<br><br>";
-          echo $_SESSION['book_1'] . "<br>";
-          echo $_SESSION['book_2'] . "<br>";
-          echo $_SESSION['book_3'] . "<br><br>";
+
         }
       ?>
 
