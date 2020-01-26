@@ -77,11 +77,3 @@ div.item
     border: 3px solid #f1f1f1;
 }
 
-/* Background image should be fixed now. */
-.library 
-{
-    background-image: url("Books.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: center center;
-}
