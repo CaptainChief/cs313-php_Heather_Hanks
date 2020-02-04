@@ -1,5 +1,4 @@
 <?php 
-
     require "dbConnect.php";
     $db = get_db();
 
@@ -12,7 +11,7 @@
         $last = $frow["last_name"];
         $relate_id = $frow["relationship_id"];
 
-        $relationships = $db->prepare("SELECT description FROM relationsihp WHERE id = $relationship_id");
+        $relationships = $db->prepare("SELECT description FROM relationsihp WHERE id = $relate_id");
         $relationships->execute();
         whiel($rRow = $relationship->fetch(PDO::FETCH_ASSOC))
         {
