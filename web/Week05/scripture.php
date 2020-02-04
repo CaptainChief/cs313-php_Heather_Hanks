@@ -13,7 +13,7 @@
         $content = $frow["content"];
 
         echo "<h1> <b>SCRIPTURE RESOURCES</b> </h1>";
-        echo "<p><b>$book $chapter:$verse</b> - $content</p><br>";
+        echo "<p><b>$book $chapter:$verse</b> - \"$content\"</p><br>";
     }
 
 ?>
