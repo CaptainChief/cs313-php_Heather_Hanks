@@ -14,5 +14,4 @@
         $content = $frow["content"];
         echo "<p><b>$book $chapter:$verse</b> - \"$content\"</p><br>";
     }
-
 ?>
