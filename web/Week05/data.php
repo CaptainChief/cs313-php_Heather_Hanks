@@ -1,13 +1,25 @@
 <?php
-    require "dbConnect.php";
-    $db = get_db();
+   session_start();
+   require "dbConnect.php";
+   $_SESSION['db'] = get_db();
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>TA05</title>
 </head>
+
+<script>
+
+set_id(id)
+{
+   $_SESSION['id'] = id;
+}
+
+</script>
+
 <body>
 
    <form action="data.php" method="post">
@@ -31,12 +43,13 @@
       echo "<h1> <b>SCRIPTURE RESOURCES</b> </h1>";
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
-         echo "asjdfl;alskdfj     in the loop";
-         $book = $frow["book"];
-         $chapter = $frow["chapter"];
-         $verse = $frow["verse"];
-         $content = $frow["content"];
-         echo "<p><b>$book $chapter:$verse</b> - \"$content\"</p><br>";
+        $id = $frow["id"];
+        $book = $frow["book"];
+        $chapter = $frow["chapter"];
+        $verse = $frow["verse"];
+        //$content = $frow["content"];
+         
+        echo "<form action=\"details.php\" method=\"post\"> <input type='submit' name='$id' value='$book $chapter:$verse'></form><br>";
       }
    }
 ?>
