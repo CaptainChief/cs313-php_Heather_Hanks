@@ -10,21 +10,22 @@
 </head>
 <body>
 
-<form action="data.php" method="post">
-    <select name="Scripture">
-        <option value="John">John</option>
-        <option value="D&C">D&C</option>
-        <option value="Mosiah">Mosiah</option>
-    </select>
+   <form action="data.php" method="post">
+      <select name="Scripture">
+         <option value="John">John</option>
+         <option value="D&C">D&C</option>
+         <option value="Mosiah">Mosiah</option>
+      </select>
 
-    <input type = "submit" value = "Search">
-</form>
+      <input type = "submit" value = "Search">
+   </form>
 <hr>
 
 <?php
    if (isset($_POST['Scripture'])) 
    {
       $book_name = $_POST['Scripture'];
+      echo $book_name;
       $scr = $db->prepare("SELECT * FROM scriptures WHERE book = $book_name");
       $scr->execute();
 
@@ -38,7 +39,7 @@
          echo "<p><b>$book $chapter:$verse</b> - \"$content\"</p><br>";
       }
    }
-   ?>
+?>
 
 </body>
 </html>
