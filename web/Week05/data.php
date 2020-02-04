@@ -24,7 +24,8 @@
 <?php
    if (isset($_POST['Scripture'])) 
    {
-      $scr = $db->prepare("SELECT * FROM scriptures WHERE book = $_POST['Scripture']");
+      $book_name = $_POST['Scripture'];
+      $scr = $db->prepare("SELECT * FROM scriptures WHERE book = $book_name");
       $scr->execute();
 
       echo "<h1> <b>SCRIPTURE RESOURCES</b> </h1>";
@@ -34,7 +35,7 @@
          $chapter = $frow["chapter"];
          $verse = $frow["verse"];
          $content = $frow["content"];
-        echo "<p><b>$book $chapter:$verse</b> - \"$content\"</p><br>";
+         echo "<p><b>$book $chapter:$verse</b> - \"$content\"</p><br>";
       }
    }
    ?>
