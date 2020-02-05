@@ -32,6 +32,10 @@
         document.getElementById(section).style.display = "block";
         evt.currentTarget.className += " active";
     }
+
+    // Get the element with id="defaultOpen" and click on it
+    // document.getElementById("defaultOpen").click();
+
 </script>
 
 <body>
@@ -52,19 +56,19 @@
 
 <!-- Tab content -->
 <div id="Animals" class="tabcontent center">
-  <span onclick="this.parentElement.style.display='none'">x</span>
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
   <p>This is where Animals will be placed.</p>
 </div>
 
 <div id="Habitats" class="tabcontent center">
-  <span onclick="this.parentElement.style.display='none'">x</span>
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Habitats</h3>
   <p>This is where Habitats will be placed.</p>
 </div>
 
 <div id="Locations" class="tabcontent center">
-  <span onclick="this.parentElement.style.display='none'">x</span>
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Locations</h3>
   <p>This is where Locations will be placed.</p>
 </div>
