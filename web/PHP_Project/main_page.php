@@ -10,24 +10,34 @@
 <body>
 
 <div class="navbar">
-  <a class="active" href="">Home Page (View Data)</a>
+  <a href="#home">Home</a>
   <div class="subnav">
-    <button class="subnavbtn active">Home Page (View Data) <i class="fa fa-caret-down"></i></button>
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="">Animals</a>
-      <a href="">Locations</a>
-      <a href="">Habitats</a>
+      <a href="#company">Company</a>
+      <a href="#team">Team</a>
+      <a href="#careers">Careers</a>
     </div>
   </div>
   <div class="subnav">
-    <button class="subnavbtn">Create <i class="fa fa-caret-down"></i></button>
+    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="create_habitat.php">Create Habitat</a>
-      <a href="create_location.php">Create Location</a>
-      <a href="create_species.php">Create Species</a>
-      <a href="create_genus.php">Create Genus</a>
+      <a href="#bring">Bring</a>
+      <a href="#deliver">Deliver</a>
+      <a href="#package">Package</a>
+      <a href="#express">Express</a>
     </div>
   </div>
+  <div class="subnav">
+    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#link1">Link 1</a>
+      <a href="#link2">Link 2</a>
+      <a href="#link3">Link 3</a>
+      <a href="#link4">Link 4</a>
+    </div>
+  </div>
+  <a href="#contact">Contact</a>
 </div>
 
 
