@@ -24,7 +24,7 @@ if (isset($_POST['1']))
          echo "<p>$content</p>";
       }
 }
-if (isset($_POST['2'])) 
+else if (isset($_POST['2'])) 
 {
 
     $scr = $db->prepare("SELECT * FROM scriptures WHERE id = 2");
@@ -36,7 +36,7 @@ if (isset($_POST['2']))
          echo "<p>$content</p>";
       }
 }
-if (isset($_POST['3'])) 
+else if (isset($_POST['3'])) 
 {
 
     $scr = $db->prepare("SELECT * FROM scriptures WHERE id = 3");
@@ -50,7 +50,7 @@ if (isset($_POST['3']))
 }
 else
 {
-    echo "How'd you get to this page???"
+    echo "How'd you get to this page???";
 }
 
 ?>

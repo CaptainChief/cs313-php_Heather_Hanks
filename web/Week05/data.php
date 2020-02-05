@@ -1,7 +1,6 @@
 <?php
-   session_start();
    require "dbConnect.php";
-   $_SESSION['db'] = get_db();
+   $db = get_db();
 ?>
 
 <!doctype html>
