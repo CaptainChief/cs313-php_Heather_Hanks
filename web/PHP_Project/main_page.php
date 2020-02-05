@@ -64,7 +64,6 @@
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
   <?php
-
     $scr = $db->prepare("SELECT specie_name FROM animal_species");
     $scr->execute();
     $i = 1;
@@ -72,24 +71,44 @@
     {
       $s_name = $frow["specie_name"];
          
-      echo "<p>$i. $s_name </p><br>";
+      echo "<p>$i. $s_name </p>";
       $i++;
     }
-
   ?>
-  <!-- <p>This is where Animals will be placed.</p> -->
 </div>
 
 <div id="Habitats" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Habitats</h3>
-  <p>This is where Habitats will be placed.</p>
+  <?php
+    $scr = $db->prepare("SELECT habitat_name FROM habitats");
+    $scr->execute();
+    $i = 1;
+    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+    {
+      $h_name = $frow["habitat_name"];
+         
+      echo "<p>$i. $h_name </p>";
+      $i++;
+    }
+  ?>
 </div>
 
 <div id="Locations" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Locations</h3>
-  <p>This is where Locations will be placed.</p>
+  <?php
+    $scr = $db->prepare("SELECT location_name FROM locations");
+    $scr->execute();
+    $i = 1;
+    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+    {
+      $l_name = $frow["location_name"];
+         
+      echo "<p>$i. $l_name </p>";
+      $i++;
+    }
+  ?>
 </div>
 
 
