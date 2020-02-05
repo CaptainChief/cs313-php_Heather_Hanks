@@ -1,3 +1,8 @@
+<?php
+   require "dbConnect.php";
+   $db = get_db();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +63,21 @@
 <div id="Animals" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
-  <p>This is where Animals will be placed.</p>
+  <?php
+
+    $scr = $db->prepare("SELECT specie_name FROM animal_species");
+    $scr->execute();
+    $i = 1;
+    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+    {
+      $s_name = $frow["specie_name"];
+         
+      echo "<p>$i. $s_name </p><br>";
+      $i++;
+    }
+
+  ?>
+  <!-- <p>This is where Animals will be placed.</p> -->
 </div>
 
 <div id="Habitats" class="tabcontent center">
