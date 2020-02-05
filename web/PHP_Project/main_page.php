@@ -44,29 +44,29 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
-  <div class="tab">
-  <button class="tablinks" onclick="openView(event, 'Animals')">London</button>
-  <button class="tablinks" onclick="openView(event, 'Habitats')">Paris</button>
-  <button class="tablinks" onclick="openView(event, 'Locations')">Tokyo</button>
+  <div class="tab center">
+  <button class="tablinks" onclick="openView(event, 'Animals')">Animals</button>
+  <button class="tablinks" onclick="openView(event, 'Habitats')">Habitats</button>
+  <button class="tablinks" onclick="openView(event, 'Locations')">Locations</button>
 </div>
 
 <!-- Tab content -->
-<div id="Animals" class="tabcontent">
+<div id="Animals" class="tabcontent center">
+  <span onclick="this.parentElement.style.display='none'">x</span>
   <h3>Animals</h3>
   <p>This is where Animals will be placed.</p>
-  <span onclick="this.parentElement.style.display='none'">x</span>
 </div>
 
-<div id="Habitats" class="tabcontent">
+<div id="Habitats" class="tabcontent center">
+  <span onclick="this.parentElement.style.display='none'">x</span>
   <h3>Habitats</h3>
   <p>This is where Habitats will be placed.</p>
-  <span onclick="this.parentElement.style.display='none'">x</span>
 </div>
 
-<div id="Locations" class="tabcontent">
+<div id="Locations" class="tabcontent center">
+  <span onclick="this.parentElement.style.display='none'">x</span>
   <h3>Locations</h3>
   <p>This is where Locations will be placed.</p>
-  <span onclick="this.parentElement.style.display='none'">x</span>
 </div>
 
 

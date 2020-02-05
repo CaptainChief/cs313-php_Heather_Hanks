@@ -90,6 +90,16 @@ li a:hover
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+/* Style the close button */
+.topright 
+{
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+  
+.topright:hover {color: red;}
 /* End of tabs */
 
 /* For text formatting */
