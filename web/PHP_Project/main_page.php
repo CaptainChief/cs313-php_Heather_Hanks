@@ -8,47 +8,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<script>
+    function openView(evt, section) 
+    {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) 
+        {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) 
+        {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(section).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
 <body>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <div class="subnav">
-    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#company">Company</a>
-      <a href="#team">Team</a>
-      <a href="#careers">Careers</a>
-    </div>
-  </div>
-  <div class="subnav">
-    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#bring">Bring</a>
-      <a href="#deliver">Deliver</a>
-      <a href="#package">Package</a>
-      <a href="#express">Express</a>
-    </div>
-  </div>
-  <div class="subnav">
-    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#link1">Link 1</a>
-      <a href="#link2">Link 2</a>
-      <a href="#link3">Link 3</a>
-      <a href="#link4">Link 4</a>
-    </div>
-  </div>
-  <a href="#contact">Contact</a>
-</div>
-
-
-  <!-- <ul>
+  <ul>
     <li><a class="active" href="">Home Page</a></li>
     <li><a href="create_habitat.php">Create Habitat</a></li>
     <li><a href="create_location.php">Create Location</a></li>
     <li><a href="create_species.php">Create Species</a></li>
     <li><a href="create_genus.php">Create Genus</a></li>
-  </ul> -->
+  </ul>
+
+  <div class="tab">
+  <button class="tablinks" onclick="openView(event, 'Animals')">London</button>
+  <button class="tablinks" onclick="openView(event, 'Habitats')">Paris</button>
+  <button class="tablinks" onclick="openView(event, 'Locations')">Tokyo</button>
+</div>
+
+<!-- Tab content -->
+<div id="Animals" class="tabcontent">
+  <h3>Animals</h3>
+  <p>This is where Animals will be placed.</p>
+  <span onclick="this.parentElement.style.display='none'">x</span>
+</div>
+
+<div id="Habitats" class="tabcontent">
+  <h3>Habitats</h3>
+  <p>This is where Habitats will be placed.</p>
+  <span onclick="this.parentElement.style.display='none'">x</span>
+</div>
+
+<div id="Locations" class="tabcontent">
+  <h3>Locations</h3>
+  <p>This is where Locations will be placed.</p>
+  <span onclick="this.parentElement.style.display='none'">x</span>
+</div>
 
 
 
