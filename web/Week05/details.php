@@ -48,6 +48,10 @@ if (isset($_POST['3']))
          echo "<p>$content</p>";
       }
 }
+else
+{
+    echo "How'd you get to this page???"
+}
 
 ?>
 

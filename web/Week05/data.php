@@ -11,15 +11,6 @@
 <title>TA05</title>
 </head>
 
-<script>
-
-set_id(id)
-{
-   $_SESSION['id'] = id;
-}
-
-</script>
-
 <body>
 
    <form action="data.php" method="post">
@@ -49,7 +40,7 @@ set_id(id)
         $verse = $frow["verse"];
         //$content = $frow["content"];
          
-        echo "<form action=\"details.php\" method=\"post\"> <input type='submit' name='$id' value='$book $chapter:$verse'></form><br>";
+        echo "<form action='details.php' method='post'> <input type='submit' name='$id' value='$book $chapter:$verse'></form><br>";
       }
    }
 ?>
