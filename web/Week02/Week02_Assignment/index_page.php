@@ -18,6 +18,7 @@
 
   <div class = "center">
     <a href="..\..\Week03\Shopping_List\browse_page.php">Assignment 03: Shopping List</a>
+    <a href="..\..\PHP_Project\main_page.php">PHP Project</a>
   </div>
 
   <!-- <div class = "center">
