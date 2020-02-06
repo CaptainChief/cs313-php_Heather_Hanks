@@ -6,7 +6,7 @@
 
     $scr = $db->prepare("SELECT name, image FROM w5_EVENT");
     $scr->execute();
-    $i = 1;
+    // $i = 1;
     // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
     // {
     //   $h_name = $frow["name"];
