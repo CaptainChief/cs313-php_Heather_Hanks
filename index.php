@@ -1,5 +1,7 @@
 <?php 
 
+    echo "<h1>These are the events</h1><br><hr>"
+
     require "dbConnect.php";
     $db = get_db();
 
