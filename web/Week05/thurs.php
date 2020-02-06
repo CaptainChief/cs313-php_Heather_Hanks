@@ -12,7 +12,7 @@
       $h_name = $frow["name"];
       $image = $frow["image"];
          
-      echo "<p>$i. Name of Event: $h_name <br><img src='$image' height="42" width="42"></p><hr>";
+      echo "<p>$i. Name of Event: $h_name <br> <img src='$image' height='42' width='42'></p><hr>";
       $i++;
     }
 ?>
