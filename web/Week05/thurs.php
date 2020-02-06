@@ -12,7 +12,7 @@
       $h_name = $frow["name"];
       $image = $frow["image"];
          
-      echo "<p>$i. $h_name   $image</p>";
+      echo "<p>$i. $h_name   <img src='$image'></p>";
       $i++;
     }
 ?>
