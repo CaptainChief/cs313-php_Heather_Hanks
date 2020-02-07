@@ -10,8 +10,15 @@
 <script>
     function myFunction() 
     {
-        var value = document.getElementById(window.location.href).id;
-        alert(value);
+        if(document.getElementById(window.location.href).animal != NULL)
+        {
+            var value = document.getElementById(window.location.href).animal;
+            alert(value);
+        }
+        else
+        {
+            alert("Couldn't find the animal");
+        }
     }
 </script>
 
