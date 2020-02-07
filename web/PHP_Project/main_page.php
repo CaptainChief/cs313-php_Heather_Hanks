@@ -38,8 +38,10 @@
         evt.currentTarget.className += " active";
     }
 
-    // Get the element with id="defaultOpen" and click on it
-    // document.getElementById("defaultOpen").click();
+    details(type, id)
+    {
+      alert("Incoming page!");
+    }
 
 </script>
 
@@ -67,14 +69,15 @@
   <h3>Animals</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT specie_name FROM animal_species");
+      $scr = $db->prepare("SELECT id, specie_name FROM animal_species");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $s_name = $frow["specie_name"];
+        $id = $frow["id"];
           
-        echo "<p><button type='button'>$s_name</button></p>";
+        echo "<p><button type='button' onclick='details('animal', $id)'>$s_name</button></p>";
         $i++;
       }
     ?>
