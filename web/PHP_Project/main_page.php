@@ -38,9 +38,9 @@
         evt.currentTarget.className += " active";
     }
 
-    function details()
+    function details(type, id)
     {
-      alert("Incoming page!");
+      alert("Incoming page for ", type);
     }
 
 </script>
@@ -77,7 +77,7 @@
         $s_name = $frow["specie_name"];
         $id = $frow["specie_id"];
           
-        echo "<p><button type='button' onclick=\"details()\">$s_name</button></p>";
+        echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
         $i++;
       }
     ?>
@@ -89,14 +89,15 @@
   <h3>Habitats</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT habitat_name FROM habitats");
+      $scr = $db->prepare("SELECT habitat_id, habitat_name FROM habitats");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $h_name = $frow["habitat_name"];
+        $id = $frow["habitat_id"];
           
-        echo "<p><button type='button'>$h_name</button></p>";
+        echo "<p><button type='button' onclick=\"details('habitat', '$id')\">$h_name</button></p>";
         $i++;
       }
     ?>
@@ -108,14 +109,15 @@
   <h3>Locations</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT location_name FROM locations");
+      $scr = $db->prepare("SELECT location_id, location_name FROM locations");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $l_name = $frow["location_name"];
-          
-        echo "<p><button type='button'>$l_name</button></p>";
+        $id = $frow["location_id"];
+        
+        echo "<p><button type='button' onclick=\"details('location', '$id')\">$l_name</button></p>";
         $i++;
       }
     ?>
