@@ -2,11 +2,15 @@
 .headerLogo 
 {
     /* float: left; */
-    margin: auto;
-    display: inline-block; 
+    /* margin: auto;
+    display: inline-block;  */
     /* width: 100%; */
-    clip-path: inset(0% 0 50% 0); 
-    /* background-position:center; */
+    /* clip-path: inset(0% 0 50% 0);  */
+    width: 200px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+
 }  
 
 
