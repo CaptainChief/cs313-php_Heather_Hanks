@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
+<script>
+    function myFunction() 
+    {
+        var value = document.getElementById("detail_page.php").id;
+        alert(value);
+    }
+</script>
+
 <body>
 
 <div class="headerLogo center"></div>
@@ -16,8 +24,11 @@
 </ul>
 
   <div class = "center">
-    <img src="construction_image.webp" alt="Construction Site">
+    <button type = "button" onclick="myFunction()">Click Me!</button>
   </div>
+
+
+
 
 </body>
 
