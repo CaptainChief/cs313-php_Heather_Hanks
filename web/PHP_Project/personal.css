@@ -5,7 +5,7 @@
     margin: auto;
     display: inline-block;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     clip:rect(0px,0px,800px,0px);
 }  
 
