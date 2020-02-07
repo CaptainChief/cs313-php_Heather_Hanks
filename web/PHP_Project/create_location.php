@@ -8,6 +8,8 @@
 
 <body>
 
+<div class="headerLogo center"></div>
+
 <ul>
     <li><a href="main_page.php">Home Page</a></li>
     <li><a href="create_habitat.php">Create Habitat</a></li>

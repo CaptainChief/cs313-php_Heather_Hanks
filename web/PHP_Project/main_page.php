@@ -45,9 +45,7 @@
 
 <body>
 
-  <div class="headerLogo center">
-    <!-- <img class = "image" src="fantasy-dragon.png"> -->
-  </div>
+  <div class="headerLogo center"></div>
 
   <ul>
     <li><a class="active" href="">Home Page</a></li>
