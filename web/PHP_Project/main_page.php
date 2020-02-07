@@ -42,7 +42,7 @@
     {
       // alert("Incoming page for " + type);
       var encodedParam = encodeURIComponent('detail_page.php?type=' + type + '&id=' + id);
-      window.location.replace(encodedParam)
+      window.location.replace('detail_page.php?type=' + type + '&id=' + id)
     }
 
 </script>
