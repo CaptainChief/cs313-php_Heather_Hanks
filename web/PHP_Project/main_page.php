@@ -73,7 +73,7 @@
     {
       $s_name = $frow["specie_name"];
          
-      echo "<p>$i. $s_name </p>";
+      echo "<p><button type='button'>$s_name</button></p>";
       $i++;
     }
   ?>
@@ -90,7 +90,7 @@
     {
       $h_name = $frow["habitat_name"];
          
-      echo "<p>$i. $h_name </p>";
+      echo "<p><button type='button'>$h_name</button></p>";
       $i++;
     }
   ?>
@@ -107,7 +107,7 @@
     {
       $l_name = $frow["location_name"];
          
-      echo "<p>$i. $l_name </p>";
+      echo "<p><button type='button'>$l_name</button></p>";
       $i++;
     }
   ?>
