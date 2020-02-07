@@ -45,7 +45,7 @@
 
 <body>
 
-  <div class="headerLogo">
+  <div class="headerLogo center">
     <img src="fantasy-dragon.png">
   </div>
 
