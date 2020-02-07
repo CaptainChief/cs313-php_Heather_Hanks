@@ -5,10 +5,8 @@
     margin: auto;
     display: inline-block; 
     /* width: 100%; */
-    /* clip-path: inset(0% 0 50% 0);  */
-    /* width:200px;  */
-    height:50px; 
-    background-position:center;
+    clip-path: inset(0% 0 50% 0); 
+    /* background-position:center; */
 }  
 
 
