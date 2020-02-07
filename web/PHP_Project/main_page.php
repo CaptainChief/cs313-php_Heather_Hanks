@@ -45,6 +45,10 @@
 
 <body>
 
+  <div class="headerLogo">
+    <img src="fantasy-dragon.png">
+  </div>
+
   <ul>
     <li><a class="active" href="">Home Page</a></li>
     <li><a href="create_habitat.php">Create Habitat</a></li>

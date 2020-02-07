@@ -74,27 +74,23 @@ limit 1;
 
 -- \echo '5d. people who have competed in 1 or more'
 ---------------- Your code here ----------------
-SELECT DISTINCT p.name, COUNT(*) AS n
-FROM w5_PARTICIPANT p
-INNER JOIN w5_EVENT_PARTICIPANT ep
-ON p.id = ep.participant_id
-INNER JOIN w5_EVENT e
-ON e.id = ep.event_id
-WHERE 2 > 0
-GROUP BY p.name
-ORDER BY 2 ASC;
+-- SELECT DISTINCT p.name, COUNT(*) AS n
+-- FROM w5_PARTICIPANT p
+-- INNER JOIN w5_EVENT_PARTICIPANT ep
+-- ON p.id = ep.participant_id
+-- INNER JOIN w5_EVENT e
+-- ON e.id = ep.event_id
+-- WHERE 2 > 0
+-- GROUP BY p.name
+-- ORDER BY 2 ASC;
 
 -- \echo '5d. - people that didn''t compete in any'
 ---------------- Your code here ----------------
-SELECT DISTINCT p.name, COUNT(*) AS n
-FROM w5_PARTICIPANT p
-INNER JOIN w5_EVENT_PARTICIPANT ep
-ON p.id = ep.participant_id
-INNER JOIN w5_EVENT e
-ON e.id = ep.event_id
-WHERE 2 = 0
-GROUP BY p.name
-ORDER BY 2 ASC;
+SELECT DISTINCT name, COUNT(*)
+FROM w5_PARTICIPANT 
+WHERE id NOT IN (SELECT participant_id FROM w5_event_participant)
+GROUP BY name
+ORDER BY 2;
 
 -- \echo '6a. Is there anyone who has competed in the same competition twice? '
 ---------------- Your code here ----------------
