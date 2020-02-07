@@ -99,6 +99,7 @@
 <div id="Locations" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Locations</h3>
+  <div class = left">
   <?php
     $scr = $db->prepare("SELECT location_name FROM locations");
     $scr->execute();
@@ -111,6 +112,7 @@
       $i++;
     }
   ?>
+  </div>
 </div>
 
 
