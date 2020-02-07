@@ -41,7 +41,7 @@
     parse_str($url_components['query'], $params); 
             
     // Display result 
-    echo ' Hi '.$params['name']; 
+    echo ' Hi '.$params['type']; 
 
   ?>
 
