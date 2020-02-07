@@ -1,8 +1,8 @@
 /* Image above menu bar */
 .headerLogo 
 {
-    height: 100%; 
-    width: 50%; 
+    height: 50%; 
+    width: 100%; 
     object-fit: contain;
 }  
 /* clip-path: inset(0% 0 50% 0);  */
