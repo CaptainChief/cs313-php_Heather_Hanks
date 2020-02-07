@@ -1,14 +1,15 @@
 /* Image above menu bar */
 .headerLogo 
 {
-    /* height: 50%; 
-    width: 100%; 
-    object-fit: contain; */
-    display: inline-block;
     height: 50%;
+    object-fit: contain; 
 }  
 /* clip-path: inset(0% 0 50% 0);  */
 
+.image
+{
+    height: 50%;
+}
 
 /*For the menu bars*/
 .active 
