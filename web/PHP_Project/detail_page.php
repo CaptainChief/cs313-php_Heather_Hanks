@@ -10,7 +10,7 @@
 <script>
     function myFunction() 
     {
-        var value = document.getElementById("detail_page.php").id;
+        var value = document.getElementById(window.location.href).id;
         alert(value);
     }
 </script>
