@@ -4,11 +4,8 @@
     /* height: 50%; 
     width: 100%; 
     object-fit: contain; */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 50px;
-    left: 0;
+    display: inline-block;
+    height: 50%;
 }  
 /* clip-path: inset(0% 0 50% 0);  */
 
