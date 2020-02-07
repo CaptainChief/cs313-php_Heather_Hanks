@@ -65,53 +65,57 @@
 <div id="Animals" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
-  <?php
-    $scr = $db->prepare("SELECT specie_name FROM animal_species");
-    $scr->execute();
-    $i = 1;
-    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    {
-      $s_name = $frow["specie_name"];
-         
-      echo "<p><button type='button'>$s_name</button></p>";
-      $i++;
-    }
-  ?>
+  <div class = "inner-left left">
+    <?php
+      $scr = $db->prepare("SELECT specie_name FROM animal_species");
+      $scr->execute();
+      $i = 1;
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $s_name = $frow["specie_name"];
+          
+        echo "<p><button type='button'>$s_name</button></p>";
+        $i++;
+      }
+    ?>
+  </div>
 </div>
 
 <div id="Habitats" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Habitats</h3>
-  <?php
-    $scr = $db->prepare("SELECT habitat_name FROM habitats");
-    $scr->execute();
-    $i = 1;
-    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    {
-      $h_name = $frow["habitat_name"];
-         
-      echo "<p><button type='button'>$h_name</button></p>";
-      $i++;
-    }
-  ?>
+  <div class = "inner-left left">
+    <?php
+      $scr = $db->prepare("SELECT habitat_name FROM habitats");
+      $scr->execute();
+      $i = 1;
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $h_name = $frow["habitat_name"];
+          
+        echo "<p><button type='button'>$h_name</button></p>";
+        $i++;
+      }
+    ?>
+  </div>
 </div>
 
 <div id="Locations" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Locations</h3>
   <div class = "inner-left left">
-  <?php
-    $scr = $db->prepare("SELECT location_name FROM locations");
-    $scr->execute();
-    $i = 1;
-    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    {
-      $l_name = $frow["location_name"];
-         
-      echo "<p><button type='button'>$l_name</button></p>";
-      $i++;
-    }
-  ?>
+    <?php
+      $scr = $db->prepare("SELECT location_name FROM locations");
+      $scr->execute();
+      $i = 1;
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $l_name = $frow["location_name"];
+          
+        echo "<p><button type='button'>$l_name</button></p>";
+        $i++;
+      }
+    ?>
   </div>
 </div>
 
