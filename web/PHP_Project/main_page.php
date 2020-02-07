@@ -41,7 +41,8 @@
     function details(type, id)
     {
       // alert("Incoming page for " + type);
-      window.location.replace("detail_page.php?type=" + type + "id=" + id)
+      var encodedParam = encodeURIComponent('detail_page.php?type=' + type + '&id=' + id);
+      window.location.replace(encodedParam)
     }
 
 </script>
