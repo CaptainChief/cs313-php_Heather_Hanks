@@ -77,7 +77,7 @@
         $s_name = $frow["specie_name"];
         $id = $frow["id"];
           
-        echo "<p><button type='button' onclick='details('animal', $id)'>$s_name</button></p>";
+        echo "<p><button type='button' onclick='details('animal', '$id')'>$s_name</button></p>";
         $i++;
       }
     ?>
