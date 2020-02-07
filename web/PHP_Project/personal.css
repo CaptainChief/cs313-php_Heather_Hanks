@@ -3,9 +3,8 @@
 {
     /* float: left; */
     margin: auto;
-    display: inline-block;
+    /* display: inline-block; */
     width: 100%;
-    position: absolute;
     clip-path: inset(0% 0 50% 0);
 }  
 
