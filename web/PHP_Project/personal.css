@@ -1,9 +1,10 @@
 /* Image above menu bar */
 .headerLogo 
 {
-    float: left;
+    /* float: left; */
     margin: auto;
-    /* display: inline-block; */
+    display: inline-block;
+    width: 100%;
 }  
 
 
