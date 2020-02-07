@@ -40,7 +40,7 @@
 
     function details(type, id)
     {
-      alert("Incoming page for ", type);
+      alert("Incoming page for " + type);
     }
 
 </script>
