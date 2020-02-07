@@ -38,7 +38,7 @@
         evt.currentTarget.className += " active";
     }
 
-    details(type, id)
+    function details(type, id)
     {
       alert("Incoming page!");
     }
