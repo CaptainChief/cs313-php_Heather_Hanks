@@ -10,7 +10,7 @@
 <script>
     function myFunction() 
     {
-        if(document.getElementById(window.location.href).animal != NULL)
+        if(document.getElementById(window.location.href).value != NULL)
         {
             var value = document.getElementById(window.location.href).animal;
             alert(value);
