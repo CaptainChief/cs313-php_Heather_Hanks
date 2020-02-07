@@ -10,15 +10,10 @@
 <script>
     function myFunction() 
     {
-        if(document.getElementById(window.location.href).value != NULL)
-        {
-            var value = document.getElementById(window.location.href).animal;
-            alert(value);
-        }
-        else
-        {
-            alert("Couldn't find the animal");
-        }
+        var url_string = window.location.href; //window.location.href
+        var url = new URL(url_string);
+        var c = url.searchParams.get("animal");
+
     }
 </script>
 
