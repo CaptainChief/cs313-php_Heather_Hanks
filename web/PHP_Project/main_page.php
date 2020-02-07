@@ -41,7 +41,7 @@
     function details(type, id)
     {
       // alert("Incoming page for " + type);
-      window.location("detail_page.php?type=" + type + "id=" + id)
+      window.location.replace("detail_page.php?type=" + type + "id=" + id)
     }
 
 </script>
