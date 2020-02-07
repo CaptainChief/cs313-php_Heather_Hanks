@@ -3,7 +3,7 @@
 {
     background-image: url("fantasy-dragon.png");
     background-repeat: no-repeat;
-    height: 50%;
+    clip-path: inset(0% 0 50% 0);
 }  
 /* clip-path: inset(0% 0 50% 0);  */
 
