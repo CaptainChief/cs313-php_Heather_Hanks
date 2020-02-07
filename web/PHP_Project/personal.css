@@ -1,8 +1,8 @@
 /* Image above menu bar */
 .headerLogo 
 {
+    background-image: "fantasy-dragon.png";
     height: 50%;
-    object-fit: contain; 
 }  
 /* clip-path: inset(0% 0 50% 0);  */
 
