@@ -1,7 +1,7 @@
 /* Image above menu bar */
 .headerLogo 
 {
-    background-image: "fantasy-dragon.png";
+    background-image: url("fantasy-dragon.png");
     height: 50%;
 }  
 /* clip-path: inset(0% 0 50% 0);  */
