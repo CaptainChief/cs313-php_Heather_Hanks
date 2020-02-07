@@ -38,7 +38,7 @@
         evt.currentTarget.className += " active";
     }
 
-    function details(type, id)
+    function details()
     {
       alert("Incoming page!");
     }
@@ -69,15 +69,14 @@
   <h3>Animals</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT id, specie_name FROM animal_species");
+      $scr = $db->prepare("SELECT specie_name FROM animal_species");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $s_name = $frow["specie_name"];
-        $id = $frow["id"];
           
-        echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
+        echo "<p><button type='button' onclick=\"details()\">$s_name</button></p>";
         $i++;
       }
     ?>
