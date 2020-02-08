@@ -110,8 +110,8 @@
             $l_name = $frow["location_name"];
             $def = $frow["location_def"];
               
-            echo "Location: $l_name";
-            echo "Description: <br>    $def";
+            echo "Location: $l_name<br>";
+            echo "Description: <br>    $def<br><br>";
           
         }
 
@@ -124,7 +124,7 @@
                             WHERE l.location_id = $id");
         $scr->execute();
 
-        $i = 0;
+        $i = 1;
         echo "Animals: <br>";
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
@@ -149,7 +149,7 @@
         $scr->execute();
 
         echo "Habitats: <br>";
-        $i = 0;
+        $i = 1;
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
             $h_name = $frow["habitat_name"];
