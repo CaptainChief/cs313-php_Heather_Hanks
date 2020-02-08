@@ -121,7 +121,7 @@
             $def = $frow["location_def"];
               
             echo "<p>Location: $l_name</p><br>";
-            echo is_array($h_name);
+            echo "Is it an array? -> " . is_array($h_name);
             if(is_array($h_name))
             {
                 echo "<p>Habitats: <br>";
@@ -130,7 +130,7 @@
                     echo "    <p>" . $i + 1 . ". " . $h_name[i] . "</p><br>";
                 }
             }
-            else
+            else if(!is_array($h_name))
             {
                 echo "<p>Habitat: $h_name</p><br>";
             }
