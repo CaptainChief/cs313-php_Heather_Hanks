@@ -50,8 +50,6 @@
           $def = $frow["specie_def"];
             
           echo "Name: $s_name<br><br>";
-
-
           echo "Description: $def<br><br>";
         }
 
@@ -65,7 +63,7 @@
 
         $scr->execute();
 
-        echo "Locations: "
+        echo "Locations: <br>";
         $i = 1;
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
@@ -131,7 +129,6 @@
         {
 
             $h_name = $frow["specie_name"];
-              
             echo "    $i. $h_name<br>";
             $i++;
         }
