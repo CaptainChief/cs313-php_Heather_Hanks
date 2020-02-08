@@ -20,10 +20,6 @@
     <li><a href="main_page.php">Home Page</a></li>
 </ul>
 
-  <div class = "center">
-    <button type = "button" onclick="myFunction()">Click Me!</button>
-  </div>
-
   <?php
     $url = $_SERVER['REQUEST_URI'];
     $url_components = parse_url($url); 
@@ -33,8 +29,8 @@
     parse_str($url_components['query'], $params); 
             
     // Display result 
-    echo ".$params["type"]";
-    echo ".$params["id"]";
+    echo ".$params['type']";
+    echo ".$params['id']";
 
     // if($type == 'animal')
     // {
