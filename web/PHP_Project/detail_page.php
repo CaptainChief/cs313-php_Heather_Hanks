@@ -57,25 +57,42 @@
           $h_name = $frow["habitat_name"];
           $def = $frow["specie_def"];
             
-          echo "<p>Name: $s_name</p>";
-          echo "<p>Location: $l_name</p>";
-          echo "<p>Habitat: $h_name</p>";
+          echo "<p>Name: $s_name</p><br>";
+          echo "<p>Location: $l_name</p><br>";
+          echo "<p>Habitat: $h_name</p><br>";
 
-          echo "<br><br>Description: <div>$def</div>";
+          echo "<br>Description: <div>$def</div>";
           
         }
       
     }
     else if($type == 'habitat')
     {
-        $scr = $db->prepare("SELECT habitat_name FROM habitats WHERE habitat_id = $id");
-        $scr->execute();
+        $scr = $db->prepare("SELECT h.habitat_def, a.specie_name, l.location_name, h.habitat_name 
+                            FROM animal_species a 
+                            JOIN species_and_habitats sh
+                            ON a.specie_id = sh.specie_id
+                            JOIN habitats h
+                            ON h.habitat_id = sh.habitat_id
+                            JOIN species_and_location sl
+                            ON a.specie_id = sl.specie_id
+                            JOIN locations l
+                            ON l.location_id = sl.location_id
+                            WHERE h.habitat_id = $id");
+                            $scr->execute();
 
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
-          $s_name = $frow["habitat_name"];
-            
-          echo "<p>$s_name</p>";
+            $s_name = $frow["specie_name"];
+            $l_name = $frow["location_name"];
+            $h_name = $frow["habitat_name"];
+            $def = $frow["habitat_def"];
+              
+            echo "<p>Habitat: $h_name</p><br>";
+            echo "<p>Animals: $s_name</p><br>";
+            echo "<p>Locations: $l_name</p><br>";
+  
+            echo "<br>Description: <div>$def</div>";
           
         }
 
