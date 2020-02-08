@@ -46,7 +46,7 @@
           $s_name = $frow["specie_name"];
             
           echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
-          $i++;
+          
         }
       
     }
@@ -60,7 +60,7 @@
           $s_name = $frow["specie_name"];
             
           echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
-          $i++;
+          
         }
 
     }
@@ -74,7 +74,7 @@
           $s_name = $frow["specie_name"];
             
           echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
-          $i++;
+          
         }
 
     }
