@@ -121,8 +121,24 @@
             $def = $frow["location_def"];
               
             echo "<p>Location: $l_name</p><br>";
-            echo "<p>Habitats: $h_name</p><br>";
-            echo "<p>Animals: $s_name</p><br>";
+            echo "<p>Habitats: <br>";
+            if(sizeof($h_name) > 1)
+            {
+                for ($i = 0; $i < sizeof($h_name); $i++)
+                {
+                    echo "    <p>" . $i + 1 . ". $h_name[i]</p><br>";
+                }
+            }
+            else
+            {
+                echo "<p>Habitat: $h_name</p><br>";
+            }
+            if(sizeof($s_name) > 1)
+            {
+                
+            }
+            // echo "<p>Habitats: $h_name</p><br>";
+            // echo "<p>Animals: $s_name</p><br>";
   
             echo "<br>Description: <div>$def</div>";
           
