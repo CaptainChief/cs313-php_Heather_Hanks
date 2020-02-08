@@ -46,19 +46,18 @@
                             ON a.specie_id = sl.specie_id
                             JOIN locations l
                             ON l.location_id = sl.location_id
-                            WHERE a.specie_id = $id");
-        echo "Prepared";
+                            WHERE a.specie_id = $id";
         $scr->execute();
-        echo "Executed";
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
+            echo "fetching";
           $s_name = $frow["a.specie_name"];
           $l_name = $frow["l.location_name"];
           $h_name = $frow["h.habitat_name"];
             
-          echo "<p>$s_name</p>";
-          echo "<p>$l_name</p>";
-          echo "<p>$h_name</p>";
+          echo "<p>Name: $s_name</p>";
+          echo "<p>Location: $l_name</p>";
+          echo "<p>Habitat: $h_name</p>";
           
         }
       
