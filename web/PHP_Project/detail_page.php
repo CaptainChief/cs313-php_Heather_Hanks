@@ -30,23 +30,22 @@
             
     // Display result 
     $id = $params['id'];
-    echo $id;
-    // echo "$params['id']";
+    $type = $params['type'];
 
-    // if($type == 'animal')
-    // {
-    //     $scr = $db->prepare("SELECT specie_name FROM animal_species WHERE specie_id = $id");
-    //     $scr->execute();
+    if($type == 'animal')
+    {
+        $scr = $db->prepare("SELECT specie_name FROM animal_species WHERE specie_id = $id");
+        $scr->execute();
 
-    //     while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    //     {
-    //       $s_name = $frow["specie_name"];
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
             
-    //       echo "<p>$s_name</p>";
+          echo "<p>$s_name</p>";
           
-    //     }
+        }
       
-    // }
+    }
     // else if($type == 'habitat')
     // {
     //     $scr = $db->prepare("SELECT habitat_name FROM habitats WHERE habitat_id = $id");
