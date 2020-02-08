@@ -46,7 +46,7 @@
                             ON a.specie_id = sl.specie_id
                             JOIN locations l
                             ON l.location_id = sl.location_id
-                            WHERE specie_id = $id");
+                            WHERE a.specie_id = $id");
         $scr->execute();
 
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))

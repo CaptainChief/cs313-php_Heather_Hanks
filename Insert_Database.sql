@@ -247,3 +247,58 @@ VALUES
 ( 6
 , 4
 );
+
+-- Insert into species and locations
+INSERT INTO species_and_location
+( specie_id
+, location_id
+)
+VALUES
+( 1
+, 1
+);
+
+INSERT INTO species_and_location
+( specie_id
+, location_id
+)
+VALUES
+( 2
+, 1
+);
+
+INSERT INTO species_and_location
+( specie_id
+, location_id
+)
+VALUES
+( 3
+, 2
+);
+
+INSERT INTO species_and_location
+( specie_id
+, location_id
+)
+VALUES
+( 4
+, 3
+);
+
+INSERT INTO species_and_location
+( specie_id
+, location_id
+)
+VALUES
+( 5
+, 3
+);
+
+INSERT INTO species_and_location
+( specie_id
+, location_id
+)
+VALUES
+( 6
+, 3
+);
