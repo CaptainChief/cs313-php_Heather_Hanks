@@ -120,22 +120,25 @@
             $h_name = $frow["habitat_name"];
             $def = $frow["location_def"];
               
-            echo "<p>Location: $l_name</p><br>";
-            echo "Is it an array? -> " . $h_name[0];
-            echo "Is it an array? -> " . $h_name[1];
-            //  && sizeof($h_name) > 1
-            if(is_array($h_name))
+            echo "<p>Habitats: <br>";
+            foreach ($h_name as $name)
             {
-                echo "<p>Habitats: <br>";
-                for ($i = 0; $i < sizeof($h_name); $i++)
-                {
-                    echo "    <p>" . $i + 1 . ". " . $h_name[i] . "</p><br>";
-                }
+                echo "    <p>" . $name . "</p><br>";
             }
-            else if(!is_array($h_name))
-            {
-                echo "<p>Habitat: $h_name</p><br>";
-            }
+            // echo "<p>Location: $l_name</p>";
+            // //  && sizeof($h_name) > 1
+            // if(is_array($h_name))
+            // {
+            //     echo "<p>Habitats: <br>";
+            //     for ($i = 0; $i < sizeof($h_name); $i++)
+            //     {
+            //         echo "    <p>" . $i + 1 . ". " . $h_name[i] . "</p><br>";
+            //     }
+            // }
+            // else if(!is_array($h_name))
+            // {
+            //     echo "<p>Habitat: $h_name</p>";
+            // }
             if(sizeof($s_name) > 1)
             {
                 
