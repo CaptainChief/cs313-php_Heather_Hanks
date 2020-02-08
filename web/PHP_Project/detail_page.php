@@ -36,6 +36,7 @@
 
     if($type == 'animal')
     {
+        echo "id = $id";
         $scr = $db->prepare("SELECT a.specie_name, l.location_name, h.habitat_name 
                             FROM animal_species a 
                             JOIN species_and_habitats sh
@@ -49,7 +50,7 @@
                             WHERE a.specie_id = $id");
 
         $scr->execute();
-        
+
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
           $s_name = $frow["a.specie_name"];
