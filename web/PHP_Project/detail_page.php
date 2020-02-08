@@ -31,12 +31,11 @@
     $id = "none";
     
     // Display result 
-    $id = $params['id'];
+    $id = (int)$params['id'];
     $type = $params['type'];
 
     if($type == 'animal')
     {
-        echo "id = $id";
         $scr = $db->prepare("SELECT a.specie_name, l.location_name, h.habitat_name 
                             FROM animal_species a 
                             JOIN species_and_habitats sh
