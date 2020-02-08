@@ -125,11 +125,12 @@
                             WHERE l.location_id = $id");
         $scr->execute();
 
+        echo "<p>Animals: ";
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
             $s_name = $frow["specie_name"];
 
-            echo "<p>Animals: $s_name</p><br>";
+            echo "$s_name</p><br>";
         }
 
         $scr = $db->prepare("SELECT h.habitat_name 
@@ -146,11 +147,12 @@
 
         $scr->execute();
 
+        echo "<p>Habitats: ";
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
             $h_name = $frow["habitat_name"];
               
-            echo "<p>Habitat: $h_name</p><br>";         
+            echo "$h_name</p><br>";         
         }
 
     }
