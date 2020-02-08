@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
-<script>
-    function myFunction() 
-    {
-        var urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams.has('post')); // true
-        console.log(urlParams.get('action')); // "edit"
-        console.log(urlParams.getAll('action')); // ["edit"]
-        console.log(urlParams.toString()); // "?post=1234&action=edit"
-        console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
-
-    }
-</script>
-
 <body>
 
 <div class="headerLogo center"></div>
@@ -41,7 +28,55 @@
     parse_str($url_components['query'], $params); 
             
     // Display result 
-    echo ' Hi '.$params['type']; 
+    $type = .$params["type"];
+    $id = .$params["id"];
+
+    if($type == 'animal')
+    {
+        $scr = $db->prepare("SELECT specie_name FROM animal_species WHERE specie_id = $id");
+        $scr->execute();
+
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
+            
+          echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
+          $i++;
+        }
+      
+    }
+    else if($type == 'habitat')
+    {
+        $scr = $db->prepare("SELECT habitat_name FROM habitats WHERE habitat_id = $id");
+        $scr->execute();
+
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
+            
+          echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
+          $i++;
+        }
+
+    }
+    else if($type == 'location')
+    {
+        $scr = $db->prepare("SELECT location_name FROM locations WHERE location_id = $id");
+        $scr->execute();
+
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
+            
+          echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
+          $i++;
+        }
+
+    }
+    else
+    {
+        echo "We're very sorry, but it seems something went wrong with grabbing the details."
+    }
 
   ?>
 
