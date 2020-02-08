@@ -51,9 +51,13 @@
 
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
-          $s_name = $frow["specie_name"];
+          $s_name = $frow["a.specie_name"];
+          $l_name = $frow["l.location_name"];
+          $h_name = $frow["h.habitat_name"];
             
           echo "<p>$s_name</p>";
+          echo "<p>$l_name</p>";
+          echo "<p>$h_name</p>";
           
         }
       
