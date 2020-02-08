@@ -121,8 +121,8 @@
             $def = $frow["location_def"];
               
             echo "<p>Location: $l_name</p><br>";
+            echo "Is it an array? -> " . $h_name[0];
             echo "Is it an array? -> " . $h_name[1];
-            echo "Is it an array? -> " . $h_name[2];
             //  && sizeof($h_name) > 1
             if(is_array($h_name))
             {
