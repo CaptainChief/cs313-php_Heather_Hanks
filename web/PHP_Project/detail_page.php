@@ -36,7 +36,7 @@
 
     if($type == 'animal')
     {
-        $scr = $db->prepare("SELECT a.specie_name, l.location_name, h.habitat_name 
+        $scr = $db->prepare("SELECT a.specie_def, a.specie_name, l.location_name, h.habitat_name 
                             FROM animal_species a 
                             JOIN species_and_habitats sh
                             ON a.specie_id = sh.specie_id
@@ -52,14 +52,16 @@
 
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
-            echo "$frow<br><br>";
           $s_name = $frow["specie_name"];
-          $l_name = $frow["locations.location_name"];
-          $h_name = $frow["habitats.habitat_name"];
+          $l_name = $frow["location_name"];
+          $h_name = $frow["habitat_name"];
+          $def = $frow["specie_def"];
             
           echo "<p>Name: $s_name</p>";
           echo "<p>Location: $l_name</p>";
           echo "<p>Habitat: $h_name</p>";
+
+          echo "<br><br>Description: <div>$def</div>";
           
         }
       
