@@ -125,7 +125,7 @@
 
         $scr->execute();
 
-        echo "Animals: <br>"
+        echo "Animals: <br>";
         $i = 1;
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
@@ -150,7 +150,7 @@
 
         $scr->execute();
 
-        echo "<br>Locations: <br>"
+        echo "<br>Locations: <br>";
         $i = 1;
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
@@ -158,6 +158,7 @@
             $h_name = $frow["location_name"];
                 
             echo "    $i. $h_name<br>";
+            $i++;
         }
 
     }
