@@ -47,8 +47,9 @@
                             JOIN locations l
                             ON l.location_id = sl.location_id
                             WHERE a.specie_id = $id");
+        echo "Prepared";
         $scr->execute();
-
+        echo "Executed";
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
           $s_name = $frow["a.specie_name"];
