@@ -27,10 +27,12 @@
     // Use parse_str() function to parse the 
     // string passed via URL 
     parse_str($url_components['query'], $params); 
-            
+    $type = "none";
+    $id = "none";
+    
     // Display result 
-    $id = $params['id'];
-    $type = $params['type'];
+    // $id = $params['id'];
+    // $type = $params['type'];
 
     if($type == 'animal')
     {
