@@ -29,7 +29,7 @@
     parse_str($url_components['query'], $params); 
             
     // Display result 
-    // echo "$params['type']";
+    echo "Hello" .$params['type'];
     // echo "$params['id']";
 
     // if($type == 'animal')
