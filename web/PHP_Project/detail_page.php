@@ -121,12 +121,12 @@
             $def = $frow["location_def"];
               
             echo "<p>Location: $l_name</p><br>";
-            echo "<p>Habitats: <br>";
-            if(sizeof($h_name) > 1)
+            if(is_array($h_name))
             {
+                echo "<p>Habitats: <br>";
                 for ($i = 0; $i < sizeof($h_name); $i++)
                 {
-                    echo "    <p>" . $i + 1 . ". $h_name[i]</p><br>";
+                    echo "    <p>" . $i + 1 . ". " . $h_name[i] . "</p><br>";
                 }
             }
             else
