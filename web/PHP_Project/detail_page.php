@@ -46,38 +46,38 @@
         }
       
     }
-    // else if($type == 'habitat')
-    // {
-    //     $scr = $db->prepare("SELECT habitat_name FROM habitats WHERE habitat_id = $id");
-    //     $scr->execute();
+    else if($type == 'habitat')
+    {
+        $scr = $db->prepare("SELECT habitat_name FROM habitats WHERE habitat_id = $id");
+        $scr->execute();
 
-    //     while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    //     {
-    //       $s_name = $frow["specie_name"];
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
             
-    //       echo "<p>$s_name</p>";
+          echo "<p>$s_name</p>";
           
-    //     }
+        }
 
-    // }
-    // else if($type == 'location')
-    // {
-    //     $scr = $db->prepare("SELECT location_name FROM locations WHERE location_id = $id");
-    //     $scr->execute();
+    }
+    else if($type == 'location')
+    {
+        $scr = $db->prepare("SELECT location_name FROM locations WHERE location_id = $id");
+        $scr->execute();
 
-    //     while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    //     {
-    //       $s_name = $frow["specie_name"];
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
             
-    //       echo "<p>$s_name</p>";
+          echo "<p>$s_name</p>";
           
-    //     }
+        }
 
-    // }
-    // else
-    // {
-    //     echo "We're very sorry, but it seems something went wrong with grabbing the details."
-    // }
+    }
+    else
+    {
+        echo "We're very sorry, but it seems something went wrong with grabbing the details."
+    }
 
   ?>
 
