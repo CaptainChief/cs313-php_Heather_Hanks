@@ -111,9 +111,10 @@
             $def = $frow["location_def"];
               
             echo "Location: $l_name";
-            echo "Description: <div>$def</div>";
+            echo "Description: <br>    $def";
           
         }
+
         $scr = $db->prepare("SELECT a.specie_name 
                             FROM animal_species a 
                             JOIN species_and_location sl
@@ -123,12 +124,14 @@
                             WHERE l.location_id = $id");
         $scr->execute();
 
-        echo "Animals: ";
+        $i = 0;
+        echo "Animals: <br>";
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
             $s_name = $frow["specie_name"];
 
-            echo "$s_name<br>";
+            echo "    $i. $s_name<br>";
+            $i++;
         }
 
         $scr = $db->prepare("SELECT h.habitat_name 
@@ -145,12 +148,14 @@
 
         $scr->execute();
 
-        echo "Habitats: ";
+        echo "Habitats: <br>";
+        $i = 0;
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
             $h_name = $frow["habitat_name"];
               
-            echo "$h_name<br>";         
+            echo "    $i. $h_name<br>";         
+            $i++;
         }
 
     }
