@@ -19,9 +19,10 @@ INSERT INTO topics(name) VALUES('Charity');
 -- or the linking). Make sure to include foreign keys constraints.
 
 CREATE TABLE topic_scripture
-( id            SERIAL  NOT NULL    PRIMARY KEY
-, topic_id      INT     NOT NULL    
-, scripture_id  INT     NOT NULL    
+( id            SERIAL  NOT NULL
+, topic_id      INT     NOT NULL
+, scripture_id  INT     NOT NULL
+, PRIMARY KEY(id)
 , FOREIGN KEY(topic_id)     REFERENCES topics(id)
 , FOREIGN KEY(scripture_id) REFERENCES scriptures(id)
 );

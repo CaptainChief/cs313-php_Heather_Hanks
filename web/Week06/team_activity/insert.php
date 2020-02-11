@@ -4,11 +4,11 @@
 
    try
    {
-      $book = $_POST['book']
-      $chapter = $_POST['chapter']
-      $verse = $_POST['verse']
-      $content = $_POST['script_content']
-      $topic = $_POST['topic'] //array
+      $book = $_POST['book'];
+      $chapter = $_POST['chapter'];
+      $verse = $_POST['verse'];
+      $content = $_POST['script_content'];
+      $topic = $_POST['topic']; //array
 
       $query = 'INSERT INTO scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
       $statement = $db->prepare($query);
