@@ -21,7 +21,7 @@
     Password:<br>
     <input type="password" name="pass" id="id"><br><br>
 
-    <input type="button" name="log_in" value="Log In"><br>
+    <input type="button" name="log_in" value="Log In"><br><br>
     <input type="button" name="new_user" value="Create New User"><br><br>
   </div>
 
