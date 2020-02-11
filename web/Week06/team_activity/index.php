@@ -21,7 +21,7 @@
     </textarea><br><br>
 
     <?php
-        $db->prepare("SELECT * FROM topics");
+        $statement = $db->prepare("SELECT * FROM topics");
         $statement->execute();
         
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
