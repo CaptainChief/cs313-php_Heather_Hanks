@@ -33,7 +33,7 @@
             echo "<input type='checkbox' name='$id' value='$name'>";
         }
     ?>
-
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html>
