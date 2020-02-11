@@ -1,7 +1,7 @@
 -- Create a table called topic with two columns: 
 -- id and name. Then, manually insert into this table the following 
 -- topics: Faith, Sacrifice, Charity.
-DROP TABLE topic_scriptures;
+DROP TABLE topic_scripture;
 DROP TABLE topics;
 
 
