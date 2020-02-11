@@ -11,8 +11,8 @@
 
 <div class="headerLogo center"></div>
 
-  <ul>
-    <li><a class="active center" href="">Welcome to Animal Creation</a></li>
+  <ul class = "center">
+    <li><a class="active" href="">Welcome to Animal Creation</a></li>
   </ul>
 
   <div class = "center">
