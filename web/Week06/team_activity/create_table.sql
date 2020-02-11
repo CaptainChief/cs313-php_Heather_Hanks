@@ -1,6 +1,9 @@
 -- Create a table called topic with two columns: 
 -- id and name. Then, manually insert into this table the following 
 -- topics: Faith, Sacrifice, Charity.
+DROP TABLE topic_scriptures;
+DROP TABLE topics;
+
 
 CREATE TABLE topics
 ( id    SERIAL      NOT NULL    PRIMARY kEY

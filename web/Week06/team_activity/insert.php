@@ -21,7 +21,7 @@
 
    foreach ($topic as $key => $toop) 
    {
-        $new = $db->prepare("INSERT INTO topic_scripture(topic_id, scripture_id) VALUES($key, $scriptureId");
+        $new = $db->prepare("INSERT INTO topic_scripture(topic_id, scripture_id) VALUES($toop, $scriptureId");
         $new->execute();
    }
 ?>
