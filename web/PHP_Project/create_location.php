@@ -11,11 +11,9 @@
 <div class="headerLogo center"></div>
 
 <ul>
-    <li><a href="main_page.php">Home Page</a></li>
-    <li><a href="create_habitat.php">Create Habitat</a></li>
-    <li><a class="active" href="">Create Location</a></li>
-    <li><a href="create_species.php">Create Species</a></li>
-    <li><a href="create_genus.php">Create Genus</a></li>
+
+    <li><a class="active center" href="">Welcome to Animal Creation</a></li>
+
   </ul>
 
   <div class = "center">
