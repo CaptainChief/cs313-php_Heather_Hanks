@@ -1,5 +1,8 @@
 <?php
 // retrieve POST data from the other page
+$first = $_POST['first'];
+$last = $_POST['last'];
+$food = $_POST['food'];
 
 require("dbConnect.php");
 $db = get_db();
