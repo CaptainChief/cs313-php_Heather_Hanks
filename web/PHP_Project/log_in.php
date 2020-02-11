@@ -11,7 +11,9 @@
 
 <div class="headerLogo center"></div>
 
-<hr>
+  <ul>
+
+  </ul>
 
   <div class = "center">
     First name:<br>
