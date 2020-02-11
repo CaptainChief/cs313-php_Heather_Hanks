@@ -28,10 +28,7 @@
                echo "<h1>$first $last's favorite food is $food</h1>";
 
             }
-            // retrieve url parameter
-            // execute query to pull up data from that id
-            // execute another query to get food data
-            // display name and favorite food
+            
          ?>
 
 		</div>
