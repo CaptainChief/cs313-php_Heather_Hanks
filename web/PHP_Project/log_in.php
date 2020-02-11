@@ -15,9 +15,11 @@
 
   <div class = "center">
     First name:<br>
-    <input type="text" name="firstname"><br>
+    <input type="text" name="firstname" id="first_name"><br>
     Password:<br>
-    <input type="password" name="pass"><br><br>
+    <input type="password" name="pass" id="id"><br><br>
+
+    <input type="button" name="log_in"><br>
     <input type="button" name="new_user" value="Create New User"><br><br>
   </div>
 
