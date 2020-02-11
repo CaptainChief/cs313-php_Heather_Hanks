@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<form action="insert.php">
+<form action="insert.php" method="post">
     Book: <input type="text" id="book"> <br>
     Chapter: <input type="text" id="chapter"> <br>
     Verse: <input type="text" id="verse"> <br><br>
@@ -29,9 +29,10 @@
             $id = $row['id'];
             $name = $row['name'];
 
-            echo "<input type=\"checkbox\" name=\"topic\" value=\"$id\">$name";
+            echo "<input type=\"checkbox\" name=\"topic\" value=\"$id\">$name<br>";
         }
     ?>
+    </br>
     <input type="submit" value="Submit">
 </form>
 </body>
