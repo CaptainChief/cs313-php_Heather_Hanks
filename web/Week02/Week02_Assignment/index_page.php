@@ -19,7 +19,7 @@
   <div class = "center">
     <a href="..\..\Week03\Shopping_List\browse_page.php">Assignment 03: Shopping List</a><br>
     <a href="..\..\PHP_Project\log_in.php">PHP Project</a><br>
-    <a href="..\..\Week06\team_activity\index.php">Week 06</a>
+    <a href="..\..\Week06\team_activity\display.php">Week 06</a>
   </div>
 
   <!-- <div class = "center">
