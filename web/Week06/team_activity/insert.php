@@ -7,7 +7,7 @@
       $book = $_POST['book'];
       $chapter = $_POST['chapter'];
       $verse = $_POST['verse'];
-      $content = $_POST['script_content'];
+      $content = $_POST['content'];
       $topic = $_POST['topic']; // array
 
       $query = 'INSERT INTO scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
