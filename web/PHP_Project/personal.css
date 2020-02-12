@@ -10,6 +10,12 @@
     object-fit: cover;
 }  
 
+.create
+{
+    width: 500px;
+    margin: auto;
+}
+
 .details
 {
     width: 225px;

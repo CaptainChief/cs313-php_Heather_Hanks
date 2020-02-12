@@ -19,7 +19,7 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
-  <div class = "left">
+  <div class = "create left">
   <form>
     Specie Name: <input type="text" id="specie_name"><br><br>
     Specie Def : <br> 
@@ -35,6 +35,7 @@
                             ORDER BY genus_name ASC");
       
       $scr->execute();
+      echo ""
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $g_id = $frow["genus_id"];
