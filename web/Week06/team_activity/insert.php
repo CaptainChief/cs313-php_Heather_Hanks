@@ -5,10 +5,11 @@
    try
    {
       $book = $_POST['book'];
+      echo "this is book = $book";
       $chapter = $_POST['chapter'];
       $verse = $_POST['verse'];
       $content = $_POST['script_content'];
-      $topic = $_POST['topic']; //array
+      $topic = $_POST['topic']; // array
 
       $query = 'INSERT INTO scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
       $statement = $db->prepare($query);
@@ -23,7 +24,6 @@
          $new = $db->prepare("INSERT INTO topic_scripture(topic_id, scripture_id) VALUES($value, $scriptureId");
          $new->execute();
       }
-
    }
    catch (Exception $ex)
    {
