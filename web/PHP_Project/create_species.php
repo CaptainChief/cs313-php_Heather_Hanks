@@ -89,7 +89,7 @@
 
     ?> <br><br>
 
-      <button type="submit" value="Create Animal">
+      <button type="submit" value="Create Animal">Create Animal</button>
     
   </form>
   </div>
