@@ -12,9 +12,9 @@
 <body>
 
 <form action="insert.php" method="post">
-    Book: <input type="text" id="book"> <br>
-    Chapter: <input type="text" id="chapter"> <br>
-    Verse: <input type="text" id="verse"> <br><br>
+    Book: <input type="text" name="book"> <br>
+    Chapter: <input type="text" name="chapter"> <br>
+    Verse: <input type="text" name="verse"> <br><br>
 
     Verse Content:
     <textarea id="script_content" rows="4" cols="50">
