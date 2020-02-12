@@ -39,16 +39,18 @@
     if($type == 'animal')
     {
 
-        $scr = $db->prepare("SELECT a.specie_def, a.specie_name
-                            FROM animal_species a 
+        $scr = $db->prepare("SELECT g.genus_def, g.genus_name
+                            FROM animal_genus g
+                            JOIN animal_specie a
+                            ON g.genus_id = a.genus_id 
                             WHERE a.specie_id = $id");
 
         $scr->execute();
 
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
-          $s_name = $frow["specie_name"];
-          $def = $frow["specie_def"];
+          $s_name = $frow["genus_name"];
+          $def = $frow["genus_def"];
             
           echo "Name: $s_name<br><br>";
           echo "Description: $def<br><br>";
