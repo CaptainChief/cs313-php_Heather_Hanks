@@ -106,7 +106,7 @@
         {
           $h_name = $frow["habitat_name"];
 
-          echo "    $i. $h_name<br>";
+          echo "    $i. $h_name<br><br><br>";
           $i++;          
         }
       
