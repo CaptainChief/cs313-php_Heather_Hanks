@@ -19,17 +19,17 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
-  <div class = "create left">
+  <div class = "create">
   <form>
     Specie Name: <input type="text" id="specie_name"><br><br>
     Specie Def : <br> 
     <textarea id="specie_def" rows="4" cols="50">
     </textarea><br>
 
-    What genus is the specie from?<br>
+    <p class = "center">What genus is the specie from?</p><br>
 
     <select id="genus">
-    <?php
+    <!-- <?php
       $scr = $db->prepare("SELECT genus_id, genus_name
                             FROM animal_genus
                             ORDER BY genus_name ASC");
@@ -45,7 +45,7 @@
         echo "Through the looop at least once";
       }
 
-    ?>
+    ?> -->
     </select>
 
     
