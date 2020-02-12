@@ -1,11 +1,10 @@
 <?php
    require("dbConnect.php");
    $db = get_db();
-   $book = $_POST['book'];
-   echo "this is book = $book";
-/*
+   
    try
    {
+      $book = $_POST['book'];
       $chapter = $_POST['chapter'];
       $verse = $_POST['verse'];
       $content = $_POST['script_content'];
@@ -32,5 +31,5 @@
    }
    header("Location: display.php");
    die();
-   */
+   
 ?>
