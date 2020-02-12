@@ -25,7 +25,8 @@
   </ul>
 <br><br>
   <div class = "create">
-  <form>
+  <form action="post_species.php" method="post">
+
     Specie Name: <input type="text" id="specie_name"><br><br>
     Specie Def : <br> 
     <textarea id="specie_def" rows="4" cols="50">
@@ -88,6 +89,7 @@
 
     ?> <br><br>
 
+      <button type="submit" value="Create Animal">
     
   </form>
   </div>
