@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
+<script>
+
+function main()
+{
+  window.location.replace('main_page.php');
+}
+
+</script>
+
 <body>
 
 <div class="headerLogo center"></div>
@@ -21,7 +30,7 @@
     Password:<br>
     <input type="password" name="pass" id="id"><br><br>
 
-    <input type="button" name="log_in" value="Log In"><br><br>
+    <input type="button" name="log_in" value="Log In" onClick="main()"><br><br>
     <input type="button" name="new_user" value="Create New User"><br><br>
   </div>
 
