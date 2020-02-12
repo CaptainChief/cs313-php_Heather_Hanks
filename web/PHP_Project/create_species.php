@@ -29,23 +29,23 @@
     <p class = "center">What genus is the specie from?</p><br>
 
     <select id="genus">
-    <!-- <?php
-      $scr = $db->prepare("SELECT genus_id, genus_name
-                            FROM animal_genus
-                            ORDER BY genus_name ASC");
+    <?php
+      // $scr = $db->prepare("SELECT genus_id, genus_name
+      //                       FROM animal_genus
+      //                       ORDER BY genus_name ASC");
       
-      $scr->execute();
-      echo ""
-      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-      {
-        $g_id = $frow["genus_id"];
-        $g_name = $frow["genus_name"];
+      // $scr->execute();
+      // echo ""
+      // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      // {
+      //   $g_id = $frow["genus_id"];
+      //   $g_name = $frow["genus_name"];
 
-        echo "<option value='$g_id'>$g_name</option>";
-        echo "Through the looop at least once";
-      }
+      //   echo "<option value='$g_id'>$g_name</option>";
+      //   echo "Through the looop at least once";
+      // }
 
-    ?> -->
+    ?> 
     </select>
 
     
