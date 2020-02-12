@@ -22,6 +22,7 @@
 
 
 <div class = "details left">
+<br><br>
   <?php
     $url = $_SERVER['REQUEST_URI'];
     $url_components = parse_url($url); 
@@ -64,10 +65,10 @@
             $gdef = $frow["genus_def"];
 
             echo "The $s_name is part of the $g_name genus.<br><br>";
-            echo "Genus Description: $gdef<br><br>";
+            echo "<b>Genus Description</b>: $gdef<br><br>";
           }
             
-          echo "$s_name description: $def<br><br>";
+          echo "<b>$s_name Description</b>: $def<br><br>";
         }
 
         $scr = $db->prepare("SELECT l.location_name
@@ -125,9 +126,9 @@
             $h_name = $frow["habitat_name"];
             $def = $frow["habitat_def"];
               
-            echo "Habitat: $h_name<br>";
+            echo "<b>Habitat</b>: $h_name<br>";
   
-            echo "<br>Description: $def<br><br>";
+            echo "<br><b>Description</b>: $def<br><br>";
         }
 
         // $scr = $db->prepare("SELECT a.specie_name
@@ -188,8 +189,8 @@
             $l_name = $frow["location_name"];
             $def = $frow["location_def"];
               
-            echo "Location: $l_name<br><br>";
-            echo "Description: <br>    $def<br><br>";
+            echo "<b>Location</b>: $l_name<br><br>";
+            echo "<b>Description</b>: <br>    $def<br><br>";
           
         }
 
