@@ -65,7 +65,7 @@
             $gdef = $frow["genus_def"];
 
             echo "The $s_name is part of the $g_name genus.<br><br>";
-            echo "<b>Genus Description</b>: $gdef<br><br>";
+            echo "<b>$g_name Description</b>: $gdef<br><br>";
           }
             
           echo "<b>$s_name Description</b>: $def<br><br>";
