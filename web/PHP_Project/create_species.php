@@ -24,9 +24,9 @@
     Specie Name: <input type="text" id="specie_name"><br><br>
     Specie Def : <br> 
     <textarea id="specie_def" rows="4" cols="50">
-    </textarea><br>
+    </textarea><br><br>
 
-    <p class = "center">What genus is the specie from?</p><br>
+    <p class = "center">Choose a Genus</p>
 
     <select id="genus">
     <?php
@@ -35,7 +35,6 @@
       //                       ORDER BY genus_name ASC");
       
       // $scr->execute();
-      // echo ""
       // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       // {
       //   $g_id = $frow["genus_id"];
@@ -46,7 +45,44 @@
       // }
 
     ?> 
-    </select>
+    </select><br><br>
+
+    <p class = "center">Choose Locations</p>
+
+    <?php
+      $scr = $db->prepare("SELECT location_id, location_name
+                            FROM locations
+                            ORDER BY location_name ASC");
+      
+      $scr->execute();
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $g_id = $frow["location_id"];
+        $g_name = $frow["location_name"];
+
+        echo "<input type='checkbox' name='locations' value='$g_id'>$g_name<br>";
+      }
+
+    ?> <br><br>
+
+    <p class = "center">Choose Locations</p>
+
+    <?php
+      $scr = $db->prepare("SELECT habitat_id, habitat_name
+                            FROM habitats
+                            ORDER BY habitat_name ASC");
+      
+      $scr->execute();
+      echo ""
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $g_id = $frow["habitat_id"];
+        $g_name = $frow["habitat_name"];
+
+        echo "<input type='checkbox' name='habitats' value='$g_id'>$g_name<br>";
+      }
+
+    ?> <br><br>
 
     
   </form>
