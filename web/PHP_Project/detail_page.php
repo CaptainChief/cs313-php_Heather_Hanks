@@ -38,6 +38,22 @@
 
     if($type == 'animal')
     {
+
+        $scr = $db->prepare("SELECT a.specie_def, a.specie_name
+                            FROM animal_species a 
+                            WHERE a.specie_id = $id");
+
+        $scr->execute();
+
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $s_name = $frow["specie_name"];
+          $def = $frow["specie_def"];
+            
+          echo "Name: $s_name<br><br>";
+          echo "Description: $def<br><br>";
+        }
+
         $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                             FROM animal_species a 
                             WHERE a.specie_id = $id");
