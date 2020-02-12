@@ -19,28 +19,29 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
-  <div class = "center">
+  <div class = "left">
   <form>
     Specie Name: <input type="text" id="specie_name"><br><br>
     Specie Def : <br> 
     <textarea id="specie_def" rows="4" cols="50">
-    </textarea>
+    </textarea><br>
 
-    <label for="genus">What genus is the specie from?</label><br>
+    What genus is the specie from?<br>
 
     <select id="genus">
     <?php
-      $scr1 = $db->prepare("SELECT g.genus_id, g.genus_name
-                            FROM animal_genus g
-                            ORDER BY g.genus_name ASC");
+      $scr = $db->prepare("SELECT genus_id, genus_name
+                            FROM animal_genus
+                            ORDER BY genus_name ASC");
       
-      $scr1->execute();
-      while ($frow = $scr1->fetch(PDO::FETCH_ASSOC))
+      $scr->execute();
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $g_id = $frow["genus_id"];
         $g_name = $frow["genus_name"];
 
         echo "<option value='$g_id'>$g_name</option>";
+        echo "Through the looop at least once";
       }
 
     ?>
