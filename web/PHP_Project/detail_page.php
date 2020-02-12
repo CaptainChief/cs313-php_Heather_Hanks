@@ -21,7 +21,7 @@
 </ul>
 
 
-<div class = "inner-left left">
+<div class = "details left">
   <?php
     $url = $_SERVER['REQUEST_URI'];
     $url_components = parse_url($url); 
