@@ -39,23 +39,6 @@
     if($type == 'animal')
     {
 
-        $scr = $db->prepare("SELECT g.genus_def, g.genus_name
-                            FROM animal_genus g
-                            JOIN animal_species a
-                            ON g.genus_id = a.genus_id 
-                            WHERE a.specie_id = $id");
-
-        $scr->execute();
-
-        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-        {
-          $s_name = $frow["genus_name"];
-          $def = $frow["genus_def"];
-            
-          echo "Name: $s_name<br><br>";
-          echo "Description: $def<br><br>";
-        }
-
         $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                             FROM animal_species a 
                             WHERE a.specie_id = $id");
@@ -66,9 +49,25 @@
         {
           $s_name = $frow["specie_name"];
           $def = $frow["specie_def"];
+
+          $scr1 = $db->prepare("SELECT g.genus_def, g.genus_name
+          FROM animal_genus g
+          JOIN animal_species a
+          ON g.genus_id = a.genus_id 
+          WHERE a.specie_id = $id");
+
+          $scr1->execute();
+
+          while ($frow = $scr1->fetch(PDO::FETCH_ASSOC))
+          {
+            $g_name = $frow["genus_name"];
+            $gdef = $frow["genus_def"];
+
+            echo "The $Ss_name is part of the $g_name genus.<br><br>";
+            echo "Genus Description: $gdef<br><br>";
+          }
             
-          echo "Name: $s_name<br><br>";
-          echo "Description: $def<br><br>";
+          echo "$s_name description: $def<br><br>";
         }
 
         $scr = $db->prepare("SELECT l.location_name
