@@ -46,7 +46,7 @@
         $g_id = $frow["genus_id"];
         $g_name = $frow["genus_name"];
 
-        echo "<option value='$g_id'>$g_name</option>";
+        echo "<option name='genus_name' value='$g_id'>$g_name</option>";
         echo "Through the looop at least once";
       }
 
