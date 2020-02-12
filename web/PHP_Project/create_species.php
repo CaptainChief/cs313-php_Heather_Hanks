@@ -73,19 +73,19 @@
     <p class = "center">Choose Locations</p>
 
     <?php
-      $scr = $db->prepare("SELECT habitat_id, habitat_name
-                            FROM habitats
-                            ORDER BY habitat_name ASC");
+      // $scr = $db->prepare("SELECT habitat_id, habitat_name
+      //                       FROM habitats
+      //                       ORDER BY habitat_name ASC");
       
-      $scr->execute();
-      echo ""
-      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-      {
-        $g_id = $frow["habitat_id"];
-        $g_name = $frow["habitat_name"];
+      // $scr->execute();
+      // echo ""
+      // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      // {
+      //   $g_id = $frow["habitat_id"];
+      //   $g_name = $frow["habitat_name"];
 
-        echo "<input type='checkbox' name='habitats' value='$g_id'>$g_name<br>";
-      }
+      //   echo "<input type='checkbox' name='habitats' value='$g_id'>$g_name<br>";
+      // }
 
     ?> <br><br>
 
