@@ -21,16 +21,18 @@
 
   <div class = "center">
   <form>
-    Specie Name: <input type="text" id="specie_name">
+    Specie Name: <input type="text" id="specie_name"><br><br>
     Specie Def : <br> 
     <textarea id="specie_def" rows="4" cols="50">
     </textarea>
 
-    <label for="genus">What genus is the specie from?</label>
+    <label for="genus">What genus is the specie from?</label><br>
+
     <select id="genus">
     <?php
       $scr1 = $db->prepare("SELECT g.genus_id, g.genus_name
-                            FROM animal_genus g");
+                            FROM animal_genus g
+                            ORDER BY g.genus_name ASC");
       
       $scr1->execute();
       while ($frow = $scr1->fetch(PDO::FETCH_ASSOC))
