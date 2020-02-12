@@ -78,7 +78,6 @@
                             ORDER BY habitat_name ASC");
       
       $scr->execute();
-      echo ""
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
         $g_id = $frow["habitat_id"];
