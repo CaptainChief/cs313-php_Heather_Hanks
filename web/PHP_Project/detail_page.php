@@ -41,7 +41,7 @@
 
         $scr = $db->prepare("SELECT g.genus_def, g.genus_name
                             FROM animal_genus g
-                            JOIN animal_specie a
+                            JOIN animal_species a
                             ON g.genus_id = a.genus_id 
                             WHERE a.specie_id = $id");
 
