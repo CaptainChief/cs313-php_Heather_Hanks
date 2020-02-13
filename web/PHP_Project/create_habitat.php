@@ -19,8 +19,17 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
-  <div class = "center">
-    <img src="construction_image.webp" alt="Construction Site">
+  <div class = "create">
+  <form action="post_habitat.php" method="post">
+
+    Habitat Name: <input type="text" id="habitat_name"><br><br>
+    Habitat Definition: <br> 
+    <textarea id="habitat_def" rows="4" cols="50">
+    </textarea><br><br>
+
+
+      <button type="submit" value="Create Habitat">Create Habitat</button><br><br>
+  </form>
   </div>
 
 </body>

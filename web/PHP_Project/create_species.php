@@ -28,7 +28,7 @@
   <form action="post_species.php" method="post">
 
     Specie Name: <input type="text" id="specie_name"><br><br>
-    Specie Def : <br> 
+    Specie Definition: <br> 
     <textarea id="specie_def" rows="4" cols="50">
     </textarea><br><br>
 

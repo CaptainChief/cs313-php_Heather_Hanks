@@ -18,8 +18,17 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
-  <div class = "center">
-    <img src="construction_image.webp" alt="Construction Site">
+  <div class = "create">
+  <form action="post_location.php" method="post">
+
+    Location Name: <input type="text" id="location_name"><br><br>
+    Location Definition: <br> 
+    <textarea id="location_def" rows="4" cols="50">
+    </textarea><br><br>
+
+
+      <button type="submit" value="Create Location">Create Location</button><br><br>
+  </form>
   </div>
 
 </body>
