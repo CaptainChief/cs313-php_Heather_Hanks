@@ -155,7 +155,7 @@
 
         $h_name = $frow["specie_name"];
         $h_id = $frow["specie_id"];
-        echo "    $i. <button type='button' onclick=\"details('animal', '$h_id')\">$h_name</button><br><br>";
+        echo "    $i. <button type='button' onclick=\"details('specie', '$h_id')\">$h_name</button><br><br>";
         $i++;
       }
     }
