@@ -41,7 +41,7 @@
         $statement->execute();
 
 
-        $frow = fetch(PDO::FETCH_ASSOC);
+        // $frow = fetch(PDO::FETCH_ASSOC);
 
 
         // if (is_null($scr->fetch(PDO::FETCH_ASSOC)))
