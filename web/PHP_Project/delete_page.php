@@ -43,11 +43,21 @@
 
         $frow = $statement->fetch(PDO::FETCH_ASSOC);
 
-        var_dump($frow);
-        // if (is_null($scr->fetch(PDO::FETCH_ASSOC)))
-        // {
-        //     echo "It's null";
-        // }
+        if($frow)
+        {
+            echo "<script> alert('There are animals still attached to this location. Could not delete.');
+                  window.location.href='main_page.php'; </script>";
+        }
+        else
+        {
+            $query = "DELETE FROM locations WHERE location_id = $id";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':id', $id);
+            $statement->execute();
+
+            echo "<script> alert('Location Deleted.');
+                  window.location.href='main_page.php'; </script>";
+        }
     }
     
     // header('Location: create_location.php');
