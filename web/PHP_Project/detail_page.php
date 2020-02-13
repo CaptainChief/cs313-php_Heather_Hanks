@@ -80,7 +80,7 @@
           echo "<b>$s_name Description</b>: $def<br><br>";
         }
 
-        $scr = $db->prepare("SELECT l.location_name
+        $scr = $db->prepare("SELECT l.location_id, l.location_name
                             FROM animal_species a 
                             JOIN species_and_location sl
                             ON a.specie_id = sl.specie_id
@@ -95,12 +95,13 @@
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
           $l_name = $frow["location_name"];
+          $l_id = $frow["location_id"];
             
-          echo "    $i. $l_name<br>";
+          echo "    $i. <button type='button' onclick=\"details('location', '$l_id')\">$l_name</button><br><br>";
           $i++;          
         }
 
-        $scr = $db->prepare("SELECT h.habitat_name 
+        $scr = $db->prepare("SELECT h.habitat_id, h.habitat_name 
                             FROM animal_species a 
                             JOIN species_and_habitats sh
                             ON a.specie_id = sh.specie_id
@@ -115,8 +116,9 @@
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
           $h_name = $frow["habitat_name"];
+          $h_id = $frow["habitat_id"];
 
-          echo "    $i. $h_name<br><br><br>";
+          echo "    $i. <button type='button' onclick=\"details('habitat', '$h_id')\">$h_name</button><br><br>";
           $i++;          
         }
       
@@ -157,7 +159,7 @@
 
             $h_name = $frow["specie_name"];
             $h_id = $frow["specie_id"];
-            echo "    $i. <button type='button' onclick=\"details('animal', '$h_id')\">$h_name</button><br>";
+            echo "    $i. <button type='button' onclick=\"details('animal', '$h_id')\">$h_name</button><br><br>";
             $i++;
         }
 
@@ -220,7 +222,7 @@
             $s_name = $frow["specie_name"];
             $s_id = $frow["specie_id"];
 
-            echo "    $i. <button type='button' onclick=\"details('animal', '$s_id')\">$s_name</button><br>";
+            echo "    $i. <button type='button' onclick=\"details('animal', '$s_id')\">$s_name</button><br><br>";
             $i++;
         }
 
