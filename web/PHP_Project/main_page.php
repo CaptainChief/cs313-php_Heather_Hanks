@@ -94,6 +94,7 @@
     <?php
       $scr = $db->prepare("SELECT specie_id, specie_name FROM animal_species ORDER BY specie_name ASC");
       $scr->execute();
+      
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
