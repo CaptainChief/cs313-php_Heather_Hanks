@@ -34,7 +34,7 @@
 
     <p class = "center">Choose a Genus</p>
 
-    <select id="genus">
+    <select id="genus" name="genus">
     <?php
       $scr = $db->prepare("SELECT genus_id, genus_name
                             FROM animal_genus
@@ -66,7 +66,7 @@
         $g_id = $frow["location_id"];
         $g_name = $frow["location_name"];
 
-        echo "<input type='checkbox' name='locations' value='$g_id'>$g_name<br>";
+        echo "<input type='checkbox' name='locations[]' value='$g_id'>$g_name<br>";
       }
 
     ?> <br><br>
@@ -84,7 +84,7 @@
         $g_id = $frow["habitat_id"];
         $g_name = $frow["habitat_name"];
 
-        echo "<input type='checkbox' name='habitats' value='$g_id'>$g_name<br>";
+        echo "<input type='checkbox' name='habitats[]' value='$g_id'>$g_name<br>";
       }
 
     ?> <br><br>
