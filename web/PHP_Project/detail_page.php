@@ -128,7 +128,7 @@
           $i++;          
         }
 
-
+        echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('specie', '$id')\">Delete Specie</button><br><br>";
       
     }
@@ -168,7 +168,7 @@
         $i++;
       }
 
-
+      echo "<br><hr><br>";
       echo "<button type='button' onclick=\"delete_item('genus', '$id')\">Delete Genus</button><br><br>";
     }
     else if($type == 'habitat')
@@ -235,7 +235,7 @@
         //     echo "    $i. $h_name<br>";
         //     $i++;
         // }
-
+        echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('habitat', '$id')\">Delete Habitat</button><br><br>";
 
     }
@@ -299,7 +299,7 @@
         //     echo "    $i. $h_name<br>";         
         //     $i++;
         // }
-
+        echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('location', '$id')\">Delete Location</button><br><br>";
 
     }

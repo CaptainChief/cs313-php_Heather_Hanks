@@ -14,21 +14,21 @@
 
     if($type == 'genus')
     {
-        $query = "";
-        $statement = $db->prepare($query);
-        $statement->execute();
+        // $query = "";
+        // $statement = $db->prepare($query);
+        // $statement->execute();
     }
     else if($type == 'specie')
     {
-        $query = "";
-        $statement = $db->prepare($query);
-        $statement->execute();
+        // $query = "";
+        // $statement = $db->prepare($query);
+        // $statement->execute();
     }
     else if($type == 'habitat')
     {
-        $query = "";
-        $statement = $db->prepare($query);
-        $statement->execute();
+        // $query = "";
+        // $statement = $db->prepare($query);
+        // $statement->execute();
     }
     else if($type == 'location')
     {
