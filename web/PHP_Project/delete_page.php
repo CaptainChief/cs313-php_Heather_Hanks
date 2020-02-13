@@ -40,10 +40,14 @@
         $statement->bindValue(':id', $id);
         $statement->execute();
 
-        if (is_null($scr->fetch(PDO::FETCH_ASSOC)))
-        {
-            echo "It's null";
-        }
+
+        $frow = $scr->fetch(PDO::FETCH_ASSOC);
+
+
+        // if (is_null($scr->fetch(PDO::FETCH_ASSOC)))
+        // {
+        //     echo "It's null";
+        // }
     }
     
     // header('Location: create_location.php');
