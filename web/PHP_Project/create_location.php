@@ -21,10 +21,9 @@
   <div class = "create">
   <form action="post_location.php" method="post">
 
-    Location Name: <input type="text" id="location_name"><br><br>
+    Location Name: <input type="text" id="location_name" name="location_name"><br><br>
     Location Definition: <br> 
-    <textarea id="location_def" rows="4" cols="50">
-    </textarea><br><br>
+    <textarea id="location_def" name="location_def" rows="4" cols="50"></textarea><br><br>
 
 
       <button type="submit" value="Create Location">Create Location</button><br><br>
