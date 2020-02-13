@@ -8,12 +8,7 @@
     $habitats = $_POST["habitats"]; //specie_habitat
     $locations = $_POST["locations"]; //specie_location
 
-    foreach ($habitats as $name)
-    {
-        echo "The name of the genus is: $name";
-    }
-        echo "The name of the locations are: $locations";
-
+    echo $name;
 
     //Filter
     $name = htmlspecialchars($name);
@@ -21,25 +16,25 @@
 
     $query = "INSERT INTO animal_species (specie_name, genus_id, specie_def) VALUES(:name, $g_id, :def)";
 	$statement = $db->prepare($query);
-	$statement->bindValue(':name', $name); //This will help keep statements safe
-	$statement->bindValue(':def', $def);
-    $statement->execute();
+	// $statement->bindValue(':name', $name); //This will help keep statements safe
+	// $statement->bindValue(':def', $def);
+    // $statement->execute();
 
-    $specieId = $db->lastInsertId("animal_species");
+    // $specieId = $db->lastInsertId("animal_species");
 
-    foreach ($habitats as $habitat)
-    {
-        $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES(specieId, $habitat)";
-        $statement = $db->prepare($query);
-        $statement->execute();
-    }
+    // foreach ($habitats as $habitat)
+    // {
+    //     $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES(specieId, $habitat)";
+    //     $statement = $db->prepare($query);
+    //     $statement->execute();
+    // }
     
-    foreach ($locations as $location)
-    {
-        $query = "INSERT INTO species_and_location (specie_id, location_id) VALUES($specieId, $location)";
-        $statement = $db->prepare($query);
-        $statement->execute();
-    }
+    // foreach ($locations as $location)
+    // {
+    //     $query = "INSERT INTO species_and_location (specie_id, location_id) VALUES($specieId, $location)";
+    //     $statement = $db->prepare($query);
+    //     $statement->execute();
+    // }
     
-    header('Location: create_specie.php');
+    // header('Location: create_specie.php');
 ?>
