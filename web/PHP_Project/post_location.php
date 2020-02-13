@@ -5,10 +5,16 @@
     $name = $_POST["location_name"];
     $def = $_POST["location_def"];
 
-    echo "The name of the genus is: $name";
-
-
     //Filter
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
+
+    $query = 'INSERT INTO locations (location_name, location_def) VALUES(:name, :def)';
+	$statement = $db->prepare($query);
+	$statement->bindValue(':name', $name); //This will help keep statements safe
+	$statement->bindValue(':def', $def);
+
+    $statement->execute();
+    
+    location.replace("create_location.php");
 ?>
