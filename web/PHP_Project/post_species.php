@@ -22,7 +22,7 @@
 
     foreach ($habitats as $habitat)
     {
-        $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES(specieId, $habitat)";
+        $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES($specieId, $habitat)";
         $statement = $db->prepare($query);
         $statement->execute();
     }
