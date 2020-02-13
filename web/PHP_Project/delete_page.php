@@ -32,8 +32,9 @@
     }
     else if($type == 'location')
     {
-        $query = "SELECT location_id FROM species_and_locations WHERE location_id = $id";
+        $query = "SELECT location_id FROM species_and_locations WHERE location_id = :id";
         $statement = $db->prepare($query);
+        $statement->bindValue(':id', $id);
         $statement->execute();
 
         // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
