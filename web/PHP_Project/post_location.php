@@ -10,9 +10,9 @@
     $def = htmlspecialchars($def);
 
     $query = "INSERT INTO locations (location_name, location_def) VALUES(:name, :def)";
-	// $statement = $db->prepare($query);
-	// $statement->bindValue(':name', $name); //This will help keep statements safe
-	// $statement->bindValue(':def', $def);
+	$statement = $db->prepare($query);
+	$statement->bindValue(':name', $name); //This will help keep statements safe
+	$statement->bindValue(':def', $def);
 
     // $statement->execute();
     
