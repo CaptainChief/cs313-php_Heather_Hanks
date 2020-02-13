@@ -14,7 +14,7 @@
 	$statement->bindValue(':name', $name); //This will help keep statements safe
 	$statement->bindValue(':def', $def);
 
-    // $statement->execute();
+    $statement->execute();
     
-    // header('Location: create_location.php');
+    header('Location: create_location.php');
 ?>
