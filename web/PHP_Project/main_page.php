@@ -67,7 +67,7 @@
 
 <!-- Tab content -->
 
-<div id="Animals (Genus)" class="tabcontent center">
+<!-- <div id="Animals (Genus)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
   <div class = "inner-left left">
@@ -85,7 +85,7 @@
       }
     ?>
   </div>
-</div>
+</div> -->
 
 <div id="Animals (Species)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
@@ -94,7 +94,7 @@
     <?php
       $scr = $db->prepare("SELECT specie_id, specie_name FROM animal_species ORDER BY specie_name ASC");
       $scr->execute();
-      
+
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
       {
