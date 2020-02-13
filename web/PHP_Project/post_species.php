@@ -19,6 +19,7 @@
     $statement->execute();
 
     $specieId = $db->lastInsertId("animal_species");
+    echo $specieId;
 
     foreach ($habitats as $habitat)
     {
