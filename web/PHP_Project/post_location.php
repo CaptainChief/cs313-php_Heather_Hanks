@@ -16,5 +16,5 @@
 
     $statement->execute();
     
-    header('Location: create_location.php');
+    // header('Location: create_location.php');
 ?>
