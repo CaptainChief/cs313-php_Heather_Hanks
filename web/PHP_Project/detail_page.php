@@ -20,7 +20,7 @@
       window.location.replace('detail_page.php?type=' + type + '&id=' + id)
     }
 
-    function delete(type, id)
+    function delete_item(type, id)
     {
       // var encodedParam = encodeURIComponent('delete_page.php?type=' + type + '&id=' + id);
       window.location.replace('delete_page.php?type=' + type + '&id=' + id)
@@ -129,7 +129,7 @@
         }
 
 
-        echo "<button type='button' onclick=\"delete('specie', '$id')\">Delete Specie</button><br><br>";
+        echo "<button type='button' onclick=\"delete_item('specie', '$id')\">Delete Specie</button><br><br>";
       
     }
     else if($type == 'genus')
@@ -169,7 +169,7 @@
       }
 
 
-      echo "<button type='button' onclick=\"delete('genus', '$id')\">Delete Genus</button><br><br>";
+      echo "<button type='button' onclick=\"delete_item('genus', '$id')\">Delete Genus</button><br><br>";
     }
     else if($type == 'habitat')
     {
@@ -236,7 +236,7 @@
         //     $i++;
         // }
 
-        echo "<button type='button' onclick=\"delete('habitat', '$id')\">Delete Habitat</button><br><br>";
+        echo "<button type='button' onclick=\"delete_item('habitat', '$id')\">Delete Habitat</button><br><br>";
 
     }
     else if($type == 'location')
@@ -300,7 +300,7 @@
         //     $i++;
         // }
 
-        echo "<button type='button' onclick=\"delete('location', '$id')\">Delete Location</button><br><br>";
+        echo "<button type='button' onclick=\"delete_item('location', '$id')\">Delete Location</button><br><br>";
 
     }
     else
