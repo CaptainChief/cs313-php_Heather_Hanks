@@ -40,19 +40,19 @@
         $statement->bindValue(':id', $id);
         $statement->execute();
 
-
         $frow = $statement->fetch(PDO::FETCH_ASSOC);
 
         if($frow)
         {
-            echo "<script> alert('There are animals still attached to this location. Could not delete.');
-                  window.location.href='main_page.php'; </script>";
+            echo "<script> 
+                  alert('There are animals still attached to this location. Could not delete.');
+                  window.location.href='main_page.php'; 
+                  </script>";
         }
         else
         {
             $query = "DELETE FROM locations WHERE location_id = $id";
             $statement = $db->prepare($query);
-            $statement->bindValue(':id', $id);
             $statement->execute();
 
             echo "<script> alert('Location Deleted.');
