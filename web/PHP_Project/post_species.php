@@ -12,6 +12,4 @@
     //Filter
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
-
-
 ?>
