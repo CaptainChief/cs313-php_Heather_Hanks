@@ -9,7 +9,7 @@
     $locations = $_POST["locations"];
 
     echo "The name of the genus is: $habitats";
-    echo "The name of the locations are: $locations"
+    echo "The name of the locations are: $locations";
 
 
     //Filter
