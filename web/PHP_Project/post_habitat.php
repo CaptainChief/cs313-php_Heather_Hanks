@@ -10,7 +10,7 @@
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
 
-    $query = "INSERT INTO locations (creator_id, habitat_name, habitat_def) VALUES($c_id, :name, :def)";
+    $query = "INSERT INTO habitats (creator_id, habitat_name, habitat_def) VALUES($c_id, :name, :def)";
 	$statement = $db->prepare($query);
 	$statement->bindValue(':name', $name); //This will help keep statements safe
 	$statement->bindValue(':def', $def);
