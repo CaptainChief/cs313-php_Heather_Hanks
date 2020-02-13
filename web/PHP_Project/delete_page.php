@@ -40,12 +40,9 @@
         $statement->bindValue(':id', $id);
         $statement->execute();
 
-        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        if ($scr->fetch(PDO::FETCH_ASSOC) == NULL)
         {
-          if($frow == NULL)//$g_id = $frow["location_id"];
-          {
             echo "It's null";
-          }
         }
     }
     
