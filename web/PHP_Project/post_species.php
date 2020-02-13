@@ -8,8 +8,11 @@
     $habitats = $_POST["habitats"];
     $locations = $_POST["locations"];
 
-    echo "The name of the genus is: $habitats";
-    echo "The name of the locations are: $locations";
+    foreach ($habitats as $name)
+    {
+        echo "The name of the genus is: $name";
+    }
+        echo "The name of the locations are: $locations";
 
 
     //Filter
