@@ -41,9 +41,9 @@
         $statement->execute();
 
 
-        // $frow = fetch(PDO::FETCH_ASSOC);
+        $frow = $statement->fetch(PDO::FETCH_ASSOC);
 
-
+        var_dump($frow)
         // if (is_null($scr->fetch(PDO::FETCH_ASSOC)))
         // {
         //     echo "It's null";
