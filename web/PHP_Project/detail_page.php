@@ -46,7 +46,7 @@
     $id = (int)$params['id'];
     $type = $params['type'];
 
-    if($type == 'animal')
+    if($type == 'specie')
     {
 
         $scr = $db->prepare("SELECT a.specie_def, a.specie_name
@@ -123,6 +123,41 @@
         }
       
     }
+    else if($type == 'genus')
+    {
+        $scr = $db->prepare("SELECT g.genus_def, g.genus_name 
+                            FROM animal_genus g
+                            WHERE g.genus_id = $id");
+
+        $scr->execute();
+
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+
+            $h_name = $frow["genus_name"];
+            $def = $frow["genus_def"];
+              
+            echo "<b>Genus</b>: $h_name<br>";
+  
+            echo "<br><b>Genus Description</b>: $def<br><br>";
+        }
+
+        $scr = $db->prepare("SELECT a.specie_id, a.specie_name
+                            FROM animal_species a 
+                            WHERE a.genus_id = $id");
+
+        $scr->execute();
+
+        echo "Animals: <br>";
+        $i = 1;
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+
+            $h_name = $frow["specie_name"];
+            $h_id = $frow["specie_id"];
+            echo "    $i. <button type='button' onclick=\"details('animal', '$h_id')\">$h_name</button><br><br>";
+            $i++;
+        }
     else if($type == 'habitat')
     {
         $scr = $db->prepare("SELECT h.habitat_def, h.habitat_name 

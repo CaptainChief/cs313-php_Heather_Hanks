@@ -66,7 +66,28 @@
 </div>
 
 <!-- Tab content -->
-<div id="Animals" class="tabcontent center">
+
+<div id="Animals (Genus)" class="tabcontent center">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Animals</h3>
+  <div class = "inner-left left">
+    <?php
+      $scr = $db->prepare("SELECT genus_id, genus_name FROM animal_genus ORDER BY genus_name ASC");
+      $scr->execute();
+      $i = 1;
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $s_name = $frow["genus_name"];
+        $id = $frow["genus_id"];
+          
+        echo "<p><button type='button' onclick=\"details('genus', '$id')\">$s_name</button></p>";
+        $i++;
+      }
+    ?>
+  </div>
+</div>
+
+<div id="Animals (Species)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
   <div class = "inner-left left">
@@ -79,7 +100,7 @@
         $s_name = $frow["specie_name"];
         $id = $frow["specie_id"];
           
-        echo "<p><button type='button' onclick=\"details('animal', '$id')\">$s_name</button></p>";
+        echo "<p><button type='button' onclick=\"details('specie', '$id')\">$s_name</button></p>";
         $i++;
       }
     ?>
