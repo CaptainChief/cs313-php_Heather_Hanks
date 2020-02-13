@@ -42,9 +42,10 @@
 
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
-          $g_id = $frow["location_id"];
-  
-          echo "$g_id";
+          if($frow == NULL)//$g_id = $frow["location_id"];
+          {
+            echo "It's null";
+          }
         }
     }
     
