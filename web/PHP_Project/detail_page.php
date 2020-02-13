@@ -16,8 +16,14 @@
     function details(type, id)
     {
       // alert("Incoming page for " + type);
-      var encodedParam = encodeURIComponent('detail_page.php?type=' + type + '&id=' + id);
+      // var encodedParam = encodeURIComponent('detail_page.php?type=' + type + '&id=' + id);
       window.location.replace('detail_page.php?type=' + type + '&id=' + id)
+    }
+
+    function delete(type, id)
+    {
+      // var encodedParam = encodeURIComponent('delete_page.php?type=' + type + '&id=' + id);
+      window.location.replace('delete_page.php?type=' + type + '&id=' + id)
     }
 </script>
 
@@ -121,6 +127,9 @@
           echo "    $i. <button type='button' onclick=\"details('habitat', '$h_id')\">$h_name</button><br><br>";
           $i++;          
         }
+
+
+        echo "<button type='button' onclick=\"delete('specie', '$id')\">Delete Specie</button><br><br>";
       
     }
     else if($type == 'genus')
@@ -158,6 +167,9 @@
         echo "    $i. <button type='button' onclick=\"details('specie', '$h_id')\">$h_name</button><br><br>";
         $i++;
       }
+
+
+      echo "<button type='button' onclick=\"delete('genus', '$id')\">Delete Genus</button><br><br>";
     }
     else if($type == 'habitat')
     {
@@ -224,6 +236,8 @@
         //     $i++;
         // }
 
+        echo "<button type='button' onclick=\"delete('habitat', '$id')\">Delete Habitat</button><br><br>";
+
     }
     else if($type == 'location')
     {
@@ -285,6 +299,8 @@
         //     echo "    $i. $h_name<br>";         
         //     $i++;
         // }
+
+        echo "<button type='button' onclick=\"delete('location', '$id')\">Delete Location</button><br><br>";
 
     }
     else
