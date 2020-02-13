@@ -40,12 +40,12 @@
         $statement->bindValue(':id', $id);
         $statement->execute();
 
-        // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-        // {
-        //   $g_id = $frow["location_id"];
+        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        {
+          $g_id = $frow["location_id"];
   
-        //   echo "$g_id";
-        // }
+          echo "$g_id";
+        }
     }
     
     // header('Location: create_location.php');
