@@ -19,6 +19,7 @@
     <li><a class = "active" href="">Create Genus</a></li>
   </ul>
 
+ <br><br>
   <div class = "create">
   <form action="post_genus.php" method="post">
 

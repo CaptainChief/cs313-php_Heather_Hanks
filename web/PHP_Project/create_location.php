@@ -18,6 +18,7 @@
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
 
+  <br><br>
   <div class = "create">
   <form action="post_location.php" method="post">
 

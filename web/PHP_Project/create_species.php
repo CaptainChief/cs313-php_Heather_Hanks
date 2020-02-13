@@ -23,7 +23,8 @@
     <li><a class="active" href="">Create Species</a></li>
     <li><a href="create_genus.php">Create Genus</a></li>
   </ul>
-<br><br>
+
+  <br><br>
   <div class = "create">
   <form action="post_species.php" method="post">
 

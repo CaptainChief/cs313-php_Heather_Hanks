@@ -70,7 +70,7 @@
 
 <div id="Animals (Genus)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Animals</h3>
+  <h3>Animals (Genus)</h3>
   <div class = "inner-left left">
     <?php
       $scr = $db->prepare("SELECT genus_id, genus_name FROM animal_genus ORDER BY genus_name ASC");
@@ -90,7 +90,7 @@
 
 <div id="Animals (Species)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Animals</h3>
+  <h3>Animals (Species)</h3>
   <div class = "inner-left left">
     <?php
       $scr = $db->prepare("SELECT specie_id, specie_name FROM animal_species ORDER BY specie_name ASC");
