@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
+<script>
+    function details(type, id)
+    {
+      // alert("Incoming page for " + type);
+      var encodedParam = encodeURIComponent('detail_page.php?type=' + type + '&id=' + id);
+      window.location.replace('detail_page.php?type=' + type + '&id=' + id)
+    }
+</script>
+
 <body>
 
 <div class="headerLogo center"></div>
@@ -131,7 +140,7 @@
             echo "<br><b>Description</b>: $def<br><br>";
         }
 
-        $scr = $db->prepare("SELECT a.specie_name
+        $scr = $db->prepare("SELECT a.specie_id, a.specie_name
                             FROM animal_species a 
                             JOIN species_and_habitats sh
                             ON a.specie_id = sh.specie_id
@@ -147,7 +156,8 @@
         {
 
             $h_name = $frow["specie_name"];
-            echo "    $i. $h_name<br>";
+            $h_id = $frow["specie_id"];
+            echo "    $i. <button type='button' onclick=\"details('animal', '$h_id')\">$h_name</button><br>";
             $i++;
         }
 
@@ -194,7 +204,7 @@
           
         }
 
-        $scr = $db->prepare("SELECT a.specie_name 
+        $scr = $db->prepare("SELECT a.specie_id, a.specie_name 
                             FROM animal_species a 
                             JOIN species_and_location sl
                             ON a.specie_id = sl.specie_id
@@ -208,8 +218,9 @@
         while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
         {
             $s_name = $frow["specie_name"];
+            $s_id = $frow["specie_id"];
 
-            echo "    $i. $s_name<br>";
+            echo "    $i. <button type='button' onclick=\"details('animal', '$s_id')\">$s_name</button><br>";
             $i++;
         }
 
