@@ -9,12 +9,12 @@
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
 
-    $query = "INSERT INTO locations (location_name, location_def) VALUES(1, :name, :def)";
+    $query = "INSERT INTO locations (creator_id, location_name, location_def) VALUES(1, :name, :def)";
 	$statement = $db->prepare($query);
 	$statement->bindValue(':name', $name); //This will help keep statements safe
 	$statement->bindValue(':def', $def);
 
     $statement->execute();
     
-    // header('Location: create_location.php');
+    header('Location: create_location.php');
 ?>
