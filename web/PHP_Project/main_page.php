@@ -60,14 +60,15 @@
   </ul>
 
   <div class="tab center">
-  <button class="tablinks" onclick="openView(event, 'Animals')">Animals</button>
+  <button class="tablinks" onclick="openView(event, 'Animals (Genus)')">Animals (Genus)</button>
+  <button class="tablinks" onclick="openView(event, 'Animals (Species)')">Animals (Species)</button>
   <button class="tablinks" onclick="openView(event, 'Habitats')">Habitats</button>
   <button class="tablinks" onclick="openView(event, 'Locations')">Locations</button>
 </div>
 
 <!-- Tab content -->
 
-<!-- <div id="Animals (Genus)" class="tabcontent center">
+<div id="Animals (Genus)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Animals</h3>
   <div class = "inner-left left">
@@ -85,7 +86,7 @@
       }
     ?>
   </div>
-</div> -->
+</div>
 
 <div id="Animals (Species)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
