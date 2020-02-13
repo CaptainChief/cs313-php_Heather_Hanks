@@ -40,7 +40,7 @@
         $statement->bindValue(':id', $id);
         $statement->execute();
 
-        if ($scr->fetch(PDO::FETCH_ASSOC) == NULL)
+        if (is_null($scr->fetch(PDO::FETCH_ASSOC)))
         {
             echo "It's null";
         }
