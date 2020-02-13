@@ -33,7 +33,7 @@
         }
         else
         {
-            $query = "DELETE FROM genus WHERE genus_id = $id";
+            $query = "DELETE FROM animal_genus WHERE genus_id = $id";
             $statement = $db->prepare($query);
             $statement->execute();
 
