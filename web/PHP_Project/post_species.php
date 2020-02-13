@@ -34,5 +34,5 @@
         $statement->execute();
     }
     
-    header('Location: create_specie.php');
+    header('Location: create_species.php');
 ?>
