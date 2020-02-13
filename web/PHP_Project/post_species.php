@@ -18,8 +18,7 @@
 	$statement->bindValue(':def', $def);
     $statement->execute();
 
-    $specieId = $db->lastInsertId("animal_species");
-    echo $specieId;
+    $specieId = $db->lastInsertId("animal_species_specie_id_seq");
 
     foreach ($habitats as $habitat)
     {
