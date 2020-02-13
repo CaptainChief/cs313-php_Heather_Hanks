@@ -1,5 +1,4 @@
 <?php
-
     require("dbConnect.php");
     $db = get_db();
 
@@ -39,14 +38,14 @@
         $query = "SELECT location_id FROM species_and_locations WHERE location_id = :id";
         $statement = $db->prepare($query);
         $statement->bindValue(':id', $id);
-        $statement->execute();
+        // $statement->execute();
 
-        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-        {
-          $g_id = $frow["location_id"];
+        // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        // {
+        //   $g_id = $frow["location_id"];
   
-          echo "$g_id";
-        }
+        //   echo "$g_id";
+        // }
     }
     
     // header('Location: create_location.php');
