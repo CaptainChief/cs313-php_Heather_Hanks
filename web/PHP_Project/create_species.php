@@ -27,10 +27,9 @@
   <div class = "create">
   <form action="post_species.php" method="post">
 
-    Specie Name: <input type="text" id="specie_name"><br><br>
+    Specie Name: <input type="text" id="specie_name" name="specie_name"><br><br>
     Specie Definition: <br> 
-    <textarea id="specie_def" rows="4" cols="50">
-    </textarea><br><br>
+    <textarea id="specie_def" name="specie_def" rows="4" cols="50"></textarea><br><br>
 
     <p class = "center">Choose a Genus</p>
 

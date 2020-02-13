@@ -22,9 +22,9 @@
   <div class = "create">
   <form action="post_genus.php" method="post">
 
-    Genus Name: <input type="text" id="genus_name"><br><br>
+    Genus Name: <input type="text" id="genus_name" name="genus_name"><br><br>
     Genus Definition: <br> 
-    <textarea id="genus_def" rows="4" cols="50">
+    <textarea id="genus_def" name="genus_name" rows="4" cols="50">
     </textarea><br><br>
 
 

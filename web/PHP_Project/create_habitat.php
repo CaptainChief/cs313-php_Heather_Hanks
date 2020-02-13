@@ -22,9 +22,9 @@
   <div class = "create">
   <form action="post_habitat.php" method="post">
 
-    Habitat Name: <input type="text" id="habitat_name"><br><br>
+    Habitat Name: <input type="text" id="habitat_name" name="habitat_name"><br><br>
     Habitat Definition: <br> 
-    <textarea id="habitat_def" rows="4" cols="50">
+    <textarea id="habitat_def" name="habitat_def" rows="4" cols="50">
     </textarea><br><br>
 
 
