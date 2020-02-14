@@ -80,9 +80,14 @@
                     if($gs_name == $g_name)
                     {
                         echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
+                        $g_name = 'skip';
                     }
                 }
-                echo "<option name='genus_name' value='$g_id'>$g_name</option>";
+                echo "We are before the end. $g_name";
+                if($g_name != 'skip')
+                {
+                    echo "<option name='genus_name' value='$g_id'>$g_name</option>";
+                }
             }
             //echo '</select><br><br><br>';
 
