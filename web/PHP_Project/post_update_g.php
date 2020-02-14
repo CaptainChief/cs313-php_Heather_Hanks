@@ -6,6 +6,8 @@
    $def = $_POST["genus_def"];   //specie
    $g_id = $_POST["g_id"];       //specie
 
+   echo "this is $g_id";
+
 
    
 
