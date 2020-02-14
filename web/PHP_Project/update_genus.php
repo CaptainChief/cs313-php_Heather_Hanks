@@ -22,7 +22,7 @@
 
   <br><br>
   <div class = "create">
-  <form action="post_update.php" method="post">
+  <form action="post_update_g.php" method="post">
 
     <?php
         $url = $_SERVER['REQUEST_URI'];
@@ -51,7 +51,7 @@
             $gdef = $frow["genus_def"];
 
             echo "Genus Name: <input type=\"text\" id=\"genus_name\" name=\"genus_name\" value=\"$g_name\"><br><br>";
-            echo "Genus Definition: <br><textarea id=\"genus_def\" name=\"genus_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+            echo "Genus Definition: <br><textarea id=\"genus_def\" name=\"genus_def\" rows=\"4\" cols=\"50\">$gdef</textarea><br><br>";
             echo "<p name='g_id' value='$id' hidden></p>";
             echo "<button type='submit'>Complete Update</button><br><br>";           
         }
