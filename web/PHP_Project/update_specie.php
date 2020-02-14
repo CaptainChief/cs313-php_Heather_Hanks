@@ -31,10 +31,12 @@
             parse_str($url_components['query'], $params); 
             $type = "none";
             $id = "none";
+            $og_name = "none";
             
             // Display result 
             $id = (int)$params['id'];
             $type = $params['type'];
+            $og_name = $params['g_name'];
 
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                                     FROM animal_species a 
@@ -66,19 +68,7 @@
                 $g_id = $frow["genus_id"];
                 $g_name = $frow["genus_name"];
 
-                $script = $db->prepare("SELECT g.genus_name
-                                    FROM animal_genus g
-                                    JOIN animal_species s
-                                    ON s.genus_id = g.genus_id
-                                    WHERE s.specie_id = $id");
-                $script->execute();
-
-                while ($row = $scr->fetch(PDO::FETCH_ASSOC))
-                {
-                    $gs_name = $row["genus_name"];
-                }
-
-                if($gs_name == $g_name)
+                if($og_name == $g_name)
                 {
                     echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
                 }

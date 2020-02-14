@@ -26,11 +26,11 @@
       window.location.replace('delete_page.php?type=' + type + '&id=' + id)
     }
 
-    function update_item(type, id)
+    function update_item(type, id, genus_name'
     {
       if(type == 'specie')
       {
-        window.location.replace('update_specie.php?type=' + type + '&id=' + id)
+        window.location.replace('update_specie.php?type=' + type + '&id=' + id + '&g_name=' + genus_name)
       }
       else if(type == 'genus')
       {
@@ -150,7 +150,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('specie', '$id')\">Delete Specie</button><br><br>";
-        echo "<button type='button' onclick=\"update_item('specie', '$id')\">Update Specie</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('specie', '$id', '$g_name')\">Update Specie</button><br><br>";
     }
     else if($type == 'genus')
     {
@@ -190,7 +190,7 @@
 
       echo "<br><hr><br>";
       echo "<button type='button' onclick=\"delete_item('genus', '$id')\">Delete Genus</button><br><br>";
-      echo "<button type='button' onclick=\"update_item('genus', '$id')\">Update Genus</button><br><br>";
+      echo "<button type='button' onclick=\"update_item('genus', '$id', '')\">Update Genus</button><br><br>";
     }
     else if($type == 'habitat')
     {
@@ -234,7 +234,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('habitat', '$id')\">Delete Habitat</button><br><br>";
-        echo "<button type='button' onclick=\"update_item('habitat', '$id')\">Update Habitat</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('habitat', '$id', '')\">Update Habitat</button><br><br>";
 
     }
     else if($type == 'location')
@@ -276,7 +276,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('location', '$id')\">Delete Location</button><br><br>";
-        echo "<button type='button' onclick=\"update_item('location', '$id')\">Update Location</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('location', '$id', '')\">Update Location</button><br><br>";
 
     }
     else
