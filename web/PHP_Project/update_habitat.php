@@ -17,7 +17,7 @@
 
   <br><br>
   <div class = "create">
-  <form action="post_update.php" method="post">
+  <form action="post_update_h.php" method="post">
     
     <?php
     require "dbConnect.php";
@@ -49,6 +49,7 @@
 
             echo "Habitat Name: <input type=\"text\" id=\"habitat_name\" name=\"habitat_name\" value=\"$s_name\"><br><br>";
             echo "Habitat Definition: <br><textarea id=\"habitat_def\" name=\"habitat_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+            echo "<input type='text' id='h_id' name='h_id' value='$id' hidden>";
             echo "<button type='submit'>Complete Update</button><br><br>";  
         }
     ?>
