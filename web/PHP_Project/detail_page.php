@@ -30,7 +30,17 @@
     {
       if(type == 'specie')
       {
-        window.location.replace('update_specie.php?type=' + type + '&id=' + id + '&g_name=' + genus_name + '&locations=' + locations + '&habitats=' + habitats)
+        var url = 'update_specie.php?type=' + type + '&id=' + id + '&g_name=' + genus_name;
+        foreach(var i = 0; i < locations.length; i++)
+        {
+          url +="&locations="+locations[i];
+        }
+        foreach(var i = 0; i < habitats.length; i++)
+        {
+          url +="&habitats="+habitats[i];
+        }
+
+        window.location.replace(url)
       }
       else if(type == 'genus')
       {

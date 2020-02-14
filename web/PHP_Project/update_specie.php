@@ -39,8 +39,8 @@
             $id = (int)$params['id'];
             $type = $params['type'];
             $og_name = $params['g_name'];
-            $og_locations = $params['locations'];
-            $og_habitats = $params['habitats'];
+            $og_locations = $params['locations[]'];
+            $og_habitats = $params['habitats[]'];
 
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                                     FROM animal_species a 
