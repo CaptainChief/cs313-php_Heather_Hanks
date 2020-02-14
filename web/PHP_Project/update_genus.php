@@ -52,7 +52,7 @@
 
             echo "Genus Name: <input type=\"text\" id=\"genus_name\" name=\"genus_name\" value=\"$g_name\"><br><br>";
             echo "Genus Definition: <br><textarea id=\"genus_def\" name=\"genus_def\" rows=\"4\" cols=\"50\">$gdef</textarea><br><br>";
-            echo "<p id='g_id' name='g_id' value='$id' hidden></p>";
+            echo "<input type='text' id='g_id' name='g_id' value='$id' hidden>";
             echo "<button type='submit'>Complete Update</button><br><br>";           
         }
 
