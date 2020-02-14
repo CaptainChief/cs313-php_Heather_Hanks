@@ -54,7 +54,7 @@
             }
 
             echo '<br><br><p class = "center">Choose a Genus</p>';
-            //echo '<select id="genus" name="genus">';
+            echo '<select id="genus" name="genus">';
             
             $scr = $db->prepare("SELECT genus_id, genus_name
                                 FROM animal_genus
@@ -76,20 +76,18 @@
                 while ($row = $scr->fetch(PDO::FETCH_ASSOC))
                 {
                     $gs_name = $row["genus_name"];
-
-                    if($gs_name == $g_name)
-                    {
-                        echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
-                        $g_name = 'skip';
-                    }
                 }
-                echo "We are before the end. $g_name";
-                if($g_name != 'skip')
+
+                if($gs_name == $g_name)
+                {
+                    echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
+                }
+                else
                 {
                     echo "<option name='genus_name' value='$g_id'>$g_name</option>";
                 }
             }
-            //echo '</select><br><br><br>';
+            echo '</select><br><br><br>';
 
             echo '<br><br><p class = "center">Choose Locations:</p>';
             $scr = $db->prepare("SELECT location_id, location_name
