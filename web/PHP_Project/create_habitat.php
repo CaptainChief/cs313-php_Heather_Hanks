@@ -25,8 +25,7 @@
 
     Habitat Name: <input type="text" id="habitat_name" name="habitat_name"><br><br>
     Habitat Definition: <br> 
-    <textarea id="habitat_def" name="habitat_def" rows="4" cols="50">
-    </textarea><br><br>
+    <textarea id="habitat_def" name="habitat_def" rows="4" cols="50"></textarea><br><br>
 
 
       <button type="submit" value="Create Habitat">Create Habitat</button><br><br>
