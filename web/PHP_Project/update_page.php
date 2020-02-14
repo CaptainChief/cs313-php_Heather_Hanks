@@ -38,6 +38,8 @@
         $id = (int)$params['id'];
         $type = $params['type'];
 
+        echo "The id is $id, and the type is $type";
+
         if($type == 'specie')
         {
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
