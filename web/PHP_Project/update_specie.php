@@ -53,6 +53,7 @@
                 
             }
 
+            echo '<br><br><p class = "center">Choose a Genus</p>';
             echo '<select id="genus" name="genus">';
             
             $scr = $db->prepare("SELECT genus_id, genus_name
@@ -70,6 +71,7 @@
             }
             echo '</select><br><br><br>';
 
+            echo '<br><br><p class = "center">Choose Locations:</p>';
             $scr = $db->prepare("SELECT location_id, location_name
                                 FROM locations
                                 ORDER BY location_name ASC");
@@ -80,9 +82,11 @@
                 $g_id = $frow["location_id"];
                 $g_name = $frow["location_name"];
 
-                echo "<input type='checkbox' name='locations[]' value='$g_id'>$g_name<br><br><br>";
+                echo "<input type='checkbox' name='locations[]' value='$g_id'>$g_name<br>";
             }
 
+
+            echo '<br><br><p class = "center">Choose Habitats: </p>';
             $scr = $db->prepare("SELECT habitat_id, habitat_name
                                 FROM habitats
                                 ORDER BY habitat_name ASC");
@@ -93,10 +97,10 @@
                 $g_id = $frow["habitat_id"];
                 $g_name = $frow["habitat_name"];
 
-            echo "<input type='checkbox' name='habitats[]' value='$g_id'>$g_name<br><br><br>";
+            echo "<input type='checkbox' name='habitats[]' value='$g_id'>$g_name<br>";
             }
 
-            echo "<button type='submit'>Complete Update</button><br><br>";
+            echo "<br><br><button type='submit'>Complete Update</button><br><br>";
 
     ?>
     
