@@ -26,7 +26,7 @@
       window.location.replace('delete_page.php?type=' + type + '&id=' + id)
     }
 
-    function update_item(type, id, genus_name'
+    function update_item(type, id, genus_name)
     {
       if(type == 'specie')
       {
