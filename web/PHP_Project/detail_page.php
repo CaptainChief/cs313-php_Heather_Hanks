@@ -28,7 +28,22 @@
 
     function update_item(type, id)
     {
-      window.location.replace('update_page.php?type=' + type + '&id=' + id)
+      if(type == 'specie')
+      {
+        window.location.replace('update_specie.php?type=' + type + '&id=' + id)
+      }
+      else if(type == 'genus')
+      {
+        window.location.replace('update_genus.php?type=' + type + '&id=' + id)
+      }
+      else if(type == 'location')
+      {
+        window.location.replace('update_location.php?type=' + type + '&id=' + id)
+      }
+      else if(type == 'habitat')
+      {
+        window.location.replace('update_habitat.php?type=' + type + '&id=' + id)
+      }
     }
 </script>
 
