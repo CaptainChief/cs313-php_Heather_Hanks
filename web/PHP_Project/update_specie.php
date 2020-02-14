@@ -80,12 +80,12 @@
                     echo "Before the compare, it is $g_name, $gs_name<br><br>";
                     if($gs_name == $g_name)
                     {
-                        echo "$g_name<br>";
+                        echo "First if, $g_name, $gs_name<br>";
                         //echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
                     }
                     else
                     {
-                        echo "$g_name<br>";
+                        echo "Second if, $g_name, $gs_name<br>";
                         //echo "<option name='genus_name' value='$g_id'>$g_name</option>";
                     }
                 }
