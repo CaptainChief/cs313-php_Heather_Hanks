@@ -42,11 +42,6 @@
             $og_locations = $params['locations'];
             $og_habitats = $params['habitats'];
 
-            foreach ($og_locations as $location)
-            {
-                echo "This is Location, $location<br>";
-            }
-
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                                     FROM animal_species a 
                                     WHERE a.specie_id = $id");
@@ -100,7 +95,19 @@
                 $g_id = $frow["location_id"];
                 $g_name = $frow["location_name"];
 
-                echo "<input type='checkbox' name='locations[]' value='$g_id'>$g_name<br>";
+                foreach($og_locations as $loc)
+                {
+                    if($loc == $g_name)
+                    {
+                        echo "<input type='checkbox' name='locations[]' value='$g_id' checked>$g_name<br>";
+                        $g_name = 'skip';
+                    }
+                }
+
+                if($g_name != 'skip')
+                {
+                    echo "<input type='checkbox' name='locations[]' value='$g_id'>$g_name<br>";
+                }
             }
 
 
