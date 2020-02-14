@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
+<script>
+
+</script>
+
 <body>
 
 <div class="headerLogo center"></div>
@@ -38,13 +42,11 @@
         $id = (int)$params['id'];
         $type = $params['type'];
 
-        echo "The id is $id, and the type is $type";
-
         if($type == 'specie')
         {
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
-            FROM animal_species a 
-            WHERE a.specie_id = $id");
+                                FROM animal_species a 
+                                WHERE a.specie_id = $id");
 
             $scr->execute();
 
@@ -55,6 +57,8 @@
 
                 echo "Specie Name: <input type=\"text\" id=\"specie_name\" name=\"specie_name\" value=\"$s_name\"><br><br>";
                 echo "Specie Definition: <br><textarea id=\"specie_def\" name=\"specie_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+                echo "<button type='button' onclick=\"update_item('specie', '$id')\">Complete Update</button><br><br>";
+            
             }
             
         }
@@ -73,14 +77,16 @@
 
                 echo "Genus Name: <input type=\"text\" id=\"genus_name\" name=\"genus_name\" value=\"$g_name\"><br><br>";
                 echo "Genus Definition: <br><textarea id=\"genus_def\" name=\"genus_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+                echo "<button type='button' onclick=\"update_item('genus', '$id')\">Complete Update</button><br><br>";           
             }
             
         }
         else if($type == 'habitat')
         {
             $scr = $db->prepare("SELECT h.habitat_def, h.habitat_name
-            FROM habitats h 
-            WHERE h.habitat_id = $id");
+                                FROM habitats h 
+                                WHERE h.habitat_id = $id");
+
             $scr->execute();
 
             while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
@@ -90,6 +96,7 @@
 
                 echo "Habitat Name: <input type=\"text\" id=\"habitat_name\" name=\"habitat_name\" value=\"$s_name\"><br><br>";
                 echo "Habitat Definition: <br><textarea id=\"habitat_def\" name=\"habitat_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+                echo "<button type='button' onclick=\"update_item('habitat', '$id')\">Complete Update</button><br><br>";  
             }
             
         }
@@ -108,6 +115,7 @@
 
                 echo "Location Name: <input type=\"text\" id=\"location_name\" name=\"location_name\" value=\"$s_name\"><br><br>";
                 echo "Location Definition: <br><textarea id=\"location_def\" name=\"location_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+                echo "<button type='button' onclick=\"update_item('location', '$id')\">Complete Update</button><br><br>";
             }
             
         }
