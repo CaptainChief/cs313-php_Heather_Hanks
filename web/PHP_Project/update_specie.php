@@ -70,12 +70,13 @@
                                     FROM animal_genus g
                                     JOIN animal_species s
                                     ON s.genus_id = g.genus_id
-                                    WHERE s.genus_id = $id");
+                                    WHERE s.specie_id = $id");
                 $script->execute();
 
                 while ($row = $scr->fetch(PDO::FETCH_ASSOC))
                 {
                     $gs_name = $row["genus_name"];
+
                     if($gs_name == $g_name)
                     {
                         echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
