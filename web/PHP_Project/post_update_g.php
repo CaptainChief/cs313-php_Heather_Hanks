@@ -8,7 +8,7 @@
 
    echo "this is name, $name<br>";
    echo "this is def, $def<br>";
-   echo "this is id, $id<br>";
+   echo "this is id, $g_id<br>";
 
     //Filter
     $name = htmlspecialchars($name);
