@@ -31,12 +31,12 @@
       if(type == 'specie')
       {
         var url = "update_specie.php?type=" + type + "&id=" + id + "&g_name=" + genus_name;
-        foreach(var i = 0; i < locations.length; i++)
+        for(var i = 0; i < locations.length; i++)
         {
           console.log(locations[i]);
           url +="&locations="+locations[i];
         }
-        foreach(var i = 0; i < habitats.length; i++)
+        for(var i = 0; i < habitats.length; i++)
         {
           console.log(habitats[i]);
           url +="&habitats="+habitats[i];
