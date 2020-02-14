@@ -17,13 +17,13 @@
     {
       // alert("Incoming page for " + type);
       // var encodedParam = encodeURIComponent('detail_page.php?type=' + type + '&id=' + id);
-      window.location.replace('detail_page.php?type=' + type + '&id=' + id)
+      window.location.replace('detail_page.php?type=' + type + '&id=' + id);
     }
 
     function delete_item(type, id)
     {
       // var encodedParam = encodeURIComponent('delete_page.php?type=' + type + '&id=' + id);
-      window.location.replace('delete_page.php?type=' + type + '&id=' + id)
+      window.location.replace('delete_page.php?type=' + type + '&id=' + id);
     }
 
     function update_item(type, id, genus_name, locations, habitats)
@@ -42,19 +42,19 @@
           url +="&habitats="+habitats[i];
         }
 
-        window.location.replace(url)
+        window.location.replace(url);
       }
       else if(type == 'genus')
       {
-        window.location.replace('update_genus.php?type=' + type + '&id=' + id)
+        window.location.replace('update_genus.php?type=' + type + '&id=' + id);
       }
       else if(type == 'location')
       {
-        window.location.replace('update_location.php?type=' + type + '&id=' + id)
+        window.location.replace('update_location.php?type=' + type + '&id=' + id);
       }
       else if(type == 'habitat')
       {
-        window.location.replace('update_habitat.php?type=' + type + '&id=' + id)
+        window.location.replace('update_habitat.php?type=' + type + '&id=' + id);
       }
     }
 </script>
