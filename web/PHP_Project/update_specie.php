@@ -32,11 +32,20 @@
             $type = "none";
             $id = "none";
             $og_name = "none";
+            $og_locations = array();
+            $og_habitats = array();
             
             // Display result 
             $id = (int)$params['id'];
             $type = $params['type'];
             $og_name = $params['g_name'];
+            $og_locations = $params['locations'];
+            $og_habitats = $params['habitats'];
+
+            foreach ($og_locations as $location)
+            {
+                echo "This is Location, $location<br>";
+            }
 
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                                     FROM animal_species a 
