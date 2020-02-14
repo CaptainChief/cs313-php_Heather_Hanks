@@ -38,7 +38,7 @@
         $id = (int)$params['id'];
         $type = $params['type'];
 
-        if(type == 'specie')
+        if($type == 'specie')
         {
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
             FROM animal_species a 
@@ -54,7 +54,7 @@
             }
             
         }
-        if(type == 'genus')
+        if($type == 'genus')
         {
             $scr = $db->prepare("SELECT g.specie_def, g.specie_name
                                  FROM animal_genus g 
@@ -70,7 +70,7 @@
             }
             
         }
-        if(type == 'habitat')
+        if($type == 'habitat')
         {
             $scr = $db->prepare("SELECT h.habitat_def, h.habitat_name
             FROM habitats h 
@@ -86,7 +86,7 @@
             }
             
         }
-        if(type == 'location')
+        if($type == 'location')
         {
             $scr = $db->prepare("SELECT l.location_def, l.location_name
                                  FROM locations l
