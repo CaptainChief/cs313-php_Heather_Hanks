@@ -77,7 +77,7 @@
                 {
                     $gs_name = $row["genus_name"];
 
-                    echo "Before the compare, it is $g_name<br><br>";
+                    echo "Before the compare, it is $g_name, $gs_name<br><br>";
                     if($gs_name == $g_name)
                     {
                         echo "$g_name<br>";
