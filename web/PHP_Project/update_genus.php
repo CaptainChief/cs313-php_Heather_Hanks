@@ -7,7 +7,7 @@
 <html>
 <head>
 
-    <title>PHP Project Create Habitat</title>
+    <title>PHP Project Update Genus</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="personal.css">
 </head>
@@ -39,22 +39,22 @@
         $type = $params['type'];
 
 
-        $scr = $db->prepare("SELECT g.specie_def, g.specie_name
-                            FROM animal_genus g 
-                            WHERE g.genus_id = $id");
+        // $scr = $db->prepare("SELECT g.specie_def, g.specie_name
+        //                     FROM animal_genus g 
+        //                     WHERE g.genus_id = $id");
 
-        $scr->execute();
+        // $scr->execute();
 
-        while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-        {
-            $g_name = $frow["genus_name"];
-            $gdef = $frow["genus_def"];
+        // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+        // {
+        //     $g_name = $frow["genus_name"];
+        //     $gdef = $frow["genus_def"];
 
-            echo "Genus Name: <input type=\"text\" id=\"genus_name\" name=\"genus_name\" value=\"$g_name\"><br><br>";
-            echo "Genus Definition: <br><textarea id=\"genus_def\" name=\"genus_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
-            echo "<p name='g_id' value='$id' hidden></p>";
-            echo "<button type='submit'>Complete Update</button><br><br>";           
-        }
+        //     echo "Genus Name: <input type=\"text\" id=\"genus_name\" name=\"genus_name\" value=\"$g_name\"><br><br>";
+        //     echo "Genus Definition: <br><textarea id=\"genus_def\" name=\"genus_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+        //     echo "<p name='g_id' value='$id' hidden></p>";
+        //     echo "<button type='submit'>Complete Update</button><br><br>";           
+        // }
 
   ?>
 
