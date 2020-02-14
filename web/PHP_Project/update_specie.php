@@ -66,8 +66,25 @@
                 $g_id = $frow["genus_id"];
                 $g_name = $frow["genus_name"];
 
-                echo "<option name='genus_name' value='$g_id'>$g_name</option>";
-                echo "Through the looop at least once";
+                $script = $db->prepare("SELECT g.genus_name
+                                    FROM animal_genus g
+                                    JOIN animal_species s
+                                    ON s.genus_id = g.genus_id
+                                    WHERE s.genus_id = $id");
+                $script->execute();
+
+                while ($row = $scr->fetch(PDO::FETCH_ASSOC))
+                {
+                    $gs_name = $row["genus_name"];
+                    if($gs_name == $g_name)
+                    {
+                        echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
+                    }
+                    else
+                    {
+                        echo "<option name='genus_name' value='$g_id'>$g_name</option>";
+                    }
+                }
             }
             echo '</select><br><br><br>';
 
@@ -79,6 +96,7 @@
             $scr->execute();
             while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
             {
+
                 $g_id = $frow["location_id"];
                 $g_name = $frow["location_name"];
 
