@@ -18,7 +18,7 @@
 
   <br><br>
   <div class = "create">
-  <form action="post_update.php" method="post">
+  <form action="post_update_l.php" method="post">
     
     <?php
     require "dbConnect.php";
@@ -38,8 +38,8 @@
     $type = $params['type'];
 
     $scr = $db->prepare("SELECT l.location_def, l.location_name
-    FROM locations l
-    WHERE l.location_id = $id");
+                        FROM locations l
+                        WHERE l.location_id = $id");
 
         $scr->execute();
 
@@ -50,6 +50,7 @@
 
             echo "Location Name: <input type=\"text\" id=\"location_name\" name=\"location_name\" value=\"$s_name\"><br><br>";
             echo "Location Definition: <br><textarea id=\"location_def\" name=\"location_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
+            echo "<input type='text' id='l_id' name='l_id' value='$id' hidden>";
             echo "<button type='submit'>Complete Update</button><br><br>";
         }
 
