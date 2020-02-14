@@ -17,5 +17,5 @@
 	$statement->bindValue(':name', $name); //This will help keep statements safe
 	$statement->bindValue(':def', $def);
 
-    // $scr->execute();
+    $statement->execute();
 ?>
