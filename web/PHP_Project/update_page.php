@@ -45,7 +45,9 @@
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
             FROM animal_species a 
             WHERE a.specie_id = $id");
-            echo "In the specie";
+
+            $scr->execute();
+
             while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
             {
                 $s_name = $frow["specie_name"];
@@ -54,7 +56,6 @@
                 echo "Specie Name: <input type=\"text\" id=\"specie_name\" name=\"specie_name\" value=\"$s_name\"><br><br>";
                 echo "Specie Definition: <br><textarea id=\"specie_def\" name=\"specie_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
             }
-            echo "Past the query";
             
         }
         else if($type == 'genus')
@@ -62,6 +63,8 @@
             $scr = $db->prepare("SELECT g.specie_def, g.specie_name
                                  FROM animal_genus g 
                                  WHERE g.genus_id = $id");
+
+            $scr->execute();
 
             while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
             {
@@ -78,6 +81,7 @@
             $scr = $db->prepare("SELECT h.habitat_def, h.habitat_name
             FROM habitats h 
             WHERE h.habitat_id = $id");
+            $scr->execute();
 
             while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
             {
@@ -94,6 +98,8 @@
             $scr = $db->prepare("SELECT l.location_def, l.location_name
                                  FROM locations l
                                  WHERE l.location_id = $id");
+
+            $scr->execute();
 
             while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
             {
