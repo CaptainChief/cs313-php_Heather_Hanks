@@ -66,26 +66,26 @@
                 $g_id = $frow["genus_id"];
                 $g_name = $frow["genus_name"];
 
-                // $script = $db->prepare("SELECT g.genus_name
-                //                     FROM animal_genus g
-                //                     JOIN animal_species s
-                //                     ON s.genus_id = g.genus_id
-                //                     WHERE s.specie_id = $id");
-                // $script->execute();
+                $script = $db->prepare("SELECT g.genus_name
+                                    FROM animal_genus g
+                                    JOIN animal_species s
+                                    ON s.genus_id = g.genus_id
+                                    WHERE s.specie_id = $id");
+                $script->execute();
 
-                // while ($row = $scr->fetch(PDO::FETCH_ASSOC))
-                // {
-                //     $gs_name = $row["genus_name"];
-                // }
+                while ($row = $scr->fetch(PDO::FETCH_ASSOC))
+                {
+                    $gs_name = $row["genus_name"];
+                }
 
-                // if($gs_name == $g_name)
-                // {
-                    // echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
-                // }
-                // else
-                // {
+                if($gs_name == $g_name)
+                {
+                    echo "<option name='genus_name' value='$g_id' selected>$g_name</option>";
+                }
+                else
+                {
                     echo "<option name='genus_name' value='$g_id'>$g_name</option>";
-                // }
+                }
             }
             echo '</select><br><br><br>';
 
