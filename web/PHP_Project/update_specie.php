@@ -97,6 +97,7 @@
 
                 foreach($og_locations as $loc)
                 {
+                    echo "<input type='checkbox' name='locations[]' value='$g_id' checked>$loc<br>";
                     if($loc == $g_name)
                     {
                         echo "<input type='checkbox' name='locations[]' value='$g_id' checked>$g_name<br>";
