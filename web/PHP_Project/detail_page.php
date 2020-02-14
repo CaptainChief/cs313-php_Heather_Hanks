@@ -25,6 +25,11 @@
       // var encodedParam = encodeURIComponent('delete_page.php?type=' + type + '&id=' + id);
       window.location.replace('delete_page.php?type=' + type + '&id=' + id)
     }
+
+    function update_item(type, id)
+    {
+      window.location.replace('update_page.php?type=' + type + '&id=' + id)
+    }
 </script>
 
 <body>
@@ -130,7 +135,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('specie', '$id')\">Delete Specie</button><br><br>";
-      
+        echo "<button type='button' onclick=\"update_item('specie', '$id')\">Update Specie</button><br><br>";
     }
     else if($type == 'genus')
     {
@@ -170,6 +175,7 @@
 
       echo "<br><hr><br>";
       echo "<button type='button' onclick=\"delete_item('genus', '$id')\">Delete Genus</button><br><br>";
+      echo "<button type='button' onclick=\"update_item('genus', '$id')\">Update Genus</button><br><br>";
     }
     else if($type == 'habitat')
     {
@@ -211,32 +217,9 @@
             $i++;
         }
 
-        // $scr = $db->prepare("SELECT  l.location_name 
-        //                     FROM animal_species a 
-        //                     JOIN species_and_habitats sh
-        //                     ON a.specie_id = sh.specie_id
-        //                     JOIN habitats h
-        //                     ON h.habitat_id = sh.habitat_id
-        //                     JOIN species_and_location sl
-        //                     ON a.specie_id = sl.specie_id
-        //                     JOIN locations l
-        //                     ON l.location_id = sl.location_id
-        //                     WHERE h.habitat_id = $id");
-
-        // $scr->execute();
-
-        // echo "<br>Locations: <br>";
-        // $i = 1;
-        // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-        // {
-
-        //     $h_name = $frow["location_name"];
-                
-        //     echo "    $i. $h_name<br>";
-        //     $i++;
-        // }
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('habitat', '$id')\">Delete Habitat</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('habitat', '$id')\">Update Habitat</button><br><br>";
 
     }
     else if($type == 'location')
@@ -276,31 +259,9 @@
             $i++;
         }
 
-        // $scr = $db->prepare("SELECT h.habitat_name 
-        //                     FROM animal_species a 
-        //                     JOIN species_and_habitats sh
-        //                     ON a.specie_id = sh.specie_id
-        //                     JOIN habitats h
-        //                     ON h.habitat_id = sh.habitat_id
-        //                     JOIN species_and_location sl
-        //                     ON a.specie_id = sl.specie_id
-        //                     JOIN locations l
-        //                     ON l.location_id = sl.location_id
-        //                     WHERE l.location_id = $id");
-
-        // $scr->execute();
-
-        // echo "<br>Habitats: <br>";
-        // $i = 1;
-        // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-        // {
-        //     $h_name = $frow["habitat_name"];
-              
-        //     echo "    $i. $h_name<br>";         
-        //     $i++;
-        // }
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('location', '$id')\">Delete Location</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('location', '$id')\">Update Location</button><br><br>";
 
     }
     else
