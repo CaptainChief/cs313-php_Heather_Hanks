@@ -32,15 +32,13 @@
             $type = "none";
             $id = "none";
             $og_name = "none";
-            $og_locations = array();
-            $og_habitats = array();
+
             
             // Display result 
             $id = (int)$params['id'];
             $type = $params['type'];
             $og_name = $params['g_name'];
-            $og_locations = $params['locations[]'];
-            $og_habitats = $params['habitats[]'];
+
 
             $scr = $db->prepare("SELECT a.specie_def, a.specie_name
                                     FROM animal_species a 
@@ -94,21 +92,27 @@
 
                 $g_id = $frow["location_id"];
                 $g_name = $frow["location_name"];
+                $script = $db->prepare("SELECT l.location_name
+                                        FROM species_and_location sl
+                                        JOIN location l
+                                        ON sl.location_id = l.location_id
+                                        WHERE l.specie_id = $id");
 
-                foreach($og_locations as $loc)
+                $script->execute();
+                while ($row = $scr->fetch(PDO::FETCH_ASSOC))
                 {
-                    echo "<input type='checkbox' name='locations[]' value='$g_id' checked>$loc<br>";
-                    if($loc == $g_name)
+                    $sl_name = $row["location_name"];
+                    if($sl_name == $g_name)
                     {
                         echo "<input type='checkbox' name='locations[]' value='$g_id' checked>$g_name<br>";
                         $g_name = 'skip';
                     }
                 }
-
                 if($g_name != 'skip')
                 {
                     echo "<input type='checkbox' name='locations[]' value='$g_id'>$g_name<br>";
                 }
+                
             }
 
 
