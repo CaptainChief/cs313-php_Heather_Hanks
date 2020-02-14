@@ -20,11 +20,6 @@
     <li><a href="main_page.php">Cancel Update</a></li>
   </ul>
 
-<?php
-
-?>
-
-
   <br><br>
   <div class = "create">
   <form action="post_update.php" method="post">
@@ -106,6 +101,10 @@
                 echo "Location Definition: <br><textarea id=\"location_def\" name=\"location_def\" rows=\"4\" cols=\"50\">$sdef</textarea><br><br>";
             }
             
+        }
+        else
+        {
+            echo "Could not get the update page up and running.";
         }
         // $scr = $db->prepare("SELECT a.specie_def, a.specie_name
         //                     FROM animal_species a 
