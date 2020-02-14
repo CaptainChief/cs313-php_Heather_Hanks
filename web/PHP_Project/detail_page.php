@@ -26,11 +26,11 @@
       window.location.replace('delete_page.php?type=' + type + '&id=' + id)
     }
 
-    function update_item(type, id, genus_name)
+    function update_item(type, id, genus_name, locations, habitats)
     {
       if(type == 'specie')
       {
-        window.location.replace('update_specie.php?type=' + type + '&id=' + id + '&g_name=' + genus_name)
+        window.location.replace('update_specie.php?type=' + type + '&id=' + id + '&g_name=' + genus_name + '&locations=' + locations + '&habitats=' + habitats)
       }
       else if(type == 'genus')
       {
@@ -106,6 +106,7 @@
           echo "<b>$s_name Description</b>: $def<br><br>";
         }
 
+        $locations = array();
         $scr = $db->prepare("SELECT l.location_id, l.location_name
                             FROM animal_species a 
                             JOIN species_and_location sl
@@ -122,11 +123,13 @@
         {
           $l_name = $frow["location_name"];
           $l_id = $frow["location_id"];
+          array_push($locations, $l_name);
             
           echo "    $i. <button type='button' onclick=\"details('location', '$l_id')\">$l_name</button><br><br>";
           $i++;          
         }
 
+        $habitats = array();
         $scr = $db->prepare("SELECT h.habitat_id, h.habitat_name 
                             FROM animal_species a 
                             JOIN species_and_habitats sh
@@ -143,6 +146,7 @@
         {
           $h_name = $frow["habitat_name"];
           $h_id = $frow["habitat_id"];
+          array_push($habitats, $h_name);
 
           echo "    $i. <button type='button' onclick=\"details('habitat', '$h_id')\">$h_name</button><br><br>";
           $i++;          
@@ -150,7 +154,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('specie', '$id')\">Delete Specie</button><br><br>";
-        echo "<button type='button' onclick=\"update_item('specie', '$id', '$g_name')\">Update Specie</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('specie', '$id', '$g_name', $locations, $habitats)\">Update Specie</button><br><br>";
     }
     else if($type == 'genus')
     {
@@ -190,7 +194,7 @@
 
       echo "<br><hr><br>";
       echo "<button type='button' onclick=\"delete_item('genus', '$id')\">Delete Genus</button><br><br>";
-      echo "<button type='button' onclick=\"update_item('genus', '$id', '')\">Update Genus</button><br><br>";
+      echo "<button type='button' onclick=\"update_item('genus', '$id', '', '', '')\">Update Genus</button><br><br>";
     }
     else if($type == 'habitat')
     {
@@ -234,7 +238,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('habitat', '$id')\">Delete Habitat</button><br><br>";
-        echo "<button type='button' onclick=\"update_item('habitat', '$id', '')\">Update Habitat</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('habitat', '$id', '', '', '')\">Update Habitat</button><br><br>";
 
     }
     else if($type == 'location')
@@ -276,7 +280,7 @@
 
         echo "<br><hr><br>";
         echo "<button type='button' onclick=\"delete_item('location', '$id')\">Delete Location</button><br><br>";
-        echo "<button type='button' onclick=\"update_item('location', '$id', '')\">Update Location</button><br><br>";
+        echo "<button type='button' onclick=\"update_item('location', '$id', '', '', '')\">Update Location</button><br><br>";
 
     }
     else
