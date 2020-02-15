@@ -51,7 +51,7 @@
 
         foreach($habitats as $habitat)
         {
-            echo "Does $habitat == $h_id?<br><br>"
+            echo "Does $habitat == $h_id?<br><br>";
             if($habitat == $h_id)
             {
                 $delete = 0;
