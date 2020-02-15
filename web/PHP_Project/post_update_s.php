@@ -123,5 +123,5 @@
         }
     }
 
-    // header('Location: main_page.php');
+    header('Location: main_page.php');
 ?>
