@@ -47,7 +47,7 @@
 
     while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
     {
-        $g_name = $frow["habitat_id"];
+        $h_id = $frow["habitat_id"];
 
         foreach($habitats as $habitat)
         {
@@ -60,14 +60,13 @@
             else
             {
                 $delete = 1;
-                $h_id = $habitat;
             }
         }
 
         if($delete)
         {
             $scr1 = $db->prepare("DELETE FROM species_and_habitats
-                                WHERE specie_id = $s_id AND habitat_id = $habitat");
+                                WHERE specie_id = $s_id AND habitat_id = $h_id");
             $scr1->execute();
         }
 
