@@ -9,11 +9,6 @@
    $habitats = $_POST["habitats"]; //specie_habitat
    $locations = $_POST["locations"]; //specie_location
 
-   foreach($locations as $location)
-   {
-       echo "location=$location";
-   }
-
     //Filter
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
@@ -26,19 +21,23 @@
 	// $statement->bindValue(':def', $def);
 
     // $statement->execute();
-    // foreach($habitats as $habitat)
-    // {
-    //     $scr = $db->prepare("SELECT habitat_id, habitat_name
-    //     FROM habitats
-    //     ORDER BY habitat_name ASC");
+    foreach($habitats as $habitat)
+    {
+        $scr = $db->prepare("SELECT habitat_id
+                            FROM species_and_habitats
+                            WHERE habitat_id = $habitat");
 
-    //     $scr->execute();
-    //     while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-    //     {
-    //         $g_id = $frow["habitat_id"];
-    //         $g_name = $frow["habitat_name"];
-    //     }
-    // }
+        $scr->execute();
+
+        $frow = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!$frow)
+        {
+            $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES($s_id, $habitat)";
+            $statement = $db->prepare($query);
+            $statement->execute();
+        }
+
+    }
     // foreach($locations as $location)
     // {
     //     $scr = $db->prepare("SELECT l.location_id, location_name
@@ -55,5 +54,5 @@
     //     }
     // }
 
-    // header('Location: main_page.php');
+    header('Location: main_page.php');
 ?>
