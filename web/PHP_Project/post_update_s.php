@@ -25,7 +25,7 @@
     {
         $scr = $db->prepare("SELECT habitat_id
                             FROM species_and_habitats
-                            WHERE habitat_id = $habitat and specie_id = $s_id");
+                            WHERE habitat_id = $habitat AND specie_id = $s_id");
 
         $scr->execute();
 
@@ -33,7 +33,7 @@
         echo "$frow<br>";
         echo "$habitat<br><br>";
 
-        if($frow)
+        if(!$frow)
         {
             $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES($s_id, $habitat)";
             $statement = $db->prepare($query);
