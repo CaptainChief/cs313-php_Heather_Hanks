@@ -42,7 +42,7 @@
                          WHERE specie_id = $s_id");
 
     $scr->execute();
-    $delete = False;
+    $delete = 1;
     $habitat = -1;
 
     while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
@@ -53,16 +53,17 @@
         {
             if($habitat == $h_id)
             {
-                $delete = False;
+                $delete = 0;
                 break;
             }
             else
             {
-                $delete = True;
+                $delete = 1;
                 $h_id = $habitat;
             }
         }
         echo "$delete<br>";
+        echo "$habitat<br><br>";
         if($delete)
         {
             $scr1 = $db->prepare("DELETE FROM species_and_habitats
