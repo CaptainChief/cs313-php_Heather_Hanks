@@ -30,14 +30,43 @@
         $scr->execute();
 
         $frow = $scr->fetch(PDO::FETCH_ASSOC);
-        echo "$frow<br>";
-        echo "$habitat<br><br>";
-
         if(!$frow)
         {
             $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES($s_id, $habitat)";
             $statement = $db->prepare($query);
             $statement->execute();
+        }
+    }
+    $scr = $db->prepare("SELECT habitat_id
+                         FROM species_and_habitats
+                         WHERE specie_id = $s_id");
+
+    $scr->execute();
+    $delete = False;
+    $habitat = -1;
+
+    while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+    {
+        $g_name = $frow["habitat_id"];
+
+        foreach($habitats as $habitat)
+        {
+            if($habitat == $h_id)
+            {
+                $delete = False;
+                break;
+            }
+            else
+            {
+                $delete = True;
+                $h_id = $habitat;
+            }
+        }
+        if($delete)
+        {
+            $scr1 = $db->prepare("DELETE FROM species_and_habitats
+                                WHERE specie_id = $s_id AND habitat_id = $habitat");
+            $scr1->execute();
         }
 
     }
