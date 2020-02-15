@@ -17,7 +17,7 @@
 
   <br><br>
   <div class = "create">
-  <form action="post_update.php" method="post">
+  <form action="post_update_s.php" method="post">
 
     <?php
     require "dbConnect.php";
