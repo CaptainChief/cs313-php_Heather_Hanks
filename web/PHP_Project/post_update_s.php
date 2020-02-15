@@ -62,6 +62,7 @@
                 $h_id = $habitat;
             }
         }
+        echo "$delete<br>";
         if($delete)
         {
             $scr1 = $db->prepare("DELETE FROM species_and_habitats
