@@ -30,6 +30,8 @@
         $scr->execute();
 
         $frow = $scr->fetch(PDO::FETCH_ASSOC);
+        echo "$frow<br>";
+        echo "$habitat<br><br>";
         if(!$frow)
         {
             $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES($s_id, $habitat)";
@@ -54,5 +56,5 @@
     //     }
     // }
 
-    header('Location: main_page.php');
+    // header('Location: main_page.php');
 ?>
