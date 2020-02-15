@@ -30,12 +30,12 @@
         $scr->execute();
 
         $frow = $statement->fetch(PDO::FETCH_ASSOC);
-        if(!$frow)
-        {
+        // if(!$frow)
+        // {
             // $query = "INSERT INTO species_and_habitats (specie_id, habitat_id) VALUES($s_id, $habitat)";
             // $statement = $db->prepare($query);
             // $statement->execute();
-        }
+        // }
 
     }
     // foreach($locations as $location)
