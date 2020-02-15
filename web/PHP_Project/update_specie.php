@@ -109,7 +109,7 @@
                 $g_id = $frow["habitat_id"];
                 $g_name = $frow["habitat_name"];
 
-            echo "<input type='checkbox' name='habitats[]' value='$g_id'>$g_name<br>";
+                echo "<input type='checkbox' name='habitats[]' value='$g_id'>$g_name<br>";
             }
 
             echo "<br><br><button type='submit'>Complete Update</button><br><br>";
