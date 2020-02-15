@@ -51,6 +51,7 @@
 
         foreach($habitats as $habitat)
         {
+            echo "Does $habitat == $h_id?<br><br>"
             if($habitat == $h_id)
             {
                 $delete = 0;
@@ -62,8 +63,7 @@
                 $h_id = $habitat;
             }
         }
-        echo "$delete<br>";
-        echo "$habitat<br><br>";
+
         if($delete)
         {
             $scr1 = $db->prepare("DELETE FROM species_and_habitats
