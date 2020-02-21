@@ -38,7 +38,6 @@ function main()
     <input type="password" name="pass" id="pass"><br><br>
 
     <input type="submit" name="log_in" value="Log In"><br><br>
-    <input type="button" name="new_user" value="Create New User"><br><br>
   </form>
 <input type="button" name="new_user" value="Create New User"><br><br>
 </div>
