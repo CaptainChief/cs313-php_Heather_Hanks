@@ -5,8 +5,6 @@
 
    if(isset($_SESSION['userID']))
    {
-     echo "in the if<br>";
-     echo "This is the session variable: " . $_SESSION['userID'];
     $user_id = $_SESSION['userID'];
    }
    else
@@ -74,9 +72,9 @@
 
   <div class="tab center">
   <button class="tablinks" onclick="openView(event, 'Animals (Genus)')">Animals (Genus)</button>
-  <!-- <button class="tablinks" onclick="openView(event, 'Animals (Species)')">Animals (Species)</button>
-  <button class="tablinks" onclick="openView(event, 'Habitats')">Habitats</button>
-  <button class="tablinks" onclick="openView(event, 'Locations')">Locations</button> -->
+  <button class="tablinks" onclick="openView(event, 'Animals (Species)')">Animals (Species)</button>
+  <!-- <button class="tablinks" onclick="openView(event, 'Habitats')">Habitats</button> -->
+  <!-- <button class="tablinks" onclick="openView(event, 'Locations')">Locations</button>  -->
 </div>
 
 <!-- Tab content -->
