@@ -35,7 +35,7 @@ function back()
 <div class = "center">
    <form action="post_user.php" method="post">
     First name:<br>
-    <input type="text" name="firstname" id="firstname"><br>
+    <input type="text" name="firstname" id="username"><br>
     Password:<br>
     <input type="password" name="pass" id="pass"><br><br>
 
