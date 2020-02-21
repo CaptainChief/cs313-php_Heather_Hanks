@@ -76,7 +76,7 @@
   <h3>Animals (Genus)</h3>
   <div class = "inner-left left">
     <?php
-    echo $user_id;
+      echo "user_id = " . $user_id;
       $scr = $db->prepare("SELECT genus_id, genus_name 
                            FROM animal_genus 
                            WHERE creator_id = $user_id 
