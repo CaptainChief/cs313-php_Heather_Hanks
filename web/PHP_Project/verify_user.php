@@ -28,12 +28,10 @@ if (password_verify($pass, $passwordHash)) {
    // Correct Password
 
    $_SESSION['userId'] = $row['creator_id'];
-   $user_id = $_SESSION['userId'];
-   echo "user_id = " . $user_id;
    $url = 'main_page.php';
 }
 
-// header('Location: ' . $url);
-// die();
+header('Location: ' . $url);
+die();
 
 ?>

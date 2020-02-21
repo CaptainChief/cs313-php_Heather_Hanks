@@ -2,7 +2,15 @@
    session_start();
    require("dbConnect.php");
    $db = get_db();
-   $user_id = $_SESSION['userID'];
+
+   if(isset($_SESSION['userID']))
+   {
+    $user_id = $_SESSION['userID'];
+   }
+   else
+   {
+     $user_id = 0;
+   }
 ?>
 
 <!DOCTYPE html>
