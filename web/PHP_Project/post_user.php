@@ -1,8 +1,10 @@
 <?php
    session_start();
    require 'dbConnect.php';
+
    $db = get_db();
-   $url = 'login.php';
+
+   $url = 'log_in.php';
    $name = $_POST['username'];
    $pass = $_POST['pass'];
 
