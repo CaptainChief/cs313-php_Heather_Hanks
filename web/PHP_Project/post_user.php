@@ -23,7 +23,7 @@
       die();
    }
 
-   $inserStatement = $db->prepare("INSERT INTO creators (creator_name, creator_pass) VALUES(:name, :hash)");
+   $inserStatement = $db->prepare('INSERT INTO creators (creator_name, creator_pass) VALUES(:name, :hash)');
    $inserStatement->bindValue(':name', $name);
    $inserStatement->bindValue(':hash', $hash);
    $inserStatement->execute();

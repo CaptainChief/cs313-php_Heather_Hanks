@@ -30,7 +30,9 @@ function back()
   </ul>
 
 
-<h3><?php echo $_SESSION['errorStr']; ?></h3>
+<div class = "center">
+   <p><?php echo $_SESSION['errorStr']; ?></p>
+</div>
 
 <div class = "center">
    <form action="post_user.php" method="post">
