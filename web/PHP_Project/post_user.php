@@ -18,15 +18,15 @@
    $row = $retrieveStatement->fetch(PDO::FETCH_ASSOC);
    if (isset($row['creator_name'])) {
       $_SESSION['errorStr'] = "Username already taken";
-      $url = 'creat_user.php';
+      $url = 'create_user.php';
       header('Location: ' . $url);
       die();
    }
 
-   // $inserStatement = $db->prepare("INSERT INTO creators (creator_name, creator_pass) VALUES(:name, :hash)");
-   // $inserStatement->bindValue(':name', $name);
-   // $inserStatement->bindValue(':hash', $hash);
-   // $inserStatement->execute();
+   $inserStatement = $db->prepare("INSERT INTO creators (creator_name, creator_pass) VALUES(:name, :hash)");
+   $inserStatement->bindValue(':name', $name);
+   $inserStatement->bindValue(':hash', $hash);
+   $inserStatement->execute();
 
    // header('Location: ' . $url);
    // die();
