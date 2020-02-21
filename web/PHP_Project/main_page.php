@@ -96,7 +96,10 @@
   <h3>Animals (Species)</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT specie_id, specie_name FROM animal_species WHERE creator_id = $user_id ORDER BY specie_name ASC");
+      $scr = $db->prepare("SELECT specie_id, specie_name 
+                           FROM animal_species 
+                           WHERE creator_id = $user_id 
+                           ORDER BY specie_name ASC");
       $scr->execute();
 
       $i = 1;
@@ -117,7 +120,10 @@
   <h3>Habitats</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT habitat_id, habitat_name FROM habitats WHERE creator_id = $user_id ORDER BY habitat_name ASC");
+      $scr = $db->prepare("SELECT habitat_id, habitat_name 
+                           FROM habitats 
+                           WHERE creator_id = $user_id 
+                           ORDER BY habitat_name ASC");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
@@ -137,7 +143,10 @@
   <h3>Locations</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT location_id, location_name FROM locations WHERE creator_id = $user_id ORDER BY location_name ASC");
+      $scr = $db->prepare("SELECT location_id, location_name 
+                           FROM locations 
+                           WHERE creator_id = $user_id 
+                           ORDER BY location_name ASC");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
