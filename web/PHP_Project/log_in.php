@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require 'dbconnect.php';
+    require 'dbConnect.php';
     $db = get_db();
     $_SESSION['errorStr'] = "";
 ?>
