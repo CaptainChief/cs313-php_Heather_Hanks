@@ -27,7 +27,7 @@ $passwordHash = $row['creator_pass'];
 if (password_verify($pass, $passwordHash)) {
    // Correct Password
 
-   $_SESSION['userId'] = $row['creator_id'];
+   $_SESSION['userID'] = $row['creator_id'];
    $url = 'main_page.php';
 }
 
