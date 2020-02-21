@@ -77,8 +77,6 @@
   <button class="tablinks" onclick="openView(event, 'Locations')">Locations</button> 
 </div>
 
-<h3 class="title"> Genesis </h3>
-
 <!-- Tab content -->
 
 <div id="Animals (Genus)" class="tabcontent center">
