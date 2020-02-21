@@ -1,7 +1,7 @@
 CREATE TABLE creators
 ( creator_id    SERIAL      NOT NULL
-, creator_name  VARCHAR(20) NOT NULL
-, creator_pass  VARCHAR(20) NOT NULL
+, creator_name  VARCHAR(20) NOT NULL UNIQUE
+, creator_pass  VARCHAR(250) NOT NULL
 , PRIMARY KEY(creator_id)
 );
 
@@ -16,11 +16,13 @@ CREATE TABLE animal_genus
 
 CREATE TABLE animal_species
 ( specie_id     SERIAL      NOT NULL
+, creator_id	INT		 NOT NULL
 , genus_id      INT         NOT NULL
 , specie_name   VARCHAR(20) NOT NULL
 , specie_def    VARCHAR(350) NOT NULL
 , PRIMARY KEY(specie_id)
 , FOREIGN KEY(genus_id) REFERENCES animal_genus(genus_id)
+, FOREIGN KEY(creator_id) REFERENCES creators(creator_id)
 );
 
 CREATE TABLE habitats

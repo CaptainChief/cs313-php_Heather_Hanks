@@ -8,6 +8,14 @@
    $name = $_POST['username'];
    $pass = $_POST['pass'];
 
+   if($name == "" || $pass == "")
+   {
+      $_SESSION['errorStr'] = "Please fill in both fields.";
+      $url = 'create_user.php';
+      header('Location: ' . $url);
+      die();
+   }
+
 
    $hash = password_hash($pass, PASSWORD_DEFAULT);
 

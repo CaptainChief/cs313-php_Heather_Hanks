@@ -46,67 +46,79 @@ VALUES
 -- Inserting into animal species table.
 
 INSERT INTO animal_species
-( genus_id
+( creator_id 
+, genus_id
 , specie_name
 , specie_def
 )
 VALUES
 ( 1
+, 1
 , 'Lion'
 , 'The lion is a type of wild cat found in savannah.'
 );
 
 INSERT INTO animal_species
-( genus_id
+( creator_id 
+, genus_id
 , specie_name
 , specie_def
 )
 VALUES
 ( 1
+, 1
 , 'Leopard'
 , 'The leopard is a type of wild cat found in the jungle.'
 );
 
 INSERT INTO animal_species
-( genus_id
+( creator_id 
+, genus_id
 , specie_name
 , specie_def
 )
 VALUES
-( 2
+( 1
+, 2
 , 'Wyvern'
 , 'The wyvern is a type of dragon, having only two legs. This is unusual as most dragons types have four legs.'
 );
 
 INSERT INTO animal_species
-( genus_id
+( creator_id 
+, genus_id
 , specie_name
 , specie_def
 )
 VALUES
-( 2
+( 1
+, 2
 , 'Sea Dragon'
 , 'The sea dragon live in the sea, eating the deep sea monsters rather than hunting humans.'
 );
 
 INSERT INTO animal_species
-( genus_id
+( creator_id 
+, genus_id
 , specie_name
 , specie_def
 )
 VALUES
-( 3
+( 1
+, 3
 , 'Giant Squid'
 , 'The Giant Squid is the most common deep sea monster found.'
 );
 
 INSERT INTO animal_species
-( genus_id
+( creator_id 
+, genus_id
 , specie_name
 , specie_def
 )
 VALUES
-( 3
+( 1
+, 3
 , 'Metashark'
 , 'The Metashark is a huge shark that preys on the giant squid and other various large creaturs.'
 );
