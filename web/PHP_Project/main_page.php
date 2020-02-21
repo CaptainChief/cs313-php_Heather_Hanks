@@ -113,27 +113,27 @@
 </div>
 
 <div id="Animals (Species)" class="tabcontent center">
-  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Animals (Species)</h3>
+  <span onclick="this.parentElement.style.display='none' class="topright">&times</span>
+  <!-- <h3>Animals (Species)</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT specie_id, specie_name 
-                           FROM animal_species 
-                           WHERE creator_id = $user_id 
-                           ORDER BY specie_name ASC");
-      $scr->execute();
+      // $scr = $db->prepare("SELECT specie_id, specie_name 
+      //                      FROM animal_species 
+      //                      WHERE creator_id = $user_id 
+      //                      ORDER BY specie_name ASC");
+      // $scr->execute();
 
-      $i = 1;
-      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-      {
-        $s_name = $frow["specie_name"];
-        $id = $frow["specie_id"];
+      // $i = 1;
+      // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      // {
+      //   $s_name = $frow["specie_name"];
+      //   $id = $frow["specie_id"];
           
-        echo "<p><button type='button' onclick=\"details('specie', '$id')\">$s_name</button></p>";
-        $i++;
-      }
+      //   echo "<p><button type='button' onclick=\"details('specie', '$id')\">$s_name</button></p>";
+      //   $i++;
+      // }
     ?>
-  </div>
+  </div> -->
 </div>
 
 <div id="Habitats" class="tabcontent center">
