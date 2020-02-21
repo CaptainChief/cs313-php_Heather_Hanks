@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
+<script>
+
+function back()
+{
+   window.location.replace('log_in.php');
+}
+
+</script>
+
 <body>
 
 <div class="headerLogo center"></div>
@@ -23,17 +32,17 @@
 
 <h3><?php echo $_SESSION['errorStr']; ?></h3>
 
-<form action="post_user.php" method="post">
 <div class = "center">
+   <form action="post_user.php" method="post">
     First name:<br>
     <input type="text" name="firstname" id="firstname"><br>
     Password:<br>
     <input type="password" name="pass" id="pass"><br><br>
 
-    <input type="submit" name="log_in" value="Log In"><br><br>
-    <input type="button" name="new_user" value="Create New User"><br><br>
-  </div>
-</form>
+    <input type="submit" name="new_user" value="Create New User"><br><br>
+   </form>
+   <input type="button" name="back" value="Back" onclick="back()"><br><br>
+</div>
 
 </body>
 </html>
