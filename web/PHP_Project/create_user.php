@@ -7,20 +7,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>PHP Project Log In</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="personal.css">
 </head>
-
-<script>
-
-function main()
-{
-  window.location.replace('main_page.php');
-}
-
-</script>
 
 <body>
 
@@ -30,8 +20,11 @@ function main()
     <li><a class="active" href=""></a></li>
   </ul>
 
+
+<h3><?php echo $_SESSION['errorStr']; ?></h3>
+
+<form action="post_user.php" method="post">
 <div class = "center">
-  <form action='verify_user.php' method='post'>
     First name:<br>
     <input type="text" name="firstname" id="firstname"><br>
     Password:<br>
@@ -39,11 +32,8 @@ function main()
 
     <input type="submit" name="log_in" value="Log In"><br><br>
     <input type="button" name="new_user" value="Create New User"><br><br>
-  </form>
-<input type="button" name="new_user" value="Create New User"><br><br>
-</div>
+  </div>
+</form>
 
 </body>
-
-
 </html>

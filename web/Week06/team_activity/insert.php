@@ -1,4 +1,4 @@
-<?php
+SELECT SELECT book, verse, ddffff
    require("dbConnect.php");
    $db = get_db();
    

@@ -1,5 +1,5 @@
 <?php
-   require "dbConnect.php";
+   require("dbConnect.php");
    $db = get_db();
 ?>
 
@@ -11,6 +11,12 @@
 </head>
 <body>
 
+<?php
+
+    $new = $db->prepare("SELECT book, verse, ffff");
+    $new->execute();
+
+?>
 
 </body>
 </html>
