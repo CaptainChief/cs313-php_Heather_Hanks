@@ -4,7 +4,7 @@
 
     $name = $_POST["genus_name"];
     $def = $_POST["genus_def"];
-    $c_id = 1;
+    $c_id = = $_SESSION['userID'];
 
     //Filter
     $name = htmlspecialchars($name);

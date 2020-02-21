@@ -4,7 +4,7 @@
 
     $name = $_POST["habitat_name"];
     $def = $_POST["habitat_def"];
-    $c_id = 1;
+    $c_id = = $_SESSION['userID'];
 
     //Filter
     $name = htmlspecialchars($name);

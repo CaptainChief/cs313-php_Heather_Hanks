@@ -4,7 +4,7 @@
 
     $name = $_POST["location_name"];
     $def = $_POST["location_def"];
-    $c_id = 1;
+    $c_id = = $_SESSION['userID'];
 
     //Filter
     $name = htmlspecialchars($name);
