@@ -1,5 +1,5 @@
 <?php
-    session_start();
+   session_start();
    require("dbConnect.php");
    $db = get_db();
 
@@ -8,7 +8,7 @@
     $g_id = $_POST["genus"];       //specie
     $habitats = $_POST["habitats"]; //specie_habitat
     $locations = $_POST["locations"]; //specie_location
-    $c_id = = $_SESSION['userID'];
+    $c_id = $_SESSION['userID'];
 
     //Filter
     $name = htmlspecialchars($name);

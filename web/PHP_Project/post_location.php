@@ -1,11 +1,11 @@
 <?php
-    session_start();
+   session_start();
    require("dbConnect.php");
    $db = get_db();
 
     $name = $_POST["location_name"];
     $def = $_POST["location_def"];
-    $c_id = = $_SESSION['userID'];
+    $c_id = $_SESSION['userID'];
 
     //Filter
     $name = htmlspecialchars($name);
