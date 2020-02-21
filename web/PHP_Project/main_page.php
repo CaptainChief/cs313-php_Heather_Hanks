@@ -36,9 +36,26 @@
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        alert(section);
-        document.getElementById(section).style.display = "block";
-        evt.currentTarget.className += " active";
+        if(section == 'Animals (Genus)')
+        {
+          document.getElementById("Animals (Genus)").style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        else if(section == 'Animals (Species)')
+        {
+          document.getElementById("Animals (Species)").style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        else if(section == 'Habitats')
+        {
+          document.getElementById("Habitats").style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        else if(section == 'Locations')
+        {
+          document.getElementById("Locations").style.display = "block";
+          evt.currentTarget.className += " active";
+        }
     }
 
     function details(type, id)
