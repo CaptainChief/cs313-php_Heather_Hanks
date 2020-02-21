@@ -5,13 +5,20 @@
 
     $name = $_POST["genus_name"];
     $def = $_POST["genus_def"];
-    $c_id = $_SESSION['userID'];
+    if(isset($_SESSION['userID']))
+    {
+     $user_id = $_SESSION['userID'];
+    }
+    else
+    {
+      $user_id = 0;
+    }
 
     //Filter
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
 
-    $query = "INSERT INTO animal_genus (creator_id, genus_name, genus_def) VALUES($c_id, :name, :def)";
+    $query = "INSERT INTO animal_genus (creator_id, genus_name, genus_def) VALUES($user_id, :name, :def)";
 	$statement = $db->prepare($query);
 	$statement->bindValue(':name', $name); //This will help keep statements safe
 	$statement->bindValue(':def', $def);

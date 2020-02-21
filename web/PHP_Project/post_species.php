@@ -8,13 +8,19 @@
     $g_id = $_POST["genus"];       //specie
     $habitats = $_POST["habitats"]; //specie_habitat
     $locations = $_POST["locations"]; //specie_location
-    $c_id = $_SESSION['userID'];
-
+    if(isset($_SESSION['userID']))
+    {
+     $user_id = $_SESSION['userID'];
+    }
+    else
+    {
+      $user_id = 0;
+    }
     //Filter
     $name = htmlspecialchars($name);
     $def = htmlspecialchars($def);
 
-    $query = "INSERT INTO animal_species (creator_id, specie_name, genus_id, specie_def) VALUES($c_id, :name, $g_id, :def)";
+    $query = "INSERT INTO animal_species (creator_id, specie_name, genus_id, specie_def) VALUES($user_id, :name, $g_id, :def)";
 	$statement = $db->prepare($query);
 	$statement->bindValue(':name', $name); //This will help keep statements safe
 	$statement->bindValue(':def', $def);
