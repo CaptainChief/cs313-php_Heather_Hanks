@@ -16,10 +16,10 @@
 
 <script>
 
-function main()
-{
-  window.location.replace('main_page.php');
-}
+  function new_user() 
+  {
+    window.location.replace('create_user.php');
+  }
 
 </script>
 
@@ -32,15 +32,18 @@ function main()
   </ul>
 
 <div class = "center">
-  <form action='verify_user.php' method='post'>
-    First name:<br>
+
+<form action="verify_user.php" method="post">
+    Username:<br>
     <input type="text" name="firstname" id="firstname"><br>
     Password:<br>
     <input type="password" name="pass" id="pass"><br><br>
 
     <input type="submit" name="log_in" value="Log In"><br><br>
-  </form>
-<input type="button" name="new_user" value="Create New User"><br><br>
+</form>
+
+<input type="button" name="new_user" value="Create New User" onclick="new_user()"><br><br>
+
 </div>
 
 </body>
