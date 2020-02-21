@@ -28,7 +28,7 @@
 
 <div class = "center">
    <form action="post_user.php" method="post">
-    First name:<br>
+    Username:<br>
     <input type="text" name="username" id="username"><br>
     Password:<br>
     <input type="password" name="pass" id="pass"><br><br>
