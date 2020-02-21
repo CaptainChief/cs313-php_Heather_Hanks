@@ -26,6 +26,7 @@
 <div class = "center">
 
 <h3 class="title"> Genesis </h3>
+<hr>
 
 <form action="verify_user.php" method="post">
     Username:<br>
