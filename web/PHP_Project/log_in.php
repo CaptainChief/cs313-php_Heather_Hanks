@@ -35,7 +35,7 @@
 
 <form action="verify_user.php" method="post">
     Username:<br>
-    <input type="text" name="firstname" id="firstname"><br>
+    <input type="text" name="username" id="username"><br>
     Password:<br>
     <input type="password" name="pass" id="pass"><br><br>
 

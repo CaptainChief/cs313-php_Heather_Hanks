@@ -9,7 +9,7 @@ $_SESSION['userID'] = "";
 $_SESSION['errorStr'] = "";
 
 
-$name = $_POST['firstname'];
+$name = $_POST['username'];
 $pass = $_POST['pass'];
 
 $statement = $db->prepare("SELECT creator_id, creator_pass FROM creators WHERE creator_name = :name");
