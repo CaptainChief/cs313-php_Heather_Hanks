@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-require 'dbconnect.php';
+require 'dbConnect.php';
 $db = get_db();
-$url = 'login.php';
+$url = 'log_in.php';
 
 $_SESSION['userID'] = "";
 $_SESSION['errorStr'] = "";
@@ -24,16 +24,13 @@ if (!isset($row['id'])) {
 
 $passwordHash = $row['userpassword'];
 
-echo "verification: " . password_verify($pass, $passwordHash) . "<br>";
-echo "PASSWORD HASH: " . $passwordHash;
 if (password_verify($pass, $passwordHash)) {
    // Correct Password
 
    $_SESSION['userId'] = $row['id'];
-   $url = 'success.php';
+   $url = 'main_page.php';
 }
 
-$_SESSION['errorStr'] = "killed in the password verification";
 header('Location: ' . $url);
 die();
 

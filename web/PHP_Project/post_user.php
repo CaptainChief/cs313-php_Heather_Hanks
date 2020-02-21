@@ -1,30 +1,27 @@
 <?php
    session_start();
-   require 'dbconnect.php';
+   require 'dbConnect.php';
    $db = get_db();
    $url = 'login.php';
    $name = $_POST['username'];
    $pass = $_POST['pass'];
 
 
-   // echo "username = $name\n";
-   // echo "pass = $pass\n";
    $hash = password_hash($pass, PASSWORD_DEFAULT);
-   // echo "hash = $hash\n";
 
-   $retrieveStatement = $db->prepare("SELECT username FROM ta07_user WHERE username = :name");
+   $retrieveStatement = $db->prepare("SELECT creator_name FROM creators WHERE creator_name = :name");
    $retrieveStatement->bindValue(':name', $name);
    $retrieveStatement->execute();
 
    $row = $retrieveStatement->fetch(PDO::FETCH_ASSOC);
-   if (isset($row['username'])) {
+   if (isset($row['creator_name'])) {
       $_SESSION['errorStr'] = "Username already taken";
-      $url = 'signUp.php';
+      $url = 'creat_user.php';
       header('Location: ' . $url);
       die();
    }
 
-   $inserStatement = $db->prepare("INSERT INTO ta07_user (username, userpassword) VALUES(:name, :hash)");
+   $inserStatement = $db->prepare("INSERT INTO creators (creator_name, creator_pass) VALUES(:name, :hash)");
    $inserStatement->bindValue(':name', $name);
    $inserStatement->bindValue(':hash', $hash);
    $inserStatement->execute();
