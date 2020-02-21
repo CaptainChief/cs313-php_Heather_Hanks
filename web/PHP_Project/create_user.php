@@ -17,7 +17,7 @@
 <div class="headerLogo center"></div>
 
 <ul class = "center">
-    <li><a class="" href="log_in.php">Create New User</a></li>
+    <li><a class="" href="log_in.php">Log In</a></li>
     <li><a class="active" href="">Create New User</a></li>
   </ul>
 
