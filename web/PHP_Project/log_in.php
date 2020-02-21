@@ -25,7 +25,8 @@
 
 <div class = "center">
 
-<h3 class="title"> Genesis </h3>
+<hr>
+<h3 class="title"> Welcome to Genesis </h3>
 <hr>
 
 <form action="verify_user.php" method="post">
