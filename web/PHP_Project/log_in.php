@@ -23,9 +23,9 @@
     <li><a class="" href="create_user.php">Create New User</a></li>
   </ul>
 
-  <h3 class="title"> Genesis </h3>
-
 <div class = "center">
+
+<h3 class="title"> Genesis </h3>
 
 <form action="verify_user.php" method="post">
     Username:<br>
