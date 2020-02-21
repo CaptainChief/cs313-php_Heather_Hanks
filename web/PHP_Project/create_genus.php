@@ -15,8 +15,9 @@
     <li><a href="main_page.php">Home Page</a></li>
     <li><a href="create_habitat.php">Create Habitat</a></li>
     <li><a href="create_location.php">Create Location</a></li>
-    <li><a href="create_species.php">Create Species</a></li>
     <li><a class = "active" href="">Create Genus</a></li>
+    <li><a href="create_species.php">Create Species</a></li>
+    <li><a href="log_in.php">Log Out</a></li>
   </ul>
 
  <br><br>

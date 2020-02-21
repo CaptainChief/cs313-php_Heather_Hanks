@@ -14,21 +14,13 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
-<script>
-
-  function new_user() 
-  {
-    window.location.replace('create_user.php');
-  }
-
-</script>
-
 <body>
 
 <div class="headerLogo center"></div>
 
   <ul class = "center">
-    <li><a class="active" href=""></a></li>
+    <li><a class="active" href="">Create New User</a></li>
+    <li><a class="" href="create_user.php">Create New User</a></li>
   </ul>
 
 <div class = "center">
@@ -41,8 +33,6 @@
 
     <input type="submit" name="log_in" value="Log In"><br><br>
 </form>
-
-<input type="button" name="new_user" value="Create New User" onclick="new_user()"><br><br>
 
 </div>
 

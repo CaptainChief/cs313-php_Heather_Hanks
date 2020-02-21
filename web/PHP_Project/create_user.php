@@ -12,21 +12,13 @@
     <link rel="stylesheet" href="personal.css">
 </head>
 
-<script>
-
-function back()
-{
-   window.location.replace('log_in.php');
-}
-
-</script>
-
 <body>
 
 <div class="headerLogo center"></div>
 
-  <ul class = "center">
-    <li><a class="active" href=""></a></li>
+<ul class = "center">
+    <li><a class="" href="log_in.php">Create New User</a></li>
+    <li><a class="active" href="">Create New User</a></li>
   </ul>
 
 
@@ -43,7 +35,6 @@ function back()
 
     <input type="submit" name="new_user" value="Create New User"><br><br>
    </form>
-   <input type="button" name="back" value="Back" onclick="back()"><br><br>
 </div>
 
 </body>
