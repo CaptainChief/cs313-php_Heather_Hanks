@@ -36,26 +36,8 @@
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        if(section == 'Animals (Genus)')
-        {
-          document.getElementById("Animals (Genus)").style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        else if(section == 'Animals (Species)')
-        {
-          document.getElementById("Animals (Species)").style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        else if(section == 'Habitats')
-        {
-          document.getElementById("Habitats").style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        else if(section == 'Locations')
-        {
-          document.getElementById("Locations").style.display = "block";
-          evt.currentTarget.className += " active";
-        }
+        document.getElementById(section).style.display = "block";
+        evt.currentTarget.className += " active";
     }
 
     function details(type, id)
@@ -114,26 +96,26 @@
 
 <div id="Animals (Species)" class="tabcontent center">
   <span onclick="this.parentElement.style.display='none' class="topright">&times</span>
-  <!-- <h3>Animals (Species)</h3>
-  <div class = "inner-left left">
+   <h3>Animals (Species)</h3> 
+   <div class = "inner-left left">
     <?php
-      // $scr = $db->prepare("SELECT specie_id, specie_name 
-      //                      FROM animal_species 
-      //                      WHERE creator_id = $user_id 
-      //                      ORDER BY specie_name ASC");
-      // $scr->execute();
+      $scr = $db->prepare("SELECT specie_id, specie_name 
+                           FROM animal_species 
+                          --  WHERE creator_id = $user_id 
+                           ORDER BY specie_name ASC");
+      $scr->execute();
 
-      // $i = 1;
-      // while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
-      // {
-      //   $s_name = $frow["specie_name"];
-      //   $id = $frow["specie_id"];
+      $i = 1;
+      while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
+      {
+        $s_name = $frow["specie_name"];
+        $id = $frow["specie_id"];
           
-      //   echo "<p><button type='button' onclick=\"details('specie', '$id')\">$s_name</button></p>";
-      //   $i++;
-      // }
+        echo "<p><button type='button' onclick=\"details('specie', '$id')\">$s_name</button></p>";
+        $i++;
+      }
     ?>
-  </div> -->
+  </div>
 </div>
 
 <div id="Habitats" class="tabcontent center">
@@ -143,7 +125,7 @@
     <?php
       $scr = $db->prepare("SELECT habitat_id, habitat_name 
                            FROM habitats 
-                           WHERE creator_id = $user_id 
+                          --  WHERE creator_id = $user_id 
                            ORDER BY habitat_name ASC");
       $scr->execute();
       $i = 1;
@@ -166,7 +148,7 @@
     <?php
       $scr = $db->prepare("SELECT location_id, location_name 
                            FROM locations 
-                           WHERE creator_id = $user_id 
+                          --  WHERE creator_id = $user_id 
                            ORDER BY location_name ASC");
       $scr->execute();
       $i = 1;
