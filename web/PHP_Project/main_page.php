@@ -5,6 +5,8 @@
 
    if(isset($_SESSION['userID']))
    {
+     echo "in the if<br>";
+     echo "This is the session variable: " . $_SESSION['userID'];
     $user_id = $_SESSION['userID'];
    }
    else
