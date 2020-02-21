@@ -20,8 +20,10 @@
   <form action="post_update_s.php" method="post">
 
     <?php
+    session_start();
     require "dbConnect.php";
     $db = get_db();
+    $user_id = $_SESSION['userID'];
 
     $url = $_SERVER['REQUEST_URI'];
             $url_components = parse_url($url); 
@@ -62,6 +64,7 @@
             
             $scr = $db->prepare("SELECT genus_id, genus_name
                                 FROM animal_genus
+                                WHERE creator_id = $user_id
                                 ORDER BY genus_name ASC");
             
             $scr->execute();
@@ -84,6 +87,7 @@
             echo '<br><br><p class = "center">Choose Locations:</p>';
             $scr = $db->prepare("SELECT location_id, location_name
                                 FROM locations
+                                WHERE creator_id = $user_id
                                 ORDER BY location_name ASC");
       
             $scr->execute();
@@ -101,6 +105,7 @@
             echo '<br><br><p class = "center">Choose Habitats: </p>';
             $scr = $db->prepare("SELECT habitat_id, habitat_name
                                 FROM habitats
+                                WHERE creator_id = $user_id
                                 ORDER BY habitat_name ASC");
 
             $scr->execute();

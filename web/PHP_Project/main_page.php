@@ -1,6 +1,8 @@
 <?php
+   session_start();
    require("dbConnect.php");
    $db = get_db();
+   $user_id = $_SESSION['userID'];
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +59,7 @@
     <li><a href="create_location.php">Create Location</a></li>
     <li><a href="create_species.php">Create Species</a></li>
     <li><a href="create_genus.php">Create Genus</a></li>
+    <li><a href="log_in.php">Log Out</a></li>
   </ul>
 
   <div class="tab center">
@@ -73,7 +76,7 @@
   <h3>Animals (Genus)</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT genus_id, genus_name FROM animal_genus ORDER BY genus_name ASC");
+      $scr = $db->prepare("SELECT genus_id, genus_name FROM animal_genus WHERE creator_id = $user_id ORDER BY genus_name ASC");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
@@ -93,7 +96,7 @@
   <h3>Animals (Species)</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT specie_id, specie_name FROM animal_species ORDER BY specie_name ASC");
+      $scr = $db->prepare("SELECT specie_id, specie_name FROM animal_species WHERE creator_id = $user_id ORDER BY specie_name ASC");
       $scr->execute();
 
       $i = 1;
@@ -114,7 +117,7 @@
   <h3>Habitats</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT habitat_id, habitat_name FROM habitats ORDER BY habitat_name ASC");
+      $scr = $db->prepare("SELECT habitat_id, habitat_name FROM habitats WHERE creator_id = $user_id ORDER BY habitat_name ASC");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
@@ -134,7 +137,7 @@
   <h3>Locations</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT location_id, location_name FROM locations ORDER BY location_name ASC");
+      $scr = $db->prepare("SELECT location_id, location_name FROM locations WHERE creator_id = $user_id ORDER BY location_name ASC");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))

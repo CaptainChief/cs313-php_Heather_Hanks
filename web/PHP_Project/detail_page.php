@@ -1,6 +1,8 @@
 <?php
+   session_start();
    require "dbConnect.php";
    $db = get_db();
+   $user_id = $_SESSION['userID'];
 ?>
 
 <!DOCTYPE html>
@@ -88,10 +90,10 @@
           $def = $frow["specie_def"];
 
           $scr1 = $db->prepare("SELECT g.genus_def, g.genus_name
-          FROM animal_genus g
-          JOIN animal_species a
-          ON g.genus_id = a.genus_id 
-          WHERE a.specie_id = $id");
+                                FROM animal_genus g
+                                JOIN animal_species a
+                                ON g.genus_id = a.genus_id 
+                                WHERE a.specie_id = $id");
 
           $scr1->execute();
 
