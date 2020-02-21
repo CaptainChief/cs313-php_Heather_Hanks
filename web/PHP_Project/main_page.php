@@ -36,6 +36,7 @@
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
+        alert(section);
         document.getElementById(section).style.display = "block";
         evt.currentTarget.className += " active";
     }
@@ -76,7 +77,10 @@
   <h3>Animals (Genus)</h3>
   <div class = "inner-left left">
     <?php
-      $scr = $db->prepare("SELECT genus_id, genus_name FROM animal_genus WHERE creator_id = $user_id ORDER BY genus_name ASC");
+      $scr = $db->prepare("SELECT genus_id, genus_name 
+                           FROM animal_genus 
+                           WHERE creator_id = $user_id 
+                           ORDER BY genus_name ASC");
       $scr->execute();
       $i = 1;
       while ($frow = $scr->fetch(PDO::FETCH_ASSOC))
