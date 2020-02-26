@@ -10,20 +10,24 @@ var server = http.createServer(Request);
 
  function Request(req, res)
  {
-   if(req.url == '/home')
-   {
-      res.writeHead(200, {'Conent-Type': 'text/html'})
-      res.end('<h3> Welcome to the Home Page!!!</h3>')
-   }
-   else if(req.url == '/getData')
-   {
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      res.json({key:'{"name" : "Heather Hanks", "class" : "cs313"'});
-   }
-   else
-   {
-      console.log("Nothing happened");
-   }
+
+   res.statusCode = 200;
+   res.setHeader('Content-Type', 'text/plain');
+   res.end('Hello World');
+   // if(req.url == '/home')
+   // {
+   //    res.writeHead(200, {'Conent-Type': 'text/html'})
+   //    res.end('<h3> Welcome to the Home Page!!!</h3>')
+   // }
+   // else if(req.url == '/getData')
+   // {
+   //    res.writeHead(200, {'Content-Type': 'text/html'});
+   //    //res.json({key:'{"name" : "Heather Hanks", "class" : "cs313"'});
+   // }
+   // else
+   // {
+   //    console.log("Nothing happened");
+   // }
  }
 
  server.listen(port, hostname, () => 
